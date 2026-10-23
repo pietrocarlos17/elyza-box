@@ -451,6 +451,30 @@
   .fp-stars span.on{color:var(--star)}
   .fp-thanks{text-align:center;padding:10px 0 4px;font-size:14px;line-height:1.6}
   .fp-thanks b{display:block;font-size:16px;margin-bottom:6px}
+  /* ---------- mobile menu drawer ---------- */
+  .icobtn{background:none;border:0;padding:0;display:flex;cursor:pointer;color:#111}
+  .menu-back{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:90;opacity:0;pointer-events:none;transition:opacity .3s}
+  .menu-back.open{opacity:1;pointer-events:auto}
+  .menu{position:fixed;top:0;left:0;bottom:0;width:min(320px,86vw);background:#fff;z-index:91;display:flex;flex-direction:column;transform:translateX(-102%);transition:transform .32s cubic-bezier(.2,.8,.2,1);box-shadow:20px 0 60px -30px rgba(0,0,0,.4);padding-bottom:env(safe-area-inset-bottom)}
+  .menu.open{transform:translateX(0)}
+  .menu-head{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--line)}
+  .menu-head img{height:26px;width:auto}
+  .menu-close{width:36px;height:36px;border:1px solid var(--line);border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#111}
+  .menu-links{display:flex;flex-direction:column;padding:10px 0;border-bottom:1px solid var(--line)}
+  .menu-links a{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.02em;text-decoration:none;color:#111}
+  .menu-links a::after{content:"→";color:var(--muted);font-size:14px}
+  .menu-links a.hot{color:var(--accent)}
+  .menu-util{display:flex;flex-direction:column;padding:12px 0}
+  .menu-util a{padding:10px 20px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#555;text-decoration:none}
+  .menu-foot{margin-top:auto;padding:16px 20px;border-top:1px solid var(--line);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:center}
+  body.menu-open{overflow:hidden}
+  /* ---------- search bar ---------- */
+  .searchbar{display:none;align-items:center;gap:8px;padding:10px 16px;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:51px;z-index:19}
+  .searchbar.open{display:flex}
+  .searchbar svg{width:18px;height:18px;flex:none;fill:none;stroke:#111;stroke-width:1.8}
+  .searchbar input{flex:1;height:40px;border:1px solid #ccc;border-radius:6px;padding:0 12px;font:inherit;font-size:16px;background:#fff}
+  .searchbar input:focus{outline:none;border-color:#111}
+  .searchbar button{height:40px;padding:0 14px;background:#111;color:#fff;border:0;border-radius:6px;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.06em;cursor:pointer}
 </style>
 </head>
 <body>
@@ -458,8 +482,8 @@
 
 <header>
   <div class="side">
-    <svg class="ico" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    <svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+    <button class="icobtn" id="menuBtn" type="button" aria-label="Open menu" aria-controls="menu" aria-expanded="false"><svg class="ico" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <button class="icobtn" id="searchBtn" type="button" aria-label="Search" aria-expanded="false"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
   </div>
   <a href="#" class="logo" aria-label="JBL home"><img src="images/logo1.svg" alt="JBL"></a>
   <div class="side r">
@@ -467,6 +491,11 @@
     <svg class="ico" viewBox="0 0 24 24"><path d="M5 7h14l-1 13H6L5 7z"/><path d="M9 7a3 3 0 016 0"/></svg>
   </div>
 </header>
+<form class="searchbar" id="searchBar" role="search" autocomplete="off">
+  <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+  <input type="search" id="searchInput" placeholder="Search speakers, headphones…" aria-label="Search">
+  <button type="submit">Search</button>
+</form>
 
 <main class="wrap">
   <div class="pinfo px">
@@ -660,6 +689,29 @@
 </footer>
 <div class="bottom">Privacy · Terms · Sitemap</div>
 
+<!-- Mobile menu drawer -->
+<div class="menu-back" id="menuBack"></div>
+<aside class="menu" id="menu" aria-hidden="true">
+  <div class="menu-head">
+    <img src="images/logo1.svg" alt="JBL">
+    <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+  </div>
+  <nav class="menu-links">
+    <a href="./">Speakers</a>
+    <a href="./">Headphones</a>
+    <a href="./">Party Boxes</a>
+    <a href="./">Soundbars</a>
+    <a href="./">Accessories</a>
+    <a href="./" class="hot">Early Black Friday Deals</a>
+  </nav>
+  <div class="menu-util">
+    <a href="./">Support</a>
+    <a href="./">Track Order</a>
+    <a href="./">Account</a>
+  </div>
+  <div class="menu-foot">Free UK delivery · 30-day returns · 1-year warranty</div>
+</aside>
+
 <!-- Cart modal -->
 <div class="cart-back" id="cartBack"></div>
 <aside class="cart" id="cart" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
@@ -819,6 +871,26 @@
   };
   loadMore.onclick = () => { shown += 1; renderRevs(); };
   renderRevs();
+
+  // ---------- Mobile menu drawer ----------
+  const menu = document.getElementById('menu'), menuBack = document.getElementById('menuBack'), menuBtn = document.getElementById('menuBtn');
+  const openMenu = () => { menu.classList.add('open'); menuBack.classList.add('open'); document.body.classList.add('menu-open'); menu.setAttribute('aria-hidden', 'false'); menuBtn.setAttribute('aria-expanded', 'true'); };
+  const closeMenu = () => { menu.classList.remove('open'); menuBack.classList.remove('open'); document.body.classList.remove('menu-open'); menu.setAttribute('aria-hidden', 'true'); menuBtn.setAttribute('aria-expanded', 'false'); };
+  menuBtn.addEventListener('click', openMenu);
+  menuBack.addEventListener('click', closeMenu);
+  document.getElementById('menuClose').addEventListener('click', closeMenu);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+  // every menu option just brings the visitor back to this page
+  document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', e => { e.preventDefault(); closeMenu(); window.location.href = window.location.pathname + window.location.search; }));
+
+  // ---------- Search: opens a bar; submitting brings the visitor back to this page ----------
+  const searchBar = document.getElementById('searchBar'), searchBtn = document.getElementById('searchBtn'), searchInput = document.getElementById('searchInput');
+  searchBtn.addEventListener('click', () => {
+    const open = !searchBar.classList.contains('open');
+    searchBar.classList.toggle('open', open); searchBtn.setAttribute('aria-expanded', String(open));
+    if (open) searchInput.focus();
+  });
+  searchBar.addEventListener('submit', e => { e.preventDefault(); window.location.href = window.location.pathname + window.location.search; });
 
   // ---------- Footer modals (ported from ADDS/footer.js) ----------
   const modals = {
