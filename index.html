@@ -358,6 +358,28 @@
   .live>div{display:flex;align-items:center;gap:6px;background:rgba(17,17,17,.88);color:#fff;font-size:11px;font-weight:600;padding:7px 10px;border-radius:999px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);white-space:nowrap}
   .live b{font-weight:800;font-variant-numeric:tabular-nums}
   .live .timer b{color:#ffb36b}
+  /* cart gift picker */
+  .cart .cart-pick{display:grid;grid-template-columns:22px 56px 1fr auto;gap:12px;align-items:center;padding:16px 28px;border-bottom:1px solid var(--line);cursor:pointer;background:#fff;transition:background .2s}
+  .cart .cart-pick input{position:absolute;opacity:0;width:0;height:0}
+  .cart .cart-pick .box{width:22px;height:22px;border:1.5px solid var(--ink);display:flex;align-items:center;justify-content:center;color:#fff;background:#fff;transition:all .2s}
+  .cart .cart-pick input:checked ~ .box{background:var(--ink);border-color:var(--ink)}
+  .cart .cart-pick .box svg{opacity:0;transition:opacity .2s}
+  .cart .cart-pick input:checked ~ .box svg{opacity:1}
+  .cart .cart-pick .thumb{width:56px;height:56px;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:0;overflow:hidden}
+  .cart .cart-pick .thumb img{width:100%;height:100%;object-fit:cover}
+  .cart .cart-pick .info{display:flex;flex-direction:column;gap:2px;min-width:0}
+  .cart .cart-pick .tag{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--promo);font-weight:600}
+  .cart .cart-pick .nm{font-size:13px;font-weight:500;color:var(--ink);line-height:1.3}
+  .cart .cart-pick .sub{font-size:11px;color:var(--muted)}
+  .cart .cart-pick .price{display:flex;flex-direction:column;align-items:flex-end;text-align:right;margin:0;font-size:inherit;letter-spacing:0;gap:0}
+  .cart .cart-pick .price .now{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--promo);display:block;line-height:1.4}
+  .cart .cart-pick .price .was{font-size:12px;color:var(--muted);text-decoration:line-through;display:block}
+  .cart .cart-pick:not(.on) .info,.cart .cart-pick:not(.on) .thumb,.cart .cart-pick:not(.on) .price{opacity:.45}
+  .cart .cart-pick:not(.on) .tag::after{content:" · tap to add"}
+  .cart-summary .row.gift{color:var(--promo);font-weight:500}
+  .cart-summary .row.gift .v{color:var(--promo)}
+  .cart-summary .row.gift.hidden{display:none}
+  @media(max-width:520px){.cart .cart-pick{padding:14px 20px;gap:10px;grid-template-columns:20px 48px 1fr auto}.cart .cart-pick .thumb{width:48px;height:48px}}
 </style>
 </head>
 <body>
@@ -589,9 +611,21 @@
     <span><strong>Official 1-year warranty</strong> included — free 30-day returns</span>
   </div>
 
+  <label class="cart-pick" for="giftPick">
+    <input type="checkbox" id="giftPick" checked>
+    <span class="box" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
+    <span class="thumb ph auto" data-src="images/gift.png"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 14v-3a8 8 0 0116 0v3"/><rect x="3" y="13" width="4" height="7" rx="1.5"/><rect x="17" y="13" width="4" height="7" rx="1.5"/></svg></span>
+    <span class="info">
+      <span class="tag">Free gift · selected</span>
+      <span class="nm">JBL Tune 530BT Wireless Headphones</span>
+    </span>
+    <span class="price"><span class="now">FREE</span><span class="was">£39.99</span></span>
+  </label>
+
   <div class="cart-summary">
     <div class="row"><span>Subtotal</span><span class="v">£<span id="sumSub">149.99</span></span></div>
     <div class="row disc"><span>Promotion applied (−70%)</span><span class="v">−£<span id="sumDisc">350.00</span></span></div>
+    <div class="row gift" id="sumGiftRow"><span>Free gift · JBL Tune 530BT</span><span class="v">£0.00</span></div>
     <div class="row"><span>Shipping</span><span class="v">Free · 2-day</span></div>
     <div class="total">
       <span class="lbl">Total</span>
@@ -739,6 +773,10 @@
   document.getElementById('cartClose').addEventListener('click', closeCart);
   document.getElementById('cartCont').addEventListener('click', closeCart);
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCart(); });
+  // Free gift picker (pre-selected)
+  const giftPick = document.getElementById('giftPick'), giftRow = document.getElementById('sumGiftRow'), giftLabel = giftPick.closest('.cart-pick');
+  const syncGift = () => { giftLabel.classList.toggle('on', giftPick.checked); giftRow.classList.toggle('hidden', !giftPick.checked); giftLabel.querySelector('.tag').textContent = giftPick.checked ? 'Free gift · selected' : 'Free gift'; };
+  giftPick.addEventListener('change', syncGift); syncGift();
   checkoutBtn.addEventListener('click', () => { if (window.ttq) ttq.track('InitiateCheckout', { content_id: 'jbl-boombox-4', content_type: 'product', content_name: 'JBL Boombox 4', value: unitPrice, currency: 'GBP', quantity: 1 }); });
 </script>
 </body>
