@@ -393,10 +393,63 @@
   .cart-summary .row.gift .v{color:var(--promo)}
   .cart-summary .row.gift.hidden{display:none}
   @media(max-width:520px){.cart .cart-pick{padding:14px 20px;gap:10px;grid-template-columns:20px 48px 1fr auto}.cart .cart-pick .thumb{width:48px;height:48px}}
+  /* ---------- trust block under buy button ---------- */
+  .assure{list-style:none;margin-top:12px;display:grid;gap:6px}
+  .assure li{display:flex;align-items:center;gap:8px;font-size:12px;color:#333}
+  .assure svg{width:16px;height:16px;flex:none;fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .paylogos{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+  .paylogos .pl{height:26px;min-width:44px;padding:0 8px;border:1px solid #d8d8d8;border-radius:4px;background:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;letter-spacing:.02em;color:#111;font-family:Inter,system-ui,sans-serif}
+  .paylogos .visa{color:#1a1f71;font-style:italic;font-weight:900;letter-spacing:.04em}
+  .paylogos .mc i{width:14px;height:14px;border-radius:50%;background:#eb001b;display:inline-block}
+  .paylogos .mc i+i{background:#f79e1b;margin-left:-6px;opacity:.9}
+  .paylogos .amex{color:#fff;background:#2e77bc;border-color:#2e77bc;font-weight:900;font-size:10px}
+  .paylogos .apple{font-weight:600;font-size:12px}
+  .paylogos .gpay b{color:#4285f4;font-weight:800;margin-right:2px}
+  .paylogos .paypal{color:#003087;font-style:italic;font-weight:800}
+  .paylogos .paypal em{color:#009cde;font-style:italic}
+  .paylogos.small{justify-content:center;margin-top:0}
+  .paylogos.small .pl{height:22px;min-width:38px;font-size:10px;padding:0 6px}
+  .cart-note{font-size:11px;color:var(--soft);text-align:center;line-height:1.5;margin-top:-4px}
+  /* ---------- reviews: verified badge ---------- */
+  .rev small{display:block}
+  .verified{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:700;color:#1a7f37;margin-top:6px;letter-spacing:.02em}
+  .verified svg{width:12px;height:12px}
+  .verified svg circle{fill:#1a7f37}
+  .verified svg path{fill:none;stroke:#fff;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+  /* ---------- footer modal (ported from ADDS/footer.js) ---------- */
+  .fp-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:8000;align-items:center;justify-content:center;padding:16px}
+  .fp-overlay.open{display:flex}
+  .fp-modal{background:#fff;width:100%;max-width:420px;max-height:82vh;overflow-y:auto;padding:24px 20px 28px;position:relative;animation:fpFadeUp .22s ease;color:#111}
+  @keyframes fpFadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+  .fp-modal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;border-bottom:1px solid #e8e8e8;padding-bottom:14px}
+  .fp-modal-title{font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.3px}
+  .fp-modal-close{background:none;border:none;cursor:pointer;font-size:20px;line-height:1;color:#000;padding:0}
+  .fp-toggle-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid #f0f0f0;gap:12px}
+  .fp-toggle-label{font-size:13px;font-weight:700;margin-bottom:3px}
+  .fp-toggle-sub{font-size:11px;color:#767677;line-height:1.4}
+  .fp-toggle{flex-shrink:0;min-width:44px;padding:5px 10px;font-size:10px;font-weight:700;letter-spacing:.5px;border:1px solid #ccc;background:#fff;color:#767677;cursor:pointer;font-family:inherit}
+  .fp-toggle.fp-toggle-on{background:#000;color:#fff;border-color:#000}
+  .fp-toggle.fp-toggle-locked{opacity:.5;cursor:default}
+  .fp-option-list{display:flex;flex-direction:column;gap:10px}
+  .fp-option{display:flex;align-items:center;gap:10px;font-size:13px;cursor:pointer}
+  .fp-option input{accent-color:#000;width:16px;height:16px}
+  .fp-input{width:100%;border:1px solid #ccc;padding:11px 12px;font-size:16px;font-family:inherit;outline:none;margin-top:4px;background:#fff}
+  .fp-input:focus{border-color:#000}
+  textarea.fp-input{min-height:110px;resize:vertical}
+  .fp-text-block{font-size:13px;color:#333;line-height:1.6}
+  .fp-text-block h3{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin:16px 0 6px;color:#000}
+  .fp-text-block h3:first-child{margin-top:0}
+  .fp-text-block p{color:#555;margin-bottom:4px}
+  .fp-btn-primary{display:block;width:100%;margin-top:20px;padding:13px;background:#000;color:#fff;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;border:none;cursor:pointer;font-family:inherit}
+  .fp-btn-primary:hover{background:#222}
+  .fp-stars{display:flex;gap:4px;font-size:26px;color:#ccc;cursor:pointer;user-select:none;margin:6px 0 10px}
+  .fp-stars span.on{color:var(--star)}
+  .fp-thanks{text-align:center;padding:10px 0 4px;font-size:14px;line-height:1.6}
+  .fp-thanks b{display:block;font-size:16px;margin-bottom:6px}
 </style>
 </head>
 <body>
-<div class="announce">Free Shipping on orders $49+ &nbsp;|&nbsp; <u>Shop Now</u></div>
+<div class="announce">Free UK delivery &nbsp;·&nbsp; 30-day returns &nbsp;·&nbsp; 1-year warranty</div>
 
 <header>
   <div class="side">
@@ -458,11 +511,23 @@
     <div class="buy" id="buyRow">
       <button class="btn" type="button">Add to basket</button>
     </div>
+    <ul class="assure">
+      <li><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg>Dispatched within 24h · delivered in 2–4 working days</li>
+      <li><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Secure checkout · 30-day returns · 1-year warranty</li>
+    </ul>
+    <div class="paylogos" aria-label="Accepted payment methods">
+      <span class="pl visa">VISA</span>
+      <span class="pl mc"><i></i><i></i></span>
+      <span class="pl amex">AMEX</span>
+      <span class="pl apple">&#63743; Pay</span>
+      <span class="pl gpay"><b>G</b> Pay</span>
+      <span class="pl paypal">Pay<em>Pal</em></span>
+    </div>
   </div>
 
   <div class="why">
     <h4>Why buy from JBL?</h4>
-    <ul><li>Free shipping on orders $49+</li><li>Free 30-day returns</li><li>Official 1-year warranty</li></ul>
+    <ul><li>Free UK delivery · 2–4 working days</li><li>Free 30-day returns</li><li>Official 1-year warranty</li></ul>
   </div>
 
   <nav class="tabs"><a href="#features" class="on">Features</a><a href="#specs">Specs</a><a href="#reviews">Reviews</a></nav>
@@ -550,7 +615,7 @@
     <div class="body">
     <div class="sum">
       <div><div class="big">4.8</div><div class="stars">★★★★★</div><small style="color:var(--muted);font-size:11px">169 reviews</small></div>
-      <button class="btn outline" style="flex:none;padding:0 16px;height:40px;font-size:12px">Write a review</button>
+      <button class="btn outline" type="button" style="flex:none;padding:0 16px;height:40px;font-size:12px" onclick="openFooterModal('write-review')">Write a review</button>
     </div>
     <div class="bars">
       <div class="bar"><span>5★</span><div><i style="width:86%"></i></div><span>145</span></div>
@@ -559,10 +624,10 @@
       <div class="bar"><span>2★</span><div><i style="width:1%"></i></div><span>2</span></div>
       <div class="bar"><span>1★</span><div><i style="width:1%"></i></div><span>2</span></div>
     </div>
-    <div class="rev" id="r1"><div class="stars">★★★★★</div><h5>Great Speaker</h5><p>Loving the speaker and everything about it the base how loud it is the functionality is easy connect to Bluetooth it’s so loud. I want to bring it over with me. It’s a bit heavy but because it’s heavy duty a great speaker so happy with my purchase.</p><div class="rphotos"><img src="images/r1.jpeg" alt="Customer photo" loading="lazy"></div><small>Tiya123 · 4 months ago</small></div>
-    <div class="rev" id="r2"><div class="stars">★★★★★</div><h5>Great for family gatherings</h5><p>I recently purchased the JBL Boombox 4. I used the JBL Boombox 4 during a backyard BBQ and the sound quality was impressive. The bass was strong even outdoors, and the speaker got very loud without distortion. The Bluetooth connection was quick and the battery lasted for hours. I also liked that it is waterproof, which makes it great for outdoor use. My family and I really enjoyed using it and I would definitely recommend it.</p><div class="rphotos"><img src="images/r2-1.jpeg" alt="Customer photo" loading="lazy"><img src="images/r2-2.jpeg" alt="Customer photo" loading="lazy"></div><small>Husna · 4 months ago</small></div>
-    <div class="rev" id="r3"><div class="stars">★★★★★</div><h5>Just a great music player</h5><p>So i needed something to play music in the garden that actually sounded good. This is larger than alot of portable speakers but my god is it worth it, sound and bass are superb. Ive charged it once and it has lasted ages so far! I fully reccomend it to anyone who wants great music.</p><div class="rphotos"><img src="images/r3.jpeg" alt="Customer photo" loading="lazy"></div><small>BottlePete · 4 months ago</small></div>
-    <div class="rev" id="r4"><div class="stars">★★★★★</div><h5>Amazing sound!</h5><p>Yet again another JBL product landed on my door step in the most robust packaging. JBL really know how to ensure their products reach you in the best condition. I have to tell you something from the off, I have been an avid Bose addict for many a year but was tempted away from them when I heard their soundbar with sub, wow what great sound that is so I have high hopes for this Boombbox 4. I have started building my outside kitchen ready for the summer and this puppy being waterproof and robust is going to be the perfect addition. Impressed that it was almost fully charged right out of the box, pairing it via BT was as simple as putting one foot in front of the other. The sound from this is amazing and when you push the bass enhancer button OMG even at low volume it certainly gives an amazing rich full sound that is perfect for the garden party! The battery goes on for ever, the louder and bassier it is the quicker the battery will drain but saying that I have yet to recharge it since I got it. This does not have any sound enhancement ability so you would have to rely on your broadcasting device to do that however I have yet felt the need to enhance any aspect of the sound I push out to it as it all sounds amazing. The last get together I had went down really well with this JBL supplying the entertainment, I set up an old iPad for people to add tunes to the playlist, I was able to get the BB4 to power the iPad from its built in USBC plug located at the rear, it's own built in powerpack is a great bonus. Lastly the battery, its replaceable!!! So should the battery life ever drop then an affordable battery replacement is available, no need to send away it's a home DIY replacement procedure.</p><div class="rphotos"><img src="images/r4.jpeg" alt="Customer photo" loading="lazy"></div><small>Anonymous · 5 months ago</small></div>
+    <div class="rev" id="r1"><div class="stars">★★★★★</div><h5>Great Speaker</h5><p>Loving the speaker and everything about it the base how loud it is the functionality is easy connect to Bluetooth it’s so loud. I want to bring it over with me. It’s a bit heavy but because it’s heavy duty a great speaker so happy with my purchase.</p><div class="rphotos"><img src="images/r1.jpeg" alt="Customer photo" loading="lazy"></div><small>Tiya123 · 14 June 2026</small><span class="verified"><svg viewBox="0 0 11 11"><circle cx="5.5" cy="5.5" r="5.5"/><path d="M3 5.5l1.8 1.8 3.2-3.2"/></svg>Verified purchase</span></div>
+    <div class="rev" id="r2"><div class="stars">★★★★★</div><h5>Great for family gatherings</h5><p>I recently purchased the JBL Boombox 4. I used the JBL Boombox 4 during a backyard BBQ and the sound quality was impressive. The bass was strong even outdoors, and the speaker got very loud without distortion. The Bluetooth connection was quick and the battery lasted for hours. I also liked that it is waterproof, which makes it great for outdoor use. My family and I really enjoyed using it and I would definitely recommend it.</p><div class="rphotos"><img src="images/r2-1.jpeg" alt="Customer photo" loading="lazy"><img src="images/r2-2.jpeg" alt="Customer photo" loading="lazy"></div><small>Husna · 9 June 2026</small><span class="verified"><svg viewBox="0 0 11 11"><circle cx="5.5" cy="5.5" r="5.5"/><path d="M3 5.5l1.8 1.8 3.2-3.2"/></svg>Verified purchase</span></div>
+    <div class="rev" id="r3"><div class="stars">★★★★★</div><h5>Just a great music player</h5><p>So i needed something to play music in the garden that actually sounded good. This is larger than alot of portable speakers but my god is it worth it, sound and bass are superb. Ive charged it once and it has lasted ages so far! I fully reccomend it to anyone who wants great music.</p><div class="rphotos"><img src="images/r3.jpeg" alt="Customer photo" loading="lazy"></div><small>BottlePete · 2 June 2026</small><span class="verified"><svg viewBox="0 0 11 11"><circle cx="5.5" cy="5.5" r="5.5"/><path d="M3 5.5l1.8 1.8 3.2-3.2"/></svg>Verified purchase</span></div>
+    <div class="rev" id="r4"><div class="stars">★★★★★</div><h5>Amazing sound!</h5><p>Yet again another JBL product landed on my door step in the most robust packaging. JBL really know how to ensure their products reach you in the best condition. I have to tell you something from the off, I have been an avid Bose addict for many a year but was tempted away from them when I heard their soundbar with sub, wow what great sound that is so I have high hopes for this Boombbox 4. I have started building my outside kitchen ready for the summer and this puppy being waterproof and robust is going to be the perfect addition. Impressed that it was almost fully charged right out of the box, pairing it via BT was as simple as putting one foot in front of the other. The sound from this is amazing and when you push the bass enhancer button OMG even at low volume it certainly gives an amazing rich full sound that is perfect for the garden party! The battery goes on for ever, the louder and bassier it is the quicker the battery will drain but saying that I have yet to recharge it since I got it. This does not have any sound enhancement ability so you would have to rely on your broadcasting device to do that however I have yet felt the need to enhance any aspect of the sound I push out to it as it all sounds amazing. The last get together I had went down really well with this JBL supplying the entertainment, I set up an old iPad for people to add tunes to the playlist, I was able to get the BB4 to power the iPad from its built in USBC plug located at the rear, it's own built in powerpack is a great bonus. Lastly the battery, its replaceable!!! So should the battery life ever drop then an affordable battery replacement is available, no need to send away it's a home DIY replacement procedure.</p><div class="rphotos"><img src="images/r4.jpeg" alt="Customer photo" loading="lazy"></div><small>Anonymous · 21 May 2026</small><span class="verified"><svg viewBox="0 0 11 11"><circle cx="5.5" cy="5.5" r="5.5"/><path d="M3 5.5l1.8 1.8 3.2-3.2"/></svg>Verified purchase</span></div>
     <button class="btn outline loadmore" id="loadMore" type="button">Load more</button>
     </div>
     </details>
@@ -581,11 +646,11 @@
   <div class="wrap">
     <div class="fcols">
       <div><h5>Shop</h5><a href="#">Headphones</a><a href="#">Speakers</a><a href="#">Party Boxes</a><a href="#">Accessories</a><a href="#">Deals</a></div>
-      <div><h5>Support</h5><a href="#">Contact Us</a><a href="#">Order Status</a><a href="#">Returns</a><a href="#">Warranty</a><a href="#">FAQ</a></div>
+      <div><h5>Support</h5><a href="#" onclick="openFooterModal('contact');return false">Contact Us</a><a href="#" onclick="openFooterModal('contact');return false">Order Status</a><a href="#" onclick="openFooterModal('returns');return false">Returns &amp; Refunds</a><a href="#" onclick="openFooterModal('delivery');return false">Delivery</a><a href="#" onclick="openFooterModal('warranty');return false">Warranty</a></div>
       <div><h5>Company</h5><a href="#">About</a><a href="#">Careers</a><a href="#">Press</a><a href="#">Affiliates</a></div>
-      <div><h5>Legal</h5><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Cookie Settings</a><a href="#">Accessibility</a></div>
+      <div><h5>Legal</h5><a href="#" onclick="openFooterModal('privacy');return false">Privacy Policy</a><a href="#" onclick="openFooterModal('terms');return false">Terms &amp; Conditions</a><a href="#" onclick="openFooterModal('nav-terms');return false">Navigation Terms</a><a href="#" onclick="openFooterModal('cookie-settings');return false">Cookie Settings</a><a href="#" onclick="openFooterModal('personal-data');return false">Personal Data Requests</a></div>
     </div>
-    <p class="legal">© 2026 JBL. All rights reserved. Prices and availability subject to change.</p>
+    <p class="legal">© 2026 JBL. All rights reserved. Prices and availability subject to change. Questions? <a href="#" onclick="openFooterModal('contact');return false" style="color:#fff;display:inline;font-size:10px;margin:0">Contact us</a>.</p>
   </div>
 </footer>
 <div class="bottom">Privacy · Terms · Sitemap</div>
@@ -639,7 +704,7 @@
     <div class="row"><span>Subtotal</span><span class="v">£<span id="sumSub">149.99</span></span></div>
     <div class="row disc"><span>Promotion applied (−70%)</span><span class="v">−£<span id="sumDisc">350.00</span></span></div>
     <div class="row gift" id="sumGiftRow"><span>Free gift · JBL Tune 530BT</span><span class="v">£0.00</span></div>
-    <div class="row"><span>Shipping</span><span class="v">Free · 2-day</span></div>
+    <div class="row"><span>Shipping</span><span class="v">Free · 2–4 working days</span></div>
     <div class="total">
       <span class="lbl">Total</span>
       <span class="v"><sup>£</sup><span id="sumTotal">149.99</span></span>
@@ -651,6 +716,15 @@
       <span>Secure Checkout</span>
       <svg width="16" height="10" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 5h14M11 1l4 4-4 4"/></svg>
     </a>
+    <p class="cart-note">You'll be taken to our secure checkout to complete payment. Your order is protected by SSL encryption.</p>
+    <div class="paylogos small" aria-label="Accepted payment methods">
+      <span class="pl visa">VISA</span>
+      <span class="pl mc"><i></i><i></i></span>
+      <span class="pl amex">AMEX</span>
+      <span class="pl apple">&#63743; Pay</span>
+      <span class="pl gpay"><b>G</b> Pay</span>
+      <span class="pl paypal">Pay<em>Pal</em></span>
+    </div>
     <div class="trust">
       <span>Secure Payment</span>
       <span>30-Day Returns</span>
@@ -659,6 +733,17 @@
     <div class="cart-cont" id="cartCont"><u>Continue shopping</u></div>
   </div>
 </aside>
+
+<!-- Footer modal (ported from ADDS/footer.js) -->
+<div class="fp-overlay" id="fp-overlay" onclick="if(event.target===this)closeFooterModal()">
+  <div class="fp-modal" id="fp-modal" role="dialog" aria-modal="true" aria-labelledby="fp-modal-title">
+    <div class="fp-modal-header">
+      <span class="fp-modal-title" id="fp-modal-title"></span>
+      <button class="fp-modal-close" onclick="closeFooterModal()" aria-label="Close">&#x2715;</button>
+    </div>
+    <div id="fp-modal-body"></div>
+  </div>
+</div>
 
 <div class="lb" id="lb"><button class="x" id="lbX" aria-label="Close">×</button><img id="lbImg" alt=""></div>
 
@@ -729,6 +814,111 @@
   };
   loadMore.onclick = () => { shown += 1; renderRevs(); };
   renderRevs();
+
+  // ---------- Footer modals (ported from ADDS/footer.js) ----------
+  const modals = {
+    'cookie-settings': { title: 'Cookie Settings', body: `
+        <p style="font-size:13px;color:#444;line-height:1.6;margin-bottom:20px;">Manage your cookie preferences. Essential cookies are always active as they are required for the site to function properly.</p>
+        <div class="fp-toggle-row"><div><p class="fp-toggle-label">Essential Cookies</p><p class="fp-toggle-sub">Required for cart and checkout. Cannot be disabled.</p></div><div class="fp-toggle fp-toggle-on fp-toggle-locked">ON</div></div>
+        <div class="fp-toggle-row"><div><p class="fp-toggle-label">Analytics Cookies</p><p class="fp-toggle-sub">Help us understand how visitors interact with the site.</p></div><button class="fp-toggle fp-toggle-on" onclick="this.classList.toggle('fp-toggle-on');this.textContent=this.classList.contains('fp-toggle-on')?'ON':'OFF'">ON</button></div>
+        <div class="fp-toggle-row"><div><p class="fp-toggle-label">Marketing Cookies</p><p class="fp-toggle-sub">Used to personalise ads and measure their effectiveness.</p></div><button class="fp-toggle fp-toggle-on" onclick="this.classList.toggle('fp-toggle-on');this.textContent=this.classList.contains('fp-toggle-on')?'ON':'OFF'">ON</button></div>
+        <button class="fp-btn-primary" onclick="closeFooterModal()">Save Preferences</button>` },
+    'personal-data': { title: 'Personal Data Requests', body: `
+        <p style="font-size:13px;color:#444;line-height:1.6;margin-bottom:20px;">Under the UK GDPR and Data Protection Act 2018, you have the right to access, correct or delete your personal data. Submit a request below and we will respond within 30 days.</p>
+        <div class="fp-option-list">
+          <label class="fp-option"><input type="radio" name="dsr" value="access"> <span>Access my personal data</span></label>
+          <label class="fp-option"><input type="radio" name="dsr" value="delete"> <span>Delete my personal data</span></label>
+          <label class="fp-option"><input type="radio" name="dsr" value="correct"> <span>Correct my personal data</span></label>
+          <label class="fp-option"><input type="radio" name="dsr" value="portability"> <span>Data portability request</span></label>
+        </div>
+        <input class="fp-input" type="email" placeholder="Your email address" style="margin-top:14px;" />
+        <button class="fp-btn-primary" onclick="closeFooterModal()">Submit Request</button>
+        <p style="font-size:11px;color:#999;margin-top:10px;">Or contact us at <strong>privacy@elyzastore.com</strong></p>` },
+    'terms': { title: 'Terms & Conditions', body: `
+        <div class="fp-text-block">
+          <h3>1. General</h3><p>By accessing or purchasing from this site, you agree to these Terms & Conditions. These terms apply to all users of the site.</p>
+          <h3>2. Orders & Payment</h3><p>All orders are subject to availability. We reserve the right to cancel any order at any time. Payment is taken at the point of order through our secure checkout.</p>
+          <h3>3. Delivery</h3><p>Standard UK delivery is free. Orders are dispatched within 24 hours and delivered in 2–4 working days. We are not responsible for delays caused by third-party couriers.</p>
+          <h3>4. Returns</h3><p>You may return items in original packaging within 30 days of receipt. Items must be in resaleable condition. Return postage is covered by the customer unless the item is faulty.</p>
+          <h3>5. Warranty</h3><p>Every product is covered by a 1-year warranty against manufacturing defects. Contact us with your order number to make a claim.</p>
+          <h3>6. Intellectual Property</h3><p>All content on this site, including images, logos and text, belongs to its respective owners and may not be reproduced without written permission.</p>
+          <h3>7. Governing Law</h3><p>These terms are governed by the laws of England and Wales.</p>
+        </div>` },
+    'nav-terms': { title: 'Navigation Terms', body: `
+        <div class="fp-text-block">
+          <h3>Use of this Website</h3><p>This website is intended for personal, non-commercial use. You agree not to use this site for any unlawful purpose or in a way that could damage, disable or impair the site.</p>
+          <h3>Accuracy of Information</h3><p>We make every effort to ensure product information, pricing and availability are accurate. However, errors may occur. We reserve the right to correct any errors and cancel orders placed based on incorrect information.</p>
+          <h3>Links to Third Parties</h3><p>This site may contain links to third-party websites. We are not responsible for the content or privacy practices of those sites.</p>
+          <h3>Changes to the Site</h3><p>We reserve the right to modify or discontinue any part of this website at any time without notice.</p>
+        </div>` },
+    'privacy': { title: 'Privacy Policy', body: `
+        <div class="fp-text-block">
+          <h3>What We Collect</h3><p>We collect information you provide directly (name, email, address, payment details) and data collected automatically (IP address, browser type, pages visited).</p>
+          <h3>How We Use It</h3><p>Your data is used to process orders, personalise your experience, send marketing communications (with your consent), and improve our services.</p>
+          <h3>Data Sharing</h3><p>We do not sell your personal data. We may share it with trusted service providers (e.g. payment processors, delivery partners) strictly to fulfil your order.</p>
+          <h3>Your Rights</h3><p>You have the right to access, correct, delete or restrict processing of your personal data at any time. See our Personal Data Requests section.</p>
+          <h3>Cookies</h3><p>We use cookies to improve functionality and analyse traffic. You can manage your cookie preferences at any time via Cookie Settings.</p>
+          <h3>Contact</h3><p>For privacy queries, contact <strong>privacy@elyzastore.com</strong></p>
+        </div>` },
+    'returns': { title: 'Returns & Refunds', body: `
+        <div class="fp-text-block">
+          <h3>30-Day Returns</h3><p>Changed your mind? Return your order within 30 days of delivery for a full refund. Items must be unused, in their original packaging and in resaleable condition.</p>
+          <h3>Faulty Items</h3><p>If your product arrives damaged or develops a fault, contact us with photos and your order number. We will arrange a free replacement or refund.</p>
+          <h3>How to Return</h3><p>Email us with your order number and we will send you the return address and instructions. Refunds are processed within 5 working days of receiving the item.</p>
+        </div>` },
+    'delivery': { title: 'Delivery', body: `
+        <div class="fp-text-block">
+          <h3>UK Delivery</h3><p>Free standard delivery on every order. Orders placed before 2pm are dispatched the same working day; otherwise within 24 hours.</p>
+          <h3>Delivery Time</h3><p>2–4 working days to mainland UK. Highlands, islands and Northern Ireland may take 1–2 extra days.</p>
+          <h3>Tracking</h3><p>You will receive a tracking link by email as soon as your parcel is dispatched.</p>
+        </div>` },
+    'warranty': { title: 'Warranty', body: `
+        <div class="fp-text-block">
+          <h3>1-Year Warranty</h3><p>Every product is covered against manufacturing defects for 12 months from the delivery date.</p>
+          <h3>What Is Covered</h3><p>Faults in materials or workmanship under normal use. Accidental damage, water damage outside the IP rating and normal wear are not covered.</p>
+          <h3>Making a Claim</h3><p>Contact us with your order number and a short description of the issue. We will repair, replace or refund within 10 working days.</p>
+        </div>` },
+    'contact': { title: 'Contact Us', body: `
+        <div class="fp-text-block">
+          <h3>Email</h3><p><strong>support@elyzastore.com</strong> — we reply within 24 hours, Monday to Saturday.</p>
+          <h3>Order Status</h3><p>Include your order number and we will send you the latest tracking update.</p>
+          <h3>Returns & Warranty</h3><p>Email us with your order number, a short description and photos if relevant.</p>
+        </div>` },
+    'write-review': { title: 'Write a review', body: `
+        <form id="revForm" onsubmit="return submitReview(event)">
+          <label style="font-size:12px;font-weight:700">Your rating</label>
+          <div class="fp-stars" id="revStars"><span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span></div>
+          <input class="fp-input" type="text" name="name" placeholder="Your name" required />
+          <input class="fp-input" type="text" name="title" placeholder="Review title" required style="margin-top:10px" />
+          <textarea class="fp-input" name="text" placeholder="Tell us about the sound, battery, build…" required style="margin-top:10px"></textarea>
+          <button class="fp-btn-primary" type="submit">Submit review</button>
+          <p style="font-size:11px;color:#999;margin-top:10px;">Reviews are checked before publishing. Verified purchases are marked automatically.</p>
+        </form>` }
+  };
+  window.openFooterModal = function (key) {
+    const data = modals[key]; if (!data) return;
+    document.getElementById('fp-modal-title').textContent = data.title;
+    document.getElementById('fp-modal-body').innerHTML = data.body;
+    document.getElementById('fp-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (key === 'write-review') {
+      let rating = 5;
+      const stars = [...document.querySelectorAll('#revStars span')];
+      const paint = () => stars.forEach(s => s.classList.toggle('on', +s.dataset.v <= rating));
+      stars.forEach(s => s.onclick = () => { rating = +s.dataset.v; paint(); });
+      paint();
+    }
+  };
+  window.closeFooterModal = function () {
+    document.getElementById('fp-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  };
+  window.submitReview = function (e) {
+    e.preventDefault();
+    document.getElementById('fp-modal-body').innerHTML = '<div class="fp-thanks"><b>Thank you!</b>Your review has been submitted and will appear once it has been checked.</div><button class="fp-btn-primary" onclick="closeFooterModal()">Close</button>';
+    return false;
+  };
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeFooterModal(); });
   // Review photo lightbox
   const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg');
   document.querySelectorAll('.rphotos img').forEach(im => im.onclick = () => { lbImg.src = im.src; lb.classList.add('open'); });
@@ -740,7 +930,11 @@
   });
 
   // ---------- Cart modal (elyzastore) ----------
-  const end = Date.now() + (5 * 60 + 42) * 60 * 1000;
+  // Offer countdown: persisted per visitor so it does not reset on reload
+  const OFFER_MS = (5 * 60 + 42) * 60 * 1000, OFFER_KEY = 'jbl_offer_end';
+  let end = 0;
+  try { end = +localStorage.getItem(OFFER_KEY) || 0; } catch (e) {}
+  if (!end || end - Date.now() <= 0 || end - Date.now() > OFFER_MS) { end = Date.now() + OFFER_MS; try { localStorage.setItem(OFFER_KEY, end); } catch (e) {} }
   const pad = n => String(n).padStart(2, '0');
   const setText = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
   const tick = () => {
