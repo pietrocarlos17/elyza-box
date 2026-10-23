@@ -102,7 +102,12 @@
   .desc{font-size:13px;color:#333;margin-top:12px}
 
   .btn{flex:1;background:var(--accent);color:#fff;border:0;font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.04em;height:48px;cursor:pointer}
-  #buyRow .btn{border:1px solid #111;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+  /* primary CTA: refined look */
+  #buyRow .btn,.sticky-cta .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;border-radius:8px;border:1px solid rgba(0,0,0,.35);background:linear-gradient(180deg,#ff4a1f 0%,var(--accent) 60%,#f02e00 100%);color:#fff;font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 6px 16px rgba(255,51,0,.28),0 1px 2px rgba(0,0,0,.2);transition:transform .12s ease,box-shadow .12s ease,filter .12s ease}
+  #buyRow .btn:hover,.sticky-cta .btn:hover{filter:brightness(1.04);box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 8px 20px rgba(255,51,0,.34),0 1px 2px rgba(0,0,0,.2)}
+  #buyRow .btn:active,.sticky-cta .btn:active{transform:translateY(1px);box-shadow:0 1px 0 rgba(255,255,255,.2) inset,0 3px 8px rgba(255,51,0,.25)}
+  #buyRow .btn svg,.sticky-cta .btn svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .sticky-cta .btn{height:46px;font-size:13px}
   .btn:hover{background:var(--accent-dark)}
   .btn.dark{background:#111}
   .btn.outline{background:#fff;color:#111;border:1.5px solid #111}
@@ -230,7 +235,6 @@
   .sticky-cta .sp b sup,.sticky-cta .sp b small{font-size:12px;font-weight:700;vertical-align:top;letter-spacing:0}
   .sticky-cta .sp b sup{margin-right:1px}
   .sticky-cta .sp s{font-size:11px;color:#555;font-weight:600}
-  .sticky-cta .btn{height:44px;font-size:13px}
   .sticky-cta .totop{flex:none;width:44px;height:44px;background:var(--soft);border:0;display:flex;align-items:center;justify-content:center;color:#111;cursor:pointer}
   @media (min-width:600px){
     body{padding-bottom:0}
@@ -510,7 +514,7 @@
     <p class="desc">Massive sound with deep, punchy bass and up to 34 hours of playtime. Rugged, waterproof and dustproof design built to go anywhere — plus a built-in power bank to keep your devices charged.</p>
 
     <div class="buy" id="buyRow">
-      <button class="btn" type="button">Add to basket</button>
+      <button class="btn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18l-1.5 11a2 2 0 01-2 1.7H6.5a2 2 0 01-2-1.7z"/><path d="M8 6a4 4 0 018 0"/></svg><span>Add to basket</span></button>
     </div>
     <ul class="assure">
       <li><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg>Dispatched within 24h · delivered in 2–4 working days</li>
@@ -750,7 +754,7 @@
 
 <div class="sticky-cta" id="stickyCta">
   <div class="sp"><b><sup>£</sup>149<small>.99</small></b><s>£299.99</s></div>
-  <button class="btn" type="button" id="stickyBuy">Add to cart</button>
+  <button class="btn" type="button" id="stickyBuy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18l-1.5 11a2 2 0 01-2 1.7H6.5a2 2 0 01-2-1.7z"/><path d="M8 6a4 4 0 018 0"/></svg><span>Add to cart</span></button>
   <button class="totop" type="button" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 14l6-6 6 6M6 20l6-6 6 6"/></svg></button>
 </div>
 
