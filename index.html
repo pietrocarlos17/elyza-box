@@ -350,7 +350,7 @@
   .cart-cont{text-align:center;font-size:12px;letter-spacing:.02em;color:var(--soft);padding-bottom:4px;cursor:pointer;transition:color .2s}
   .cart-cont:hover{color:var(--ink)}
   .cart-cont u{text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px}
-  .cart-urgency{padding:10px 28px;background:var(--ink);color:#fff;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;display:flex;align-items:center;justify-content:center;gap:12px}
+  .cart-urgency{padding:10px 28px;background:var(--ink);color:#fff;font-size:10px;letter-spacing:.12em;text-align:center;text-transform:uppercase;font-weight:500;display:flex;align-items:center;justify-content:center;gap:12px}
   .cart-urgency .dot{width:5px;height:5px;border-radius:50%;background:var(--promo);animation:pulse 2s infinite}
   .cart-urgency .t{font-variant-numeric:tabular-nums;color:var(--accent-2);font-weight:600}
   @media(max-width:520px){
@@ -365,8 +365,8 @@
   body.cart-open{overflow:hidden}
   /* ---------- product photo overlays ---------- */
   .main-wrap{overflow:hidden}
-  .ribbon{position:absolute;top:0;left:0;width:150px;height:150px;overflow:hidden;z-index:4;pointer-events:none}
-  .ribbon span{position:absolute;top:34px;left:-44px;width:210px;transform:rotate(-45deg);background:var(--accent);color:#fff;text-align:center;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:7px 0;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+  .ribbon{position:absolute;top:0;left:0;width:170px;height:170px;overflow:hidden;z-index:4;pointer-events:none}
+  .ribbon span{position:absolute;top:52px;left:-40px;width:240px;transform:rotate(-45deg);background:var(--accent);color:#fff;text-align:center;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:7px 0;box-shadow:0 2px 6px rgba(0,0,0,.25)}
   .live{position:absolute;left:12px;right:12px;bottom:12px;display:flex;justify-content:space-between;gap:8px;z-index:4;pointer-events:none;flex-wrap:wrap}
   .live>div{display:flex;align-items:center;gap:6px;background:rgba(17,17,17,.88);color:#fff;font-size:11px;font-weight:600;padding:7px 10px;border-radius:999px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);white-space:nowrap}
   .live b{font-weight:800;font-variant-numeric:tabular-nums}
@@ -477,9 +477,9 @@
       <button class="nav prev" type="button" aria-label="Previous image">&#8249;</button>
       <div class="ph main" id="mainImg"><span>a1.png</span></div>
       <button class="nav next" type="button" aria-label="Next image">&#8250;</button>
-      <div class="ribbon"><span>Limited offer</span></div>
+      <div class="ribbon"><span>Early Black Friday</span></div>
       <div class="live">
-        <div class="timer"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg>Ends in <b><span id="offH">05</span>:<span id="offM">41</span>:<span id="offS">00</span></b></div>
+        <div class="timer"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg>Deal ends <b id="offLeft">Sunday</b></div>
       </div>
     </div>
     <div class="thumbs">
@@ -502,7 +502,7 @@
       <span class="now"><sup>£</sup>149<small>.99</small></span>
       <span class="was">Was <s>£299.99</s></span>
       <i class="brk"></i>
-      <span class="save">Save £150 · 50% off</span>
+      <span class="save">Early Black Friday Deal · Save £150 · 50% off</span>
     </div>
 
     <h2 class="dtitle">Most powerful JBL portable waterproof speaker</h2>
@@ -667,8 +667,8 @@
 
   <div class="cart-urgency">
     <span class="dot"></span>
-    <span>Offer expires in</span>
-    <span class="t"><span id="cartH">05</span>:<span id="cartM">42</span>:<span id="cartS">18</span></span>
+    <span>Early Black Friday price ends in</span>
+    <span class="t" id="cartLeft">3d 05:42:18</span>
   </div>
 
   <div class="cart-item">
@@ -712,7 +712,7 @@
   </div>
 
   <div class="cart-foot">
-    <a href="https://thestorelumo.com/cart/45158589792307:1" class="cbtn" id="checkoutBtn" target="_blank" rel="noopener noreferrer">
+    <a href="https://almondstore.store/cart/40995785015425:1" class="cbtn" id="checkoutBtn" target="_blank" rel="noopener noreferrer">
       <span>Secure Checkout</span>
       <svg width="16" height="10" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 5h14M11 1l4 4-4 4"/></svg>
     </a>
@@ -930,20 +930,25 @@
   });
 
   // ---------- Cart modal (elyzastore) ----------
-  // Offer countdown: persisted per visitor so it does not reset on reload
-  const OFFER_MS = (5 * 60 + 42) * 60 * 1000, OFFER_KEY = 'jbl_offer_end';
-  let end = 0;
-  try { end = +localStorage.getItem(OFFER_KEY) || 0; } catch (e) {}
-  if (!end || end - Date.now() <= 0 || end - Date.now() > OFFER_MS) { end = Date.now() + OFFER_MS; try { localStorage.setItem(OFFER_KEY, end); } catch (e) {} }
+  // Early Black Friday deal: ends next Sunday 23:59:59 (Europe/London). Deterministic, never resets.
   const pad = n => String(n).padStart(2, '0');
   const setText = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+  const londonNow = () => new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/London' }));
+  const dealEnd = (() => {
+    const n = londonNow(); const d = new Date(n);
+    const daysToSunday = (7 - n.getDay()) % 7 || 7; // today Sunday -> next Sunday
+    d.setDate(n.getDate() + daysToSunday); d.setHours(23, 59, 59, 0);
+    return d.getTime() - n.getTime() + Date.now(); // convert to real clock
+  })();
   const tick = () => {
-    let d = Math.max(0, end - Date.now());
+    let d = Math.max(0, dealEnd - Date.now());
+    const days = Math.floor(d / 86400000); d -= days * 86400000;
     const hrs = Math.floor(d / 3600000); d -= hrs * 3600000;
     const min = Math.floor(d / 60000); d -= min * 60000;
     const sec = Math.floor(d / 1000);
-    setText('cartH', pad(hrs)); setText('cartM', pad(min)); setText('cartS', pad(sec));
-    setText('offH', pad(hrs)); setText('offM', pad(min)); setText('offS', pad(sec));
+    const clock = pad(hrs) + ':' + pad(min) + ':' + pad(sec);
+    setText('cartLeft', (days ? days + 'd ' : '') + clock);
+    setText('offLeft', days > 1 ? 'in ' + days + ' days' : days === 1 ? 'tomorrow' : 'in ' + clock);
   };
   tick(); setInterval(tick, 1000);
 
@@ -951,7 +956,10 @@
   const cartBack = document.getElementById('cartBack');
   const unitPrice = 149.99, unitRetail = 299.99;
   const money = n => n.toFixed(2);
-  const checkoutBase = 'https://thestorelumo.com/cart/45158589792307:';
+  // CHECKOUT: swap this one line to switch store.
+  //   Almond : https://almondstore.store/cart/40995785015425:
+  //   Lumo   : https://thestorelumo.com/cart/45158589792307:
+  const checkoutBase = 'https://almondstore.store/cart/40995785015425:';
   const checkoutBtn = document.getElementById('checkoutBtn');
   const cartQty = 1; // quantity is always 1
   const updateCart = () => {
