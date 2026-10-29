@@ -996,6 +996,13 @@
     return false;
   };
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeFooterModal(); });
+  // Accordions: opening one closes the others in the same group
+  const topGroup = [...document.querySelectorAll('details.top')];
+  document.querySelectorAll('details').forEach(d => d.addEventListener('toggle', () => {
+    if (!d.open) return;
+    const group = d.classList.contains('top') ? topGroup : [...d.parentElement.querySelectorAll(':scope > details')];
+    group.forEach(o => { if (o !== d && o.open) o.open = false; });
+  }));
   // Review photo lightbox
   const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg');
   document.querySelectorAll('.rphotos img').forEach(im => im.onclick = () => { lbImg.src = im.src; lb.classList.add('open'); });
