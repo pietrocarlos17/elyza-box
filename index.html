@@ -36,266 +36,981 @@
   window.__utmifyTikTokMarket = mkt==='us' ? 'us' : 'uk';
   (mkt==='us' ? US : UK)();
 })();</script>
-<title>JBL Boombox 4</title>
+<title>JBL Boombox 4 — Big sound. Anywhere.</title>
+<meta name="description" content="JBL Boombox 4 portable waterproof speaker: 34h playtime, IP68, 210W JBL Pro Sound. Free UK delivery and a free JBL Tune 520BT.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Inter:wght@600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --accent:#ff3300; --accent-dark:#e02d00;
-    --ink:#111; --muted:#6b6b6b; --line:#e5e5e5; --soft:#f4f4f4; --ph:#d9d9d9; --ph-dark:#3a3a3a;
-    --star:#ffb400;
+    --ink:#0d0d0d;
+    --ink-2:#1a1a1a;
+    --soft:#4a4a4a;
+    --muted:#8e8a83;
+    --line:#ece7df;
+    --line-2:#f3efe8;
+    --paper:#f5f0e8;
+    --bg:#faf6f0;
+    --white:#fff;
+    --accent:#8a5a3b;
+    --accent-2:#c9a98d;
+    --accent-3:#ead8ce;
+    --promo:#b8472e;
+    --gold:#b8935a;
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;font-size:14px;line-height:1.45;}
-  a{color:inherit}
-  img{display:block;max-width:100%}
-  .wrap{max-width:560px;margin:0 auto}
-  .px{padding-left:16px;padding-right:16px}
-
-  /* placeholder */
-  .ph{background:var(--ph);display:flex;align-items:center;justify-content:center;color:#8a8a8a;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;position:relative;overflow:hidden}
-  .ph::before{content:"";position:absolute;inset:0;background:linear-gradient(45deg,transparent 49.5%,rgba(0,0,0,.06) 50%,transparent 50.5%),linear-gradient(-45deg,transparent 49.5%,rgba(0,0,0,.06) 50%,transparent 50.5%)}
-  .ph span{position:relative}
-  .ph.has-img::before{display:none}
-  .ph.dark{background:var(--ph-dark);color:#9a9a9a}
-  .ph.dark::before{background:linear-gradient(45deg,transparent 49.5%,rgba(255,255,255,.06) 50%,transparent 50.5%),linear-gradient(-45deg,transparent 49.5%,rgba(255,255,255,.06) 50%,transparent 50.5%)}
-
-  /* announcement + header */
-  .announce{background:#000;color:#fff;text-align:center;font-size:11px;font-weight:600;padding:7px 12px}
-  .announce u{font-weight:700}
-  header{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:20}
-  header .side{display:flex;gap:14px;align-items:center;width:70px}
-  header .side.r{justify-content:flex-end}
-  .logo{display:flex;align-items:center;height:30px}
-  .logo img{height:28px;width:auto}
-  .ico{width:20px;height:20px;stroke:#111;fill:none;stroke-width:1.8}
-
-  /* product top */
-  .crumb{font-size:11px;color:var(--muted);padding-top:12px}
-  .crumb a{text-decoration:none}
-  .ptitle{font-size:22px;font-weight:900;letter-spacing:-.01em;text-transform:uppercase;margin-top:6px}
-  .rating{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);margin-top:4px}
-  .stars{color:var(--star);letter-spacing:1px;font-size:13px}
-  .gallery{margin-top:12px}
-  .gallery .main{aspect-ratio:1/1;width:100%}
-  .thumbs{display:flex;gap:8px;padding:10px 16px;overflow-x:auto}
-  .thumbs .ph{flex:0 0 56px;height:56px;font-size:9px;border:2px solid transparent}
-  .thumbs .ph.on{border-color:var(--ink)}
-  .dots{display:flex;justify-content:center;gap:6px;padding-bottom:6px}
-  .dots i{width:6px;height:6px;border-radius:50%;background:#ccc}
-  .dots i.on{background:#111}
-
-  .label{font-size:12px;font-weight:700;margin-top:14px}
-  .label b{font-weight:500;color:var(--muted)}
-  .swatches{display:flex;gap:10px;margin-top:8px}
-  .sw{width:56px;height:56px;border:1px solid #ccc;cursor:pointer}
-  .sw.on{border:2px solid #111}
-  .sw.ph{font-size:9px;letter-spacing:0}
-  .sw.has-img{background-size:contain;background-repeat:no-repeat;background-position:center;background-color:#fff}
-  .sw.soldout{cursor:not-allowed;filter:grayscale(1);opacity:.45}
-  .sw.soldout::after{content:"";position:absolute;left:50%;top:-10px;bottom:-10px;width:2px;background:#555;transform:rotate(45deg);z-index:2}
-
-  .price{font-size:26px;font-weight:800;margin-top:14px}
-  .price s{font-size:15px;color:var(--muted);font-weight:500;margin-left:6px}
-  .pay{font-size:12px;color:var(--muted);margin-top:4px}
-  .pay strong{color:var(--ink)}
-  .desc{font-size:13px;color:#333;margin-top:12px}
-
-  .btn{flex:1;background:var(--accent);color:#fff;border:0;font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.04em;height:48px;cursor:pointer}
-  /* primary CTA: refined look */
-  #buyRow .btn,.sticky-cta .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;border-radius:8px;border:1px solid rgba(0,0,0,.35);background:linear-gradient(180deg,#ff4a1f 0%,var(--accent) 60%,#f02e00 100%);color:#fff;font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 6px 16px rgba(255,51,0,.28),0 1px 2px rgba(0,0,0,.2);transition:transform .12s ease,box-shadow .12s ease,filter .12s ease}
-  #buyRow .btn:hover,.sticky-cta .btn:hover{filter:brightness(1.04);box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 8px 20px rgba(255,51,0,.34),0 1px 2px rgba(0,0,0,.2)}
-  #buyRow .btn:active,.sticky-cta .btn:active{transform:translateY(1px);box-shadow:0 1px 0 rgba(255,255,255,.2) inset,0 3px 8px rgba(255,51,0,.25)}
-  #buyRow .btn svg,.sticky-cta .btn svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-  .sticky-cta .btn{height:46px;font-size:13px}
-  .btn:hover{background:var(--accent-dark)}
-  .btn.dark{background:#111}
-  .btn.outline{background:#fff;color:#111;border:1.5px solid #111}
-
-
-  .why{margin-top:0;background:var(--soft);padding:14px 16px;border-top:1px solid #e6e3dd}
-  .why h4{font-size:13px;font-weight:800;text-transform:uppercase}
-  .why ul{list-style:none;margin-top:8px;display:grid;gap:6px}
-  .why li{display:flex;gap:8px;align-items:center;font-size:13px}
-  .why li::before{content:"✓";color:var(--accent);font-weight:900}
-
-  /* tabs */
-  .tabs{display:flex;gap:22px;border-bottom:1px solid var(--line);margin-top:22px;padding:0 16px;font-size:13px;font-weight:600;position:sticky;top:51px;background:#fff;z-index:10}
-  .tabs a{text-decoration:none;padding:12px 0;color:var(--muted)}
-  .tabs a.on{color:#111;border-bottom:3px solid var(--accent)}
-
-  /* sections */
-  section{padding-top:36px}
-  .h2{font-size:22px;font-weight:900;text-transform:uppercase;text-align:center;letter-spacing:-.01em;line-height:1.1}
-  .feature .ph{aspect-ratio:4/3;margin-top:18px}
-  .feature h3{font-size:16px;font-weight:800;text-transform:uppercase;margin-top:16px}
-  .feature p{font-size:13px;color:#333;margin-top:6px}
-  .more{display:inline-block;font-size:12px;font-weight:700;margin-top:8px;text-decoration:underline}
-
-  .video{margin-top:18px;aspect-ratio:16/9;position:relative}
-  .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2}
-  .play i{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:20px;padding-left:4px}
-
-  .carousel{display:flex;gap:12px;overflow-x:auto;padding:18px 16px 6px;scroll-snap-type:x mandatory}
-  .card{flex:0 0 46%;scroll-snap-align:start;border:1px solid var(--line);padding:10px;display:flex;flex-direction:column}
-  .card .ph{aspect-ratio:1/1;font-size:10px}
-  .card .name{font-size:12px;font-weight:700;margin-top:8px;min-height:32px}
-  .card .stars{font-size:11px;margin-top:4px}
-  .card .p{font-weight:800;margin-top:4px}
-  .card .btn{height:36px;font-size:11px;margin-top:10px;flex:none}
-
-  .specs .meta{font-size:12px;color:var(--muted);margin-top:16px;display:grid;gap:4px}
-  .specs .meta b{color:var(--ink)}
-  .acc{margin-top:16px;border-top:1px solid var(--line)}
-  details{border-bottom:1px solid var(--line)}
-  summary{list-style:none;display:flex;justify-content:space-between;padding:14px 0;font-weight:800;font-size:13px;text-transform:uppercase;cursor:pointer}
-  summary::-webkit-details-marker{display:none}
-  summary::after{content:"+";font-size:18px;font-weight:400}
-  details[open]>summary::after{content:"–"}
-  details dl{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:8px 12px;font-size:12px;padding-bottom:14px}
-  details dd{overflow-wrap:anywhere}
-  details dt{color:var(--muted)}
-  details ul{padding:0 0 14px 18px;font-size:12px;display:grid;gap:4px}
-
-  .reviews .sum{display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .reviews .big{font-size:34px;font-weight:900;line-height:1}
-  .bars{display:grid;gap:4px;margin-top:12px}
-  .bar{display:grid;grid-template-columns:18px 1fr 30px;gap:8px;align-items:center;font-size:11px;color:var(--muted)}
-  .bar div{height:6px;background:var(--soft)}
-  .bar div i{display:block;height:100%;background:var(--ink)}
-  .rev{padding:14px 0;border-bottom:1px solid var(--line)}
-  .rev.hidden{display:none}
-  .rphotos{display:flex;gap:8px;margin:10px 0 8px}
-  .rphotos img{width:72px;height:96px;object-fit:cover;border:1px solid var(--line);cursor:zoom-in;background:#f4f4f4}
-  .lb{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;padding:16px}
-  .lb.open{display:flex}
-  .lb img{max-width:100%;max-height:90vh;object-fit:contain}
-  .lb .x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;background:#fff;border:0;font-size:22px;cursor:pointer}
-  .loadmore{width:100%;height:44px;font-size:12px;margin-top:16px}
-  .loadmore.hidden{display:none}
-  .reviews .sum{margin-top:0;border-top:0}
-  .reviews details.top{margin-top:18px;border-bottom:1px solid var(--line)}
-  .rev h5{font-size:13px;font-weight:800;margin-top:4px}
-  .rev p{font-size:12px;color:#333;margin-top:4px}
-  .rev small{font-size:11px;color:var(--muted)}
-
-  .support{background:var(--soft);margin-top:36px;padding:32px 16px}
-  .support .sub{text-align:center;font-size:12px;color:var(--muted);margin-top:6px}
-  .faq{background:#fff;padding:14px;margin-top:12px}
-  .faq h4{font-size:13px;font-weight:800;text-transform:uppercase;line-height:1.3}
-  .faq a{font-size:12px;font-weight:700;margin-top:6px;display:inline-block}
-  .register{background:#fff;padding:18px 14px;margin-top:20px}
-  .register h4{font-size:15px;font-weight:900;text-transform:uppercase}
-  .register p{font-size:12px;color:var(--muted);margin:6px 0 12px}
-  .register .btn{height:40px;font-size:12px;padding:0 18px;flex:none}
-
-  .news{background:var(--accent);color:#fff;padding:28px 16px}
-  .news h3{font-size:20px;font-weight:900;text-transform:uppercase;line-height:1.15}
-  .news form{display:flex;margin-top:14px}
-  .news input{flex:1;height:44px;border:0;padding:0 12px;font:inherit}
-  .news button{height:44px;padding:0 16px;background:#111;color:#fff;border:0;font-weight:800;text-transform:uppercase;font-size:12px}
-  .news small{display:block;font-size:10px;margin-top:8px;opacity:.9}
-
-  footer{background:#000;color:#fff;padding:28px 16px 20px}
-  .fcols{display:grid;grid-template-columns:1fr 1fr;gap:22px 16px}
-  .fcols h5{font-size:12px;font-weight:800;text-transform:uppercase;margin-bottom:8px}
-  .fcols a{display:block;font-size:12px;color:#bdbdbd;text-decoration:none;margin-top:5px}
-  .legal{font-size:10px;color:#8a8a8a;margin-top:20px;line-height:1.6}
-  .bottom{background:#000;color:#8a8a8a;font-size:10px;text-align:center;padding:12px 16px}
-
-  /* ---------- mobile adaptations ---------- */
-  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-  body{-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;overflow-x:hidden;padding-bottom:calc(72px + env(safe-area-inset-bottom))}
-  section[id]{scroll-margin-top:100px}
-  .thumbs,.carousel,.tabs{scrollbar-width:none;-webkit-overflow-scrolling:touch}
-  .thumbs::-webkit-scrollbar,.carousel::-webkit-scrollbar,.tabs::-webkit-scrollbar{display:none}
-  .thumbs{scroll-snap-type:x mandatory}
-  .thumbs .ph{scroll-snap-align:start}
-  .tabs{overflow-x:auto;white-space:nowrap;gap:18px}
-  .tabs a{flex:none;padding:14px 0}
-  .btn,.sw,.thumbs .ph,summary,.news button{touch-action:manipulation}
-  .sw{width:60px;height:60px;position:relative}
-  .fcols a{padding:5px 0;margin-top:0}
-  .faq{padding:16px 14px}
-  .faq a{padding:6px 0}
-  input,button,select,textarea{font-size:16px}
-  .news input{font-size:16px}
-  .more{padding:6px 0}
-  .crumb{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .card .btn{height:40px}
-  /* buy row */
-  .buy{display:flex;gap:10px;margin-top:16px}
-  /* sticky mobile CTA */
-  .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fff;border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;transform:translateY(110%);transition:transform .25s ease}
-  .sticky-cta.show{transform:translateY(0)}
-  @keyframes buyflash{0%,100%{box-shadow:0 0 0 0 rgba(255,51,0,0)}30%{box-shadow:0 0 0 4px rgba(255,51,0,.45)}}
-  .buy.flash .btn{animation:buyflash 1.2s ease 1}
-  .sticky-cta .sp{line-height:1.1}
-  .sticky-cta .sp b{display:block;font-size:20px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1;color:var(--accent)}
-  .sticky-cta .sp b sup,.sticky-cta .sp b small{font-size:12px;font-weight:700;vertical-align:top;letter-spacing:0}
-  .sticky-cta .sp b sup{margin-right:1px}
-  .sticky-cta .sp s{font-size:11px;color:#555;font-weight:600}
-  .sticky-cta .totop{flex:none;width:44px;height:44px;background:var(--soft);border:0;display:flex;align-items:center;justify-content:center;color:#111;cursor:pointer}
-  @media (min-width:600px){
-    body{padding-bottom:0}
-    .sticky-cta{display:none}
-    .card{flex-basis:31%}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Poppins',system-ui,sans-serif;
+    background:var(--bg);color:var(--ink);
+    font-weight:300;line-height:1.5;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
   }
-  /* top-level accordions: Description / Specs / Box / Downloads */
-  .specs{padding-top:36px}
-  .h2.left{text-align:left}
-  .specs>.meta{margin:14px 0 18px;font-size:14px;font-weight:800;text-transform:uppercase;color:var(--ink);gap:6px}
-  .specs>.meta span{display:inline-block;min-width:62px;margin-right:6px}
-  details.top{border-top:1px solid var(--line);border-bottom:0}
-  details.top:last-of-type{border-bottom:1px solid var(--line)}
-  details.top>summary{justify-content:space-between;align-items:center;padding:18px 0}
-  details.top>summary .h2{text-align:left;font-size:15px;letter-spacing:0}
-  details.top>summary::after{font-size:24px;line-height:1}
-  details.top>.body{padding-bottom:18px}
-  details.top>.body p{font-size:13px;color:#333;margin-bottom:10px}
-  details.top>.body>ul{padding:0 0 0 18px;font-size:13px;display:grid;gap:6px}
-  details.top>.body>ul a{padding:4px 0;display:inline-block}
-    details.top .acc{margin-top:12px;border-top:1px solid var(--line)}
-  /* ---------- top of page (reference layout) ---------- */
-  :root{--beige:#f5f3ef}
-  .pinfo{background:var(--beige);padding-top:14px;padding-bottom:18px}
-  .back{display:inline-block;font-size:14px;color:var(--muted);text-decoration:underline;padding:4px 0}
-  .trow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:6px}
-  .trow .ptitle{margin-top:0;font-size:18px;white-space:nowrap}
-  .trow .rating{margin-top:0;flex:none;color:var(--ink);font-size:12px;gap:4px}
-  .trow .stars{font-size:14px;letter-spacing:0}
-  .gallery{margin-top:0;background:#fff;padding-top:8px}
-  .main-wrap{position:relative}
-  .gallery .main{background:#fff}
-  .nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:48px;border:0;background:transparent;font-size:34px;line-height:1;color:#333;cursor:pointer;z-index:3;padding:0}
-  .nav.prev{left:2px}.nav.next{right:2px}
-  .thumbs{padding:8px 16px 14px;justify-content:center}
-  .thumbs .ph{flex:0 0 62px;height:62px;border:1px solid #cfcfcf;background:#fff}
-  .thumbs .ph.on{border:2px solid #111}
-  .label{font-size:16px;font-weight:400;margin-top:0}
-  .label b{font-weight:400;color:var(--ink)}
-  .swatches{margin-top:10px;gap:10px}
-  .sw{width:84px;height:84px;background:#fff;border:1px solid #cfcfcf}
-  .sw.on{border:2px solid #111;outline:2px solid #fff;outline-offset:-4px}
-  .pinfo .swatches{padding-bottom:18px;border-bottom:1px solid #ddd}
-  .price{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 12px;margin-top:18px;font-variant-numeric:tabular-nums lining-nums;letter-spacing:-.02em}
-  .price .now{font-size:42px;font-weight:800;color:var(--accent);line-height:1;display:inline-flex;align-items:flex-start}
-  .price .now sup{font-size:22px;font-weight:700;line-height:1;margin-top:3px;margin-right:2px}
-  .price .now small{font-size:22px;font-weight:700;line-height:1;margin-top:3px;letter-spacing:0}
-  .price .was{font-size:15px;font-weight:500;color:#555;letter-spacing:0}
-  .price .was s{color:#333;font-weight:600;text-decoration-thickness:1.5px}
-  .price .brk{flex-basis:100%;height:0}
-  .price .save{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-dark);background:#fff0eb;border:1px solid #ffd2c2;border-radius:4px;padding:4px 8px;margin-top:2px}
-  .rrp{font-size:16px;color:var(--ink);margin-top:6px;display:flex;align-items:center;gap:8px}
-  .rrp .info{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--accent);color:var(--accent);font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-style:italic}
-  .klarna{background:#fff;border:1px solid #e3e3e3;border-radius:6px;text-align:center;padding:12px 14px;margin-top:16px;font-size:14px}
-  .klarna strong{font-weight:800}
-  .klarna a{display:inline-block;margin-top:2px;font-weight:600;text-decoration:underline;padding:4px 0}
-  .klarna small{display:block;font-size:11px;color:var(--muted);margin-top:2px}
-  .dtitle{font-size:16px;font-weight:700;margin-top:18px;line-height:1.3}
-  .pinfo .desc{margin-top:8px}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  .ital{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;letter-spacing:.005em}
+  .wrap{max-width:1320px;margin:0 auto;padding:0 40px}
+  @media(max-width:640px){.wrap{padding:0 22px}}
+
+  /* ---------- Promo bar ---------- */
+  .promo-bar{
+    background:var(--ink);color:#fff;font-size:12px;padding:11px 16px;
+    text-align:center;letter-spacing:.08em;font-weight:400;
+    display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+  }
+  .promo-bar .dot{width:6px;height:6px;border-radius:50%;background:var(--promo);animation:pulse 2s infinite}
+  @keyframes pulse{50%{opacity:.3;transform:scale(1.3)}}
+  .promo-bar strong{font-weight:600;color:var(--accent-2);letter-spacing:.1em;text-transform:uppercase;font-size:11px}
+
+  /* ---------- Nav ---------- */
+  nav{
+    position:sticky;top:0;z-index:60;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:saturate(1.2) blur(16px);
+    -webkit-backdrop-filter:saturate(1.2) blur(16px);
+    border-bottom:1px solid var(--line);padding:18px 0;
+  }
+  .nav-in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px}
+  .brand{display:flex;align-items:center;justify-content:center}
+  .brand img{height:28px;width:auto;display:block}
+  .brand.mono img{filter:brightness(0) invert(1)}
+  .brand.inkl img{filter:brightness(0)}
+  .brand-mark{
+    font-family:'Cormorant Garamond','Times New Roman',serif;
+    font-weight:400;font-style:normal;
+    font-size:26px;line-height:1;color:var(--ink);
+    letter-spacing:.14em;display:block;
+    text-transform:uppercase;
+    user-select:none;
+  }
+  .nav-links{display:flex;gap:36px;font-size:13px;font-weight:400}
+  .nav-links a{color:var(--soft);transition:color .25s;white-space:nowrap}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-right{display:flex;justify-content:flex-end;gap:20px;font-size:13px;color:var(--soft);align-items:center}
+  .nav-right a:hover{color:var(--ink)}
+
+  /* hamburger */
+  .nav-hamb{display:none;width:40px;height:40px;align-items:center;justify-content:center;background:none;border:none;cursor:pointer;padding:0}
+  .nav-hamb span{display:block;width:22px;height:1.5px;background:var(--ink);position:relative;transition:all .3s cubic-bezier(.2,.8,.2,1)}
+  .nav-hamb span::before,.nav-hamb span::after{content:"";position:absolute;left:0;width:22px;height:1.5px;background:var(--ink);transition:all .3s cubic-bezier(.2,.8,.2,1)}
+  .nav-hamb span::before{top:-7px}
+  .nav-hamb span::after{top:7px}
+  .nav-hamb.open span{background:transparent}
+  .nav-hamb.open span::before{top:0;transform:rotate(45deg)}
+  .nav-hamb.open span::after{top:0;transform:rotate(-45deg)}
+
+  /* mobile drawer */
+  .drawer-back{
+    position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.4);backdrop-filter:blur(4px);
+    opacity:0;pointer-events:none;transition:opacity .35s ease;
+  }
+  .drawer-back.open{opacity:1;pointer-events:auto}
+  .drawer{
+    position:fixed;top:0;right:0;bottom:0;width:min(320px,82%);z-index:81;
+    background:#fff;border-left:1px solid var(--line);
+    transform:translateX(100%);transition:transform .45s cubic-bezier(.2,.8,.2,1);
+    display:flex;flex-direction:column;
+  }
+  .drawer.open{transform:translateX(0)}
+  .drawer-head{padding:24px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:14px}
+  .drawer-head img{height:24px}
+  .drawer-head .brand-mark{font-size:24px;color:var(--ink)}
+  .drawer-head .close{width:34px;height:34px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;background:none;color:var(--ink);transition:all .25s;cursor:pointer}
+  .drawer-head .close:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .drawer-links{display:flex;flex-direction:column;padding:20px 0;border-bottom:1px solid var(--line)}
+  .drawer-links a{
+    padding:18px 26px;font-size:17px;font-weight:400;color:var(--ink);
+    display:flex;justify-content:space-between;align-items:center;
+    letter-spacing:-.005em;transition:padding .3s, color .3s;
+  }
+  .drawer-links a:hover{padding-left:34px;color:var(--accent)}
+  .drawer-links a::after{content:"→";color:var(--muted);font-size:14px;transition:transform .3s}
+  .drawer-links a:hover::after{transform:translateX(4px);color:var(--accent)}
+  .drawer-util{padding:20px 26px;display:flex;flex-direction:column;gap:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+  .drawer-util a{color:var(--soft);padding:8px 0;transition:color .25s}
+  .drawer-util a:hover{color:var(--ink)}
+  .drawer-foot{margin-top:auto;padding:20px 26px;border-top:1px solid var(--line);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-align:center;font-weight:500}
+
+  @media(max-width:820px){
+    .nav-links{display:none}
+    .nav-hamb{display:flex}
+    .nav-right a:not(.ico-bag){display:none}
+  }
+
+  body.drawer-open{overflow:hidden}
+
+  /* ---------- Hero — clean split ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    background:var(--bg);
+    display:grid;grid-template-columns:1fr 1fr;align-items:stretch;
+  }
+  .hero-copy{
+    position:relative;z-index:3;
+    padding:80px 60px;
+    display:flex;flex-direction:column;justify-content:center;align-items:flex-end;
+    background:var(--bg);
+  }
+  .hero-copy-inner{max-width:460px;width:100%;display:flex;flex-direction:column;align-items:flex-start}
+  .hero-copy-inner .hero-rating{width:100%}
+  .hero-pill{
+    display:inline-flex;align-items:center;gap:10px;align-self:flex-start;
+    padding:8px 16px;background:#fff;border:1px solid var(--line);
+    font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);
+    font-weight:600;margin-bottom:40px;border-radius:999px;
+  }
+  .hero-pill .dot{width:6px;height:6px;border-radius:50%;background:var(--promo);animation:pulse 2s infinite;flex-shrink:0}
+  .hero-pill strong{color:var(--promo);font-weight:700}
+  h1.h1{
+    font-size:clamp(48px,6.2vw,96px);
+    font-weight:200;letter-spacing:-.04em;line-height:.95;margin-bottom:28px;color:var(--ink);
+  }
+  h1.h1 .ital{display:block;font-weight:400;font-size:1em;margin-top:-.02em}
+  .hero-sub{
+    font-size:16px;color:var(--soft);line-height:1.65;margin-bottom:40px;font-weight:400;
+  }
+  .hero-cta{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:12px;
+    padding:18px 34px;background:var(--ink);color:#fff;
+    font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+    transition:all .45s cubic-bezier(.2,.8,.2,1);
+    position:relative;overflow:hidden;
+  }
+  .btn::after{content:"";position:absolute;inset:0;background:var(--accent);transform:translateY(101%);transition:transform .5s cubic-bezier(.2,.8,.2,1);z-index:0}
+  .btn:hover::after{transform:translateY(0)}
+  .btn > *{position:relative;z-index:1}
+  .btn svg{transition:transform .45s}
+  .btn:hover svg{transform:translateX(6px)}
+  .link-u{
+    font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+    padding:4px 0;border-bottom:1px solid var(--ink);transition:all .3s;
+  }
+  .link-u:hover{color:var(--accent);border-color:var(--accent)}
+
+  .hero-rating{
+    margin-top:36px;padding-top:22px;border-top:1px solid var(--line);
+    display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+    font-size:12px;color:var(--soft);
+  }
+  .hero-rating .st{color:var(--accent);letter-spacing:2px;font-size:14px}
+  .hero-rating .sc{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+  .hero-rating .txt{color:var(--muted);letter-spacing:.01em}
+  .hero-rating .sep{width:1px;height:12px;background:var(--line)}
+
+  .hero-stage{
+    position:relative;overflow:hidden;
+    background:var(--bg);
+    min-height:600px;
+  }
+  .hero-stage img.model{
+    position:relative;z-index:2;width:100%;height:100%;
+    object-fit:contain;object-position:center bottom;display:block;
+    filter:drop-shadow(0 30px 40px rgba(60,35,20,.18));
+  }
+
+  @media(max-width:900px){
+    .hero{grid-template-columns:1fr;min-height:auto}
+    .hero-stage{order:1;aspect-ratio:4/5;min-height:auto}
+    .hero-copy{order:2;padding:54px 26px 48px;align-items:stretch}
+    .hero-copy-inner{max-width:100%}
+    .hero-pill{margin-bottom:28px}
+    h1.h1{font-size:clamp(44px,11vw,68px);margin-bottom:20px}
+    .hero-sub{font-size:16px;margin-bottom:32px}
+    .hero-cta .btn{padding:16px 28px}
+    .hero-rating{margin-top:28px;padding-top:18px;gap:10px;font-size:11px}
+    .hero-rating .st{font-size:13px}
+    .hero-rating .sep{display:none}
+  }
+  @media(max-width:480px){
+    .hero-copy{padding:44px 22px 40px}
+    .hero-pill{font-size:9px;padding:7px 12px;letter-spacing:.18em}
+  }
+
+  /* ---------- Section base ---------- */
+  section{padding:140px 0;position:relative}
+  @media(max-width:720px){section{padding:90px 0}}
+
+  .eyebrow{
+    font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--accent);font-weight:500;margin-bottom:24px;
+    display:inline-flex;align-items:center;gap:14px;
+  }
+  .eyebrow::before{content:"";width:28px;height:1px;background:var(--accent)}
+  h2{
+    font-size:clamp(38px,5vw,66px);font-weight:200;letter-spacing:-.035em;
+    line-height:1.02;color:var(--ink);
+  }
+  h2 .ital{color:inherit}
+  .sub{font-size:16px;color:var(--soft);line-height:1.7;max-width:500px;font-weight:400}
+
+  /* ---------- Proof strip ---------- */
+  .proof{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:50px 0}
+  .proof-in{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+  .proof-in > div{padding:0 30px;border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .proof-in > div:last-child{border-right:none}
+  .proof-in .n{font-size:40px;font-weight:200;letter-spacing:-.03em;color:var(--ink);line-height:1}
+  .proof-in .n sup{font-size:13px;color:var(--accent);vertical-align:top;margin-left:2px;font-weight:400}
+  .proof-in .n .ital{color:var(--accent)}
+  .proof-in .l{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:12px;font-weight:500}
+  @media(max-width:820px){.proof-in{grid-template-columns:repeat(2,1fr);gap:30px 0}.proof-in > div{border-right:none;padding:20px 10px}.proof-in > div:nth-child(odd){border-right:1px solid var(--line)}}
+
+  /* ---------- Why grid ---------- */
+  .why{background:var(--bg)}
+  .why-head{text-align:center;max-width:760px;margin:0 auto 90px}
+  .why-head .eyebrow{justify-content:center}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .why-cell{padding:58px 34px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:26px;min-height:420px;transition:background .5s}
+  .why-cell:last-child{border-right:none}
+  .why-cell:hover{background:var(--paper)}
+  .why-cell .ico{width:52px;height:52px;display:flex;align-items:center;justify-content:center;color:var(--accent)}
+  .why-cell .big{font-size:54px;font-weight:200;letter-spacing:-.035em;color:var(--ink);line-height:1}
+  .why-cell .big sup{font-size:16px;color:var(--accent);vertical-align:top;margin-left:2px}
+  .why-cell .big .ital{color:var(--accent)}
+  .why-cell .stat-lbl{margin-top:16px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:500}
+  .why-cell h4{font-size:18px;font-weight:500;letter-spacing:-.005em;margin-top:auto}
+  .why-cell p{font-size:14px;color:var(--muted);line-height:1.7;font-weight:400}
+  @media(max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr)}.why-cell:nth-child(2){border-right:none}.why-cell:nth-child(1),.why-cell:nth-child(2){border-bottom:1px solid var(--line)}}
+  @media(max-width:560px){.why-grid{grid-template-columns:1fr}.why-cell{border-right:none;border-bottom:1px solid var(--line);min-height:auto}}
+
+  /* ---------- Technology ---------- */
+  .tech{background:var(--ink);color:#fff;padding:160px 0;overflow:hidden}
+  .tech .eyebrow{color:var(--accent-2)}
+  .tech .eyebrow::before{background:var(--accent-2)}
+  .tech h2{color:#fff}
+  .tech .sub{color:rgba(255,255,255,.65)}
+  .tech-head{max-width:820px;margin:0 auto 90px;text-align:center}
+  .tech-head .eyebrow{justify-content:center}
+  .tech-head .sub{margin:24px auto 0}
+  .tech-stats{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:760px;margin:56px auto 0;
+    padding-top:40px;border-top:1px solid rgba(255,255,255,.12);
+  }
+  .tech-stats .n{font-size:38px;font-weight:200;letter-spacing:-.02em;color:#fff;line-height:1}
+  .tech-stats .n sup{font-size:14px;vertical-align:top;margin-left:2px;color:var(--accent-2)}
+  .tech-stats .l{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:10px;font-weight:500}
+
+  .tech-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:20px}
+  .tech-card{
+    background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);
+    overflow:hidden;display:flex;flex-direction:column;transition:border-color .4s,transform .5s;
+  }
+  .tech-card:hover{border-color:rgba(201,169,141,.45);transform:translateY(-4px)}
+  .tech-card .img{position:relative;aspect-ratio:4/3;overflow:hidden;background:#000}
+  .tech-card .img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+  .tech-card:hover .img img{transform:scale(1.04)}
+  .tech-card .body{padding:32px 30px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .tech-card .idx{
+    font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--accent-2);
+    font-size:18px;letter-spacing:.01em;
+  }
+  .tech-card h4{font-size:20px;font-weight:400;color:#fff;letter-spacing:-.01em;line-height:1.2}
+  .tech-card p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.7;font-weight:400}
+  .tech-card .spec{
+    margin-top:auto;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-2);font-weight:500;
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  .tech-card .spec .v{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:#fff;letter-spacing:0}
+  @media(max-width:900px){
+    .tech-cards{
+      grid-template-columns:none;display:flex;gap:16px;
+      overflow-x:auto;scroll-snap-type:x mandatory;
+      padding:4px 20px 20px;margin:0 -20px;
+      scrollbar-width:none;-ms-overflow-style:none;
+      cursor:grab;user-select:none;
+    }
+    .tech-cards.dragging{cursor:grabbing}
+    .tech-cards::-webkit-scrollbar{display:none}
+    .tech-cards .tech-card{
+      flex:0 0 78%;scroll-snap-align:center;min-width:0;
+    }
+    .tech-dots{display:flex;justify-content:center;gap:8px;margin-top:24px}
+    .tech-dots span{
+      width:24px;height:2px;background:rgba(255,255,255,.18);
+      transition:background .3s;
+    }
+    .tech-dots span.active{background:var(--accent-2)}
+  }
+  @media(min-width:901px){.tech-dots{display:none}}
+
+  /* ---------- Transformation (with real photos) ---------- */
+  .transform{background:var(--paper);padding:0}
+  .transform-grid{display:grid;grid-template-columns:repeat(3,1fr);min-height:620px}
+  .transform-card{
+    position:relative;overflow:hidden;padding:50px 40px;
+    display:flex;flex-direction:column;justify-content:flex-end;color:#fff;
+    transition:transform .6s;
+  }
+  .transform-card img.bg{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    transition:transform 1.2s cubic-bezier(.2,.8,.2,1);z-index:1;
+    filter:brightness(.9);
+  }
+  .transform-card:hover img.bg{transform:scale(1.06)}
+  .transform-card::before{
+    content:"";position:absolute;inset:0;z-index:2;
+    background:linear-gradient(180deg,rgba(0,0,0,.1) 0%,rgba(0,0,0,.25) 55%,rgba(0,0,0,.75) 100%);
+  }
+  .transform-card > *{position:relative;z-index:3}
+  .transform-card .mark{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:120px;font-weight:500;
+    color:rgba(255,255,255,.25);line-height:.8;position:absolute;top:24px;right:32px;z-index:3;
+  }
+  .transform-card h4{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+    font-size:40px;letter-spacing:-.01em;margin-bottom:10px;
+  }
+  .transform-card .t-sub{font-size:12px;letter-spacing:.22em;text-transform:uppercase;opacity:.9;font-weight:500}
+  @media(max-width:820px){.transform-grid{grid-template-columns:1fr}.transform-card{min-height:420px}}
+
+  /* ---------- Attachments ---------- */
+  .att{background:var(--white)}
+  .att-head{text-align:center;max-width:700px;margin:0 auto 80px}
+  .att-head .eyebrow{justify-content:center}
+  .att-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+  .att-cell{background:var(--white);padding:54px 38px 46px;display:flex;flex-direction:column;min-height:360px;transition:transform .5s cubic-bezier(.2,.8,.2,1);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .att-cell:hover{transform:translateY(-4px)}
+  .att-cell .idx{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--accent);font-size:18px}
+  .att-illu{height:180px;width:100%;display:flex;align-items:center;justify-content:center;margin:24px 0}
+  .att-illu img{max-height:100%;max-width:100%;object-fit:contain;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+  .att-cell:hover .att-illu img{transform:scale(1.05) translateY(-4px)}
+  .att-cell h4{font-size:19px;font-weight:400;letter-spacing:-.01em;margin-bottom:10px}
+  .att-cell p{font-size:14px;color:var(--muted);line-height:1.65;font-weight:400}
+  @media(max-width:820px){.att-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.att-grid{grid-template-columns:1fr}.att-cell{min-height:auto;padding:40px 26px}}
+
+  /* ---------- Editorial quote with photo ---------- */
+  .editorial{padding:0;position:relative;min-height:620px;overflow:hidden;background:var(--ink);color:#fff}
+  .editorial img.bg{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;
+    filter:grayscale(.2) brightness(.55);z-index:1;
+  }
+  .editorial::before{
+    content:"";position:absolute;inset:0;z-index:2;
+    background:
+      radial-gradient(ellipse at 70% 30%,rgba(138,90,59,.3),transparent 55%),
+      linear-gradient(90deg,rgba(10,8,6,.85) 0%,rgba(10,8,6,.4) 55%,rgba(10,8,6,.2) 100%);
+  }
+  .editorial-in{
+    position:relative;z-index:3;min-height:620px;display:flex;align-items:center;
+    padding:120px 40px;
+  }
+  .editorial-in .c{max-width:700px}
+  .editorial-in blockquote{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;
+    font-size:clamp(32px,3.6vw,52px);line-height:1.16;letter-spacing:-.015em;color:#fff;margin-bottom:36px;
+  }
+  .editorial-in blockquote::before{content:"\201C";margin-right:.04em}
+  .editorial-in blockquote::after{content:"\201D";margin-left:.04em}
+  .editorial-in cite{font-style:normal;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:500}
+  .editorial-in .eyebrow{color:var(--accent-2);margin-bottom:32px}
+  .editorial-in .eyebrow::before{background:var(--accent-2)}
+
+  /* ---------- SHOP — sober card ---------- */
+  .shop{background:var(--bg);position:relative;overflow:hidden}
+  .shop .wrap{max-width:960px}
+
+  .offer{
+    background:#fff;border:1px solid var(--line);
+    box-shadow:0 30px 70px -30px rgba(0,0,0,.15);
+    position:relative;
+  }
+
+  /* corner ribbon — tucked behind the box */
+  .promo-ribbon-wrap{
+    position:absolute;top:0;left:0;
+    width:190px;height:190px;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:6;
+  }
+  .promo-ribbon{
+    position:absolute;
+    top:42px;left:-70px;
+    width:280px;
+    text-align:center;
+    background:linear-gradient(135deg,#e63946 0%,#b1121d 100%);
+    color:#fff;
+    font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    padding:9px 0;
+    transform:rotate(-45deg);
+    box-shadow:0 6px 16px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.18);
+    text-shadow:0 1px 1px rgba(0,0,0,.25);
+  }
+  @media(max-width:560px){
+    .promo-ribbon-wrap{width:150px;height:150px}
+    .promo-ribbon{top:34px;left:-65px;width:230px;font-size:9.5px;letter-spacing:.1em;padding:7px 0}
+  }
+
+  /* top limited banner — sober, no colors */
+  .offer-banner{
+    background:var(--ink);color:#fff;padding:14px 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;
+  }
+  .offer-banner .left{display:flex;align-items:center;gap:10px}
+  .offer-banner .dot{width:6px;height:6px;border-radius:50%;background:var(--promo);animation:pulse 2s infinite}
+  .offer-banner .right{color:rgba(255,255,255,.55);font-size:10px;letter-spacing:.18em}
+
+  /* horizontal split on desktop */
+  .offer-split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+
+  /* product image */
+  .offer-img{
+    background:#fff;text-align:center;
+    display:flex;align-items:center;justify-content:center;
+    padding:40px;border-right:1px solid var(--line);
+  }
+  .offer-img img{width:88%;max-width:360px;height:auto}
+
+  /* info block */
+  .offer-body{padding:44px 48px;display:flex;flex-direction:column;gap:26px}
+
+  .offer-head{display:flex;flex-direction:column;gap:8px}
+  .offer-title{
+    font-size:26px;font-weight:400;letter-spacing:-.022em;color:var(--ink);line-height:1.1;
+  }
+  .offer-sub{
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--muted);font-weight:500;
+  }
+
+  /* hero price block */
+  .offer-hero-price{display:flex;flex-direction:column;gap:6px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .offer-hero-price .row{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+  .offer-hero-price .was{font-size:18px;color:var(--muted);text-decoration:line-through;font-weight:400;letter-spacing:.01em}
+  .offer-hero-price .now{font-size:64px;font-weight:200;color:var(--ink);letter-spacing:-.035em;line-height:1;font-variant-numeric:tabular-nums}
+  .offer-hero-price .now sup{font-size:22px;vertical-align:top;margin-right:3px;color:var(--accent);font-weight:300}
+  .offer-hero-price .badge{
+    background:var(--promo);color:#fff;padding:5px 10px;
+    font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;line-height:1;align-self:center;
+  }
+  .offer-hero-price .save{font-size:12px;color:var(--promo);font-weight:500;letter-spacing:.02em}
+
+  /* urgency strip — timer + stock together */
+  .offer-urgency-strip{
+    display:grid;grid-template-columns:1fr 1px 1fr;align-items:center;
+    background:var(--line-2);border:1px solid var(--line);padding:14px 4px;
+  }
+  .offer-urgency-strip .divider{background:var(--line);height:54px;margin:0 auto}
+  .offer-u{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:0 12px}
+  .offer-u .lbl{font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .offer-u .val.accent{color:var(--promo);font-weight:500;font-size:18px}
+
+  /* timer boxes */
+  .clock-boxes{display:flex;gap:6px;align-items:center}
+  .clock-unit{display:flex;flex-direction:column;align-items:center;gap:4px}
+  .clock-box{
+    min-width:36px;padding:6px 8px;background:#fff;border:1px solid var(--line);
+    font-size:18px;font-weight:500;color:var(--ink);letter-spacing:-.01em;line-height:1;
+    font-variant-numeric:tabular-nums;
+  }
+  .clock-u{
+    font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;
+  }
+  .clock-dot{color:var(--muted);font-weight:400;font-size:14px;margin:0 2px;align-self:center;padding-bottom:16px;opacity:.5}
+
+  /* inclusions */
+  .offer-incl{list-style:none;display:flex;flex-direction:column;gap:12px;margin:0;padding:0}
+  .offer-incl li{
+    display:flex;gap:12px;font-size:14px;color:var(--ink-2);align-items:center;line-height:1.4;
+  }
+  .offer-incl svg{flex-shrink:0;color:var(--accent)}
+  .offer-incl li.gift{color:var(--accent);font-weight:500}
+  .offer-incl strong{color:var(--ink);font-weight:500}
+
+  .offer-body .btn{width:100%;justify-content:center;padding:20px;font-size:12px}
+
+  .offer-foot{
+    text-align:center;
+    font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:500;
+  }
+  .offer-foot span + span::before{content:"·";margin:0 10px;color:var(--line)}
+
+  @media(max-width:820px){
+    .offer-split{grid-template-columns:1fr}
+    .offer-img{border-right:none;border-bottom:1px solid var(--line);padding:32px}
+    .offer-img img{width:70%;max-width:280px}
+    .offer-body{padding:32px 28px}
+  }
+  @media(max-width:520px){.offer-body{padding:28px 22px}.offer-img{padding:24px}}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--bg);border-top:1px solid var(--line)}
+  .faq-in{max-width:880px;margin:0 auto}
+  .faq-head{text-align:center;margin-bottom:70px}
+  .faq-head .eyebrow{justify-content:center}
+  .faq-list{border-top:1px solid var(--line)}
+  details.q{border-bottom:1px solid var(--line)}
+  details.q summary{
+    padding:28px 0;cursor:pointer;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:24px;
+    font-size:17px;font-weight:400;letter-spacing:-.005em;color:var(--ink);transition:color .25s;
+  }
+  details.q summary::-webkit-details-marker{display:none}
+  details.q summary:hover{color:var(--accent)}
+  details.q .plus{width:22px;height:22px;position:relative;flex-shrink:0}
+  details.q .plus::before,details.q .plus::after{content:"";position:absolute;background:var(--ink);top:50%;left:50%}
+  details.q .plus::before{width:14px;height:1px;margin:-.5px 0 0 -7px}
+  details.q .plus::after{width:1px;height:14px;margin:-7px 0 0 -.5px;transition:transform .4s}
+  details.q[open] .plus::after{transform:scaleY(0)}
+  details.q .ans{padding:0 40px 30px 0;font-size:15px;color:var(--soft);line-height:1.75;font-weight:400;max-width:92%}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--ink);color:rgba(255,255,255,.55);padding:90px 0 32px;font-size:13px;font-weight:400;position:relative}
+  footer::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:1px;
+    background:linear-gradient(90deg,transparent,rgba(201,169,141,.4),transparent);
+  }
+  .f-mast{
+    text-align:center;padding-bottom:60px;margin-bottom:50px;border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .f-mast .brand img{height:40px;margin:0 auto}
+  .f-mast .brand-mark{font-size:42px;color:#fff;margin:0 auto;text-align:center}
+  .f-mast .tagline{
+    margin-top:22px;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;
+    font-size:20px;color:rgba(255,255,255,.75);letter-spacing:.005em;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.4;
+  }
+
+  .f-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:48px;
+    padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .f-col h5{color:#fff;font-size:10px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;margin-bottom:20px}
+  .f-col a{display:block;padding:7px 0;transition:color .25s;color:rgba(255,255,255,.55)}
+  .f-col a:hover{color:var(--accent-2)}
+  .f-col .news{font-size:13px;color:rgba(255,255,255,.55);line-height:1.6;margin-bottom:14px}
+  .f-news-form{display:flex;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.03)}
+  .f-news-form input{
+    flex:1;padding:12px 14px;background:transparent;border:none;outline:none;
+    color:#fff;font-family:inherit;font-size:13px;font-weight:400;
+  }
+  .f-news-form input::placeholder{color:rgba(255,255,255,.35)}
+  .f-news-form button{
+    padding:0 16px;background:transparent;color:var(--accent-2);
+    border-left:1px solid rgba(255,255,255,.14);
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+    transition:background .2s,color .2s;
+  }
+  .f-news-form button:hover{background:var(--accent-2);color:var(--ink)}
+
+  .f-social{display:flex;gap:12px;margin-top:18px}
+  .f-social a{
+    width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.14);
+    display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);
+    transition:all .25s;padding:0;
+  }
+  .f-social a:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+
+  .f-pay{
+    padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .f-pay-label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:500}
+  .f-pay-marks{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .f-pay-mark{
+    padding:6px 12px;border:1px solid rgba(255,255,255,.14);
+    font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.7);
+  }
+
+  .f-bot{padding-top:28px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:11px;color:rgba(255,255,255,.4);letter-spacing:.04em}
+  .f-bot .legal{display:flex;gap:26px;flex-wrap:wrap}
+  .f-bot a:hover{color:rgba(255,255,255,.7)}
+
+  @media(max-width:900px){.f-grid{grid-template-columns:repeat(2,1fr);gap:36px}}
+  @media(max-width:520px){
+    footer{padding:60px 0 28px}
+    .f-mast{padding-bottom:40px;margin-bottom:36px}
+    .f-mast .brand img{height:32px}
+    .f-mast .brand-mark{font-size:34px}
+    .f-mast .tagline{font-size:17px}
+    .f-grid{grid-template-columns:1fr;gap:28px}
+    .f-pay{flex-direction:column;align-items:flex-start;gap:12px}
+    .f-bot{flex-direction:column;gap:10px;align-items:flex-start}
+  }
+
+  /* Sticky bar */
+  .sb{
+    position:fixed;left:0;right:0;bottom:0;z-index:70;
+    background:#fff;color:var(--ink);padding:10px 0;
+    transform:translateY(110%);transition:transform .5s cubic-bezier(.2,.8,.2,1);
+    border-top:1px solid var(--line);
+    box-shadow:0 -20px 40px -20px rgba(0,0,0,.15);
+  }
+  .sb.show{transform:translateY(0)}
+  .sb-in{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:0 20px;max-width:1320px;margin:0 auto}
+  .sb-left{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+  .sb-tag{
+    display:inline-flex;align-items:center;gap:8px;align-self:flex-start;
+    font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--promo);
+  }
+  .sb-tag .dot{width:5px;height:5px;border-radius:50%;background:var(--promo);animation:pulse 2s infinite;flex-shrink:0}
+  .sb-price{display:flex;align-items:baseline;gap:10px;line-height:1.1}
+  .sb-price .was{font-size:13px;color:var(--muted);text-decoration:line-through;font-weight:400}
+  .sb-price .now{font-size:20px;font-weight:500;letter-spacing:-.015em;color:var(--ink);font-variant-numeric:tabular-nums}
+  .sb-price .now sup{font-size:11px;vertical-align:top;margin-right:1px;color:var(--accent);font-weight:400}
+  .sb-price .badge{
+    background:var(--promo);color:#fff;font-size:9px;font-weight:700;
+    padding:3px 7px;letter-spacing:.1em;line-height:1;
+  }
+  .sb-cta{
+    display:inline-flex;align-items:center;gap:8px;flex-shrink:0;
+    background:var(--ink);color:#fff;padding:14px 22px;
+    font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+    transition:background .3s;
+  }
+  .sb-cta svg{transition:transform .3s}
+  .sb-cta:hover{background:var(--accent)}
+  .sb-cta:hover svg{transform:translateX(3px)}
+  @media(max-width:480px){
+    .sb-in{padding:0 16px;gap:12px}
+    .sb-cta{padding:12px 16px;font-size:10px;letter-spacing:.14em;gap:6px}
+    .sb-cta svg{width:12px;height:8px}
+    .sb-price .now{font-size:18px}
+    .sb-price .was{font-size:12px}
+    .sb-tag{font-size:8px;letter-spacing:.18em}
+  }
+
+  /* Reveal */
+  /* reveal anim desligada (causava bug invisível) */ .reveal{opacity:1;transform:none}
+  .reveal.in{opacity:1;transform:none}
+  /* ---------- REVIEWS ---------- */
+  .reviews{background:var(--white);border-top:1px solid var(--line)}
+  .reviews .wrap{max-width:1160px}
+
+  .rv-head{text-align:center;max-width:720px;margin:0 auto 60px}
+  .rv-head .eyebrow{justify-content:center}
+  .rv-head .sub{margin:22px auto 0}
+
+  .rv-summary{
+    display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:60px;
+    padding:40px;margin-bottom:60px;background:var(--bg);border:1px solid var(--line);
+  }
+  .rv-score{text-align:center;min-width:140px}
+  .rv-score .big{font-size:64px;font-weight:200;letter-spacing:-.03em;color:var(--ink);line-height:1}
+  .rv-score .stars{color:var(--accent);font-size:18px;letter-spacing:4px;margin-top:10px}
+  .rv-score .meta{font-size:11px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;margin-top:12px;font-weight:500}
+
+  .rv-bars{display:flex;flex-direction:column;gap:8px}
+  .rv-bars .bar{display:grid;grid-template-columns:30px 1fr 44px;gap:14px;align-items:center;font-size:12px;color:var(--soft)}
+  .rv-bars .bar .l{font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
+  .rv-bars .bar .track{height:6px;background:var(--line);position:relative;overflow:hidden}
+  .rv-bars .bar .fill{position:absolute;inset:0 auto 0 0;background:var(--accent)}
+  .rv-bars .bar .p{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted);font-size:11px}
+
+  .rv-tags{display:flex;flex-direction:column;gap:8px;min-width:180px}
+  .rv-tags .tag-label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
+  .rv-tags .tag{
+    font-size:12px;color:var(--soft);padding:6px 12px;
+    background:#fff;border:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;gap:10px;
+  }
+  .rv-tags .tag .c{color:var(--muted);font-weight:500;font-variant-numeric:tabular-nums;font-size:11px}
+
+  .rv-photostrip{margin-bottom:56px;padding-bottom:40px;border-bottom:1px solid var(--line)}
+  .rv-photostrip .lbl{
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);
+    font-weight:600;margin-bottom:18px;display:flex;align-items:center;gap:12px;
+  }
+  .rv-photostrip .lbl::after{content:"";flex:1;height:1px;background:var(--line)}
+  .rv-photostrip .row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .rv-photostrip .row img{
+    width:100%;aspect-ratio:1/1;object-fit:cover;display:block;
+    transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .3s;
+    cursor:pointer;
+  }
+  .rv-photostrip .row img:hover{transform:scale(1.03)}
+
+  .rv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .rv-card{
+    background:#fff;border:1px solid var(--line);padding:32px 30px;
+    display:flex;flex-direction:column;gap:16px;transition:border-color .3s;
+  }
+  .rv-card:hover{border-color:var(--accent-2)}
+  .rv-card .top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .rv-card .stars{color:var(--accent);font-size:14px;letter-spacing:3px}
+  .rv-card .verified{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:#2d7a3e;
+  }
+  .rv-card .verified svg{color:#2d7a3e}
+  .rv-card .title{
+    font-size:16px;font-weight:500;color:var(--ink);letter-spacing:-.005em;line-height:1.3;
+  }
+  .rv-card .body{font-size:14px;color:var(--soft);line-height:1.7}
+  .rv-card .photos{display:flex;gap:8px;flex-wrap:wrap}
+  .rv-card .photos img{
+    width:72px;height:72px;object-fit:cover;border:1px solid var(--line);transition:transform .4s;cursor:pointer;
+  }
+  .rv-card .photos img:hover{transform:scale(1.04)}
+  .rv-card .meta{
+    display:flex;justify-content:space-between;align-items:center;gap:12px;
+    padding-top:16px;margin-top:4px;border-top:1px solid var(--line);
+  }
+  .rv-card .who{display:flex;align-items:center;gap:12px}
+  .rv-card .avatar{
+    width:36px;height:36px;border-radius:50%;
+    background:linear-gradient(135deg,var(--accent-2),var(--accent));
+    color:#fff;display:flex;align-items:center;justify-content:center;
+    font-size:12px;font-weight:600;letter-spacing:.02em;flex-shrink:0;
+  }
+  .rv-card .name{font-size:13px;font-weight:500;color:var(--ink)}
+  .rv-card .place{font-size:11px;color:var(--muted);margin-top:2px;letter-spacing:.02em}
+  .rv-card .helpful{
+    font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;
+    display:flex;align-items:center;gap:6px;
+  }
+  .rv-card .helpful svg{color:var(--soft)}
+
+  .rv-more{
+    text-align:center;margin-top:40px;
+  }
+  .rv-more a{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 28px;border:1px solid var(--ink);color:var(--ink);
+    font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+    transition:all .3s;
+  }
+  .rv-more a:hover{background:var(--ink);color:#fff}
+
+  @media(max-width:900px){
+    .rv-summary{grid-template-columns:1fr;gap:30px;padding:28px}
+    .rv-tags{min-width:0}
+    .rv-grid{grid-template-columns:1fr}
+    .rv-photostrip .row{grid-template-columns:repeat(3,1fr)}
+    .rv-photostrip .row img:nth-child(n+4){display:none}
+  }
+  @media(max-width:520px){
+    .rv-card{padding:26px 22px}
+    .rv-card .title{font-size:15px}
+    .rv-card .body{font-size:13px}
+    .rv-score .big{font-size:52px}
+    .rv-photostrip .row{grid-template-columns:repeat(2,1fr)}
+    .rv-photostrip .row img:nth-child(n+3){display:none}
+  }
+
+  /* ---------- LIGHTBOX ---------- */
+  .lb{
+    position:fixed;inset:0;z-index:120;
+    background:rgba(8,6,4,.88);backdrop-filter:blur(10px);
+    opacity:0;pointer-events:none;
+    display:flex;align-items:center;justify-content:center;padding:40px 20px;
+    transition:opacity .35s cubic-bezier(.2,.8,.2,1);
+  }
+  .lb.open{opacity:1;pointer-events:auto}
+  .lb-img{
+    max-width:min(900px,92vw);max-height:88vh;
+    object-fit:contain;display:block;
+    transform:scale(.96);transition:transform .4s cubic-bezier(.2,.8,.2,1);
+    box-shadow:0 40px 100px -20px rgba(0,0,0,.6);
+  }
+  .lb.open .lb-img{transform:scale(1)}
+  .lb-close{
+    position:absolute;top:22px;right:22px;
+    width:42px;height:42px;border-radius:50%;
+    background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+    color:#fff;display:flex;align-items:center;justify-content:center;
+    cursor:pointer;transition:all .3s;
+  }
+  .lb-close:hover{background:#fff;color:var(--ink);transform:rotate(90deg)}
+  .lb-counter{
+    position:absolute;top:30px;left:30px;
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:rgba(255,255,255,.6);font-weight:500;font-variant-numeric:tabular-nums;
+  }
+  .lb-nav{
+    position:absolute;top:50%;transform:translateY(-50%);
+    width:48px;height:48px;border-radius:50%;
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+    color:#fff;display:flex;align-items:center;justify-content:center;
+    cursor:pointer;transition:all .25s;
+  }
+  .lb-nav:hover{background:rgba(255,255,255,.18);border-color:#fff}
+  .lb-nav.prev{left:24px}
+  .lb-nav.next{right:24px}
+  .rv-photostrip img,.rv-card .photos img{cursor:zoom-in}
+  @media(max-width:640px){
+    .lb-nav{width:40px;height:40px}
+    .lb-nav.prev{left:10px}
+    .lb-nav.next{right:10px}
+    .lb-close{top:14px;right:14px;width:36px;height:36px}
+    .lb-counter{top:22px;left:16px;font-size:10px}
+  }
+
+  /* ---------- MOBILE REFINEMENTS ---------- */
+  @media(max-width:820px){
+    section{padding:70px 0}
+    .wrap{padding:0 20px}
+
+    /* promo bar */
+    .promo-bar{font-size:11px;padding:10px 16px;letter-spacing:.04em;line-height:1.4;gap:8px}
+    .promo-bar strong{font-size:10px}
+
+    /* nav */
+    nav{padding:14px 0}
+    .brand{font-size:20px}
+    .nav-right{gap:14px;font-size:12px}
+
+    /* hero */
+    .hero{padding:40px 20px 30px;gap:24px}
+    .hero-copy{padding-top:0}
+    h1.h1{font-size:clamp(42px,10vw,64px);margin-bottom:22px}
+    .hero-sub{font-size:15px;margin-bottom:28px}
+    .hero-tag{font-size:10px;margin-bottom:20px}
+    .hero-cta{gap:18px}
+    .btn{padding:15px 26px;font-size:11px;letter-spacing:.16em}
+
+    /* proof */
+    .proof{padding:34px 0}
+    .proof-in .n{font-size:28px}
+    .proof-in .l{font-size:10px;letter-spacing:.16em}
+
+    /* section headings */
+    h2{font-size:clamp(32px,7vw,44px)}
+    .eyebrow{font-size:10px;margin-bottom:18px}
+    .sub{font-size:15px}
+    .head,.section-head,.why-head,.att-head,.faq-head,.tech-head{margin-bottom:50px !important}
+
+    /* why grid */
+    .why-cell{padding:40px 26px;min-height:auto;gap:20px}
+    .why-cell .big{font-size:42px}
+
+    /* tech */
+    .tech{padding:80px 0}
+    .tech-stats{margin:32px auto 0;padding-top:26px;gap:18px}
+    .tech-stats .n{font-size:26px}
+    .tech-stats .l{font-size:9px;letter-spacing:.16em}
+    .tech-card .body{padding:26px 24px;gap:10px}
+    .tech-card h4{font-size:18px}
+    .tech-card p{font-size:13px}
+
+    /* transformation */
+    .transform-card{min-height:340px;padding:36px 28px}
+    .transform-card h4{font-size:32px}
+    .transform-card .mark{font-size:96px;top:16px;right:22px}
+    .transform-card .t-sub{font-size:11px;letter-spacing:.16em}
+
+    /* attachments */
+    .att-cell{padding:40px 24px;min-height:auto}
+    .att-illu{height:150px;margin:18px 0}
+    .att-cell h4{font-size:17px}
+    .att-cell p{font-size:13px}
+
+    /* editorial quote */
+    .editorial{min-height:auto;height:auto}
+    .editorial::before{
+      background:linear-gradient(180deg,rgba(10,8,6,.35) 0%,rgba(10,8,6,.6) 60%,rgba(10,8,6,.88) 100%);
+    }
+    .editorial img.bg{object-position:center 22%}
+    .editorial-in{
+      min-height:auto;aspect-ratio:4/5;
+      padding:0 28px 48px;
+      align-items:flex-end;justify-content:flex-start;
+    }
+    .editorial-in .c{max-width:100%}
+    .editorial-in blockquote{font-size:clamp(22px,5.6vw,30px);line-height:1.24;margin-bottom:20px}
+    .editorial-in .eyebrow{margin-bottom:16px;font-size:10px}
+    .editorial-in cite{font-size:10px}
+
+    /* offer card */
+    .shop{padding:70px 0}
+    .offer-banner{padding:12px 20px;font-size:10px;letter-spacing:.16em;gap:10px}
+    .offer-banner .right{font-size:9px}
+    .offer-body{padding:34px 26px;gap:22px}
+    .offer-title{font-size:22px}
+    .offer-sub{font-size:10px;letter-spacing:.16em}
+    .offer-hero-price{padding:16px 0}
+    .offer-hero-price .was{font-size:16px}
+    .offer-hero-price .now{font-size:52px}
+    .offer-hero-price .now sup{font-size:18px}
+    .offer-hero-price .badge{font-size:9px;padding:4px 8px;letter-spacing:.1em}
+    .offer-hero-price .save{font-size:11px}
+    .offer-urgency-strip{padding:12px 0}
+    .offer-u .val.accent{font-size:16px}
+    .offer-u .lbl{font-size:9px}
+    .clock-boxes{gap:4px}
+    .clock-box{min-width:30px;padding:5px 6px;font-size:15px}
+    .clock-u{font-size:7px;letter-spacing:.14em}
+    .clock-dot{font-size:12px;padding-bottom:14px}
+    .offer-incl li{font-size:13px;gap:10px}
+    .offer-foot{font-size:9px;letter-spacing:.14em}
+    .offer-foot span + span::before{margin:0 6px}
+
+    /* FAQ */
+    .faq-head{margin-bottom:50px}
+    details.q summary{padding:22px 0;font-size:15px;gap:16px}
+    details.q .ans{font-size:14px;padding:0 0 22px 0;max-width:100%}
+
+    /* footer */
+    footer{padding:60px 0 30px}
+    .f-top{padding-bottom:40px;gap:32px}
+    .f-links{gap:32px}
+    .f-bot{flex-direction:column;gap:10px;align-items:flex-start}
+    .f-bot .legal{gap:18px;flex-wrap:wrap}
+
+    /* sticky buy bar */
+    .sb{padding:10px 0}
+    .sb-in{gap:12px}
+    .sb-thumb{width:34px;height:34px}
+    .sb-cta{padding:11px 18px;font-size:10px;letter-spacing:.16em}
+  }
+
+  @media(max-width:480px){
+    section{padding:60px 0}
+    .wrap{padding:0 18px}
+
+    h1.h1{font-size:clamp(38px,11vw,56px);letter-spacing:-.038em}
+    h2{font-size:clamp(28px,8vw,38px)}
+
+
+    /* proof strip vertical readability */
+    .proof-in{grid-template-columns:repeat(2,1fr);gap:20px 0}
+    .proof-in > div{padding:16px 8px;border-bottom:1px solid var(--line)}
+    .proof-in > div:nth-child(3),.proof-in > div:nth-child(4){border-bottom:none}
+
+    /* offer — compact */
+    .offer-img{padding:22px}
+    .offer-img img{width:72%;max-width:240px}
+    .offer-body{padding:26px 20px}
+    .offer-timer .u{min-width:38px}
+    .offer-timer .u .v{font-size:22px}
+    .offer-price{flex-wrap:wrap;gap:8px}
+    .offer-price .nums{flex-wrap:wrap;gap:8px}
+
+    /* transformation */
+    .transform-card{min-height:300px;padding:30px 22px}
+    .transform-card h4{font-size:28px}
+    .transform-card .mark{font-size:80px}
+
+    /* footer grid */
+    .f-top{flex-direction:column}
+    .f-links{width:100%;justify-content:space-between;gap:20px}
+    .f-col{min-width:0}
+  }
+  /* ===== JBL cart / modals / menu (from current box page) =====
   /* ---------- CART MODAL ---------- */
-  .cart,.cart-back{--ink:#0d0d0d;--soft:#4a4a4a;--muted:#8e8a83;--line:#ece7df;--line-2:#f3efe8;--bg:#faf6f0;--accent:#8a5a3b;--accent-2:#c9a98d;--promo:#b8472e}
   .cart{font-family:'Poppins',system-ui,sans-serif;font-weight:300;line-height:1.5;color:var(--ink)}
   .cart button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   @keyframes pulse{50%{opacity:.3;transform:scale(1.3)}}
@@ -368,14 +1083,6 @@
     .cart-foot{padding:0 20px 22px}
   }
   body.cart-open{overflow:hidden}
-  /* ---------- product photo overlays ---------- */
-  .main-wrap{overflow:hidden}
-  .ribbon{position:absolute;top:0;left:0;width:170px;height:170px;overflow:hidden;z-index:4;pointer-events:none}
-  .ribbon span{position:absolute;top:44px;left:-48px;width:240px;transform:rotate(-45deg);background:var(--accent);color:#fff;text-align:center;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:7px 0;box-shadow:0 2px 6px rgba(0,0,0,.25)}
-  .live{position:absolute;left:12px;right:12px;bottom:12px;display:flex;justify-content:space-between;gap:8px;z-index:4;pointer-events:none;flex-wrap:wrap}
-  .live>div{display:flex;align-items:center;gap:6px;background:rgba(17,17,17,.88);color:#fff;font-size:11px;font-weight:600;padding:7px 10px;border-radius:999px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);white-space:nowrap}
-  .live b{font-weight:800;font-variant-numeric:tabular-nums}
-  .live .timer b{color:#ffb36b}
   /* cart gift picker */
   .cart .cart-pick{display:grid;grid-template-columns:22px 56px 1fr auto;gap:12px;align-items:center;padding:16px 28px;border-bottom:1px solid var(--line);cursor:pointer;background:#fff;transition:background .2s}
   .cart .cart-pick input{position:absolute;opacity:0;width:0;height:0}
@@ -398,10 +1105,6 @@
   .cart-summary .row.gift .v{color:var(--promo)}
   .cart-summary .row.gift.hidden{display:none}
   @media(max-width:520px){.cart .cart-pick{padding:14px 20px;gap:10px;grid-template-columns:20px 48px 1fr auto}.cart .cart-pick .thumb{width:48px;height:48px}}
-  /* ---------- trust block under buy button ---------- */
-  .assure{list-style:none;margin-top:12px;display:grid;gap:6px}
-  .assure li{display:flex;align-items:center;gap:8px;font-size:12px;color:#333}
-  .assure svg{width:16px;height:16px;flex:none;fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
   .paylogos{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
   .paylogos .pl{height:26px;min-width:44px;padding:0 8px;border:1px solid #d8d8d8;border-radius:4px;background:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;letter-spacing:.02em;color:#111;font-family:Inter,system-ui,sans-serif}
   .paylogos .visa{color:#1a1f71;font-style:italic;font-weight:900;letter-spacing:.04em}
@@ -415,12 +1118,6 @@
   .paylogos.small{justify-content:center;margin-top:0}
   .paylogos.small .pl{height:22px;min-width:38px;font-size:10px;padding:0 6px}
   .cart-note{font-size:11px;color:var(--soft);text-align:center;line-height:1.5;margin-top:-4px}
-  /* ---------- reviews: verified badge ---------- */
-  .rev small{display:block}
-  .verified{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:700;color:#1a7f37;margin-top:6px;letter-spacing:.02em}
-  .verified svg{width:12px;height:12px}
-  .verified svg circle{fill:#1a7f37}
-  .verified svg path{fill:none;stroke:#fff;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
   /* ---------- footer modal (ported from ADDS/footer.js) ---------- */
   .fp-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:8000;align-items:center;justify-content:center;padding:16px}
   .fp-overlay.open{display:flex}
@@ -477,288 +1174,764 @@
   .searchbar input{flex:1;height:40px;border:1px solid #ccc;border-radius:6px;padding:0 12px;font:inherit;font-size:16px;background:#fff}
   .searchbar input:focus{outline:none;border-color:#111}
   .searchbar button{height:40px;padding:0 14px;background:#111;color:#fff;border:0;border-radius:6px;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.06em;cursor:pointer}
-  /* gift callout */
-  .giftcall{display:flex;align-items:center;gap:12px;margin-top:14px;padding:10px 12px;background:#fff;border:1px dashed var(--accent);border-radius:8px}
-  .giftcall img{width:44px;height:44px;object-fit:cover;border-radius:6px;background:#f4f4f4;flex:none}
-  .giftcall div{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
-  .giftcall b{font-size:13px;font-weight:800;color:#111;line-height:1.25}
-  .giftcall span{font-size:11px;color:#555}
-  .giftcall em{font-style:normal;font-size:11px;font-weight:900;letter-spacing:.1em;color:#fff;background:var(--accent);padding:5px 8px;border-radius:4px;flex:none}
-  /* feature cards */
-  .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-  .fcard{border:1px solid var(--line);border-radius:8px;padding:14px 12px;background:#fff}
-  .fcard svg{width:26px;height:26px;fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-  .fcard h3{font-size:13px;font-weight:800;text-transform:none;margin-top:10px;line-height:1.25}
-  .fcard p{font-size:12px;color:#444;margin-top:4px;line-height:1.4}
-  /* FAQ */
-  .faq{padding-top:36px}
-  .faqlist{margin-top:14px;border-top:1px solid var(--line)}
-  .faqlist details{border-bottom:1px solid var(--line)}
-  .faqlist summary{text-transform:none;font-size:14px;font-weight:700;padding:14px 0}
-  .faqlist p{font-size:13px;color:#333;line-height:1.5;padding:0 0 14px}
+
+  /* =========================================================
+     JBL long-form layout
+     ========================================================= */
+  :root{
+    --ink:#0d0d0d;--ink-2:#1a1a1a;--soft:#4a4a4a;--muted:#8a8a8a;
+    --line:#e7e7e4;--line-2:#f3f3f1;--paper:#efefec;--bg:#f7f7f5;--white:#fff;
+    --accent:#ff3300;--accent-2:#ff7a52;--accent-3:#ffe1d6;--promo:#e02d00;--gold:#ffb400;--star:#ffb400;
+  }
+  body{font-family:'Poppins',system-ui,sans-serif}
+  .ital{font-family:inherit;font-style:normal;font-weight:700;letter-spacing:-.035em;color:var(--accent)}
+  h1.h1 .ital{font-weight:700}
+  .tech .ital,.editorial .ital{color:var(--accent-2)}
+  .btn::after,.cbtn::after{background:var(--accent)}
+  .hidden{display:none !important}
+
+  /* ---------- header ---------- */
+  nav.top{padding:12px 0}
+  nav.top .nav-in{grid-template-columns:1fr auto 1fr}
+  nav.top .left{display:flex;align-items:center;gap:14px}
+  nav.top .brand img{height:30px}
+  nav.top .nav-right{gap:16px}
+  .ico{width:22px;height:22px;fill:none;stroke:#111;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .icobtn{background:none;border:0;padding:0;display:flex;cursor:pointer;color:#111}
+  .bagbtn{position:relative}
+  .bagcount{position:absolute;top:-6px;right:-8px;min-width:16px;height:16px;padding:0 4px;border-radius:999px;background:var(--accent);color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1}
+  @media(min-width:821px){nav.top .nav-links{display:flex}}
+  @media(max-width:820px){nav.top .nav-links{display:none}}
+
+  /* ---------- hero ---------- */
+  .hero-stage img.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 55%}
+  .hero-stage .off{
+    position:absolute;top:16px;left:16px;z-index:3;background:var(--accent);color:#fff;
+    font-size:12px;font-weight:700;letter-spacing:.08em;padding:7px 11px;line-height:1;
+  }
+  .hero-stage .ends{
+    position:absolute;left:16px;bottom:16px;z-index:3;display:inline-flex;align-items:center;gap:8px;
+    background:rgba(13,13,13,.78);backdrop-filter:blur(6px);color:#fff;padding:8px 12px;
+    font-size:11px;letter-spacing:.06em;font-weight:500;
+  }
+  .hero-stage .ends .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
+  .hero-stage .ends b{font-weight:600;color:#ffb199;font-variant-numeric:tabular-nums}
+  .hero-price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:-8px 0 16px}
+  .hero-price .now{font-size:46px;font-weight:300;letter-spacing:-.035em;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+  .hero-price .now sup{font-size:18px;vertical-align:top;margin-right:2px;color:var(--accent);font-weight:400;position:relative;top:4px}
+  .hero-price .was{font-size:14px;color:#555;font-weight:400}
+  .hero-price .was s{color:#555;text-decoration-thickness:1.5px}
+  .hero-price .badge{background:var(--promo);color:#fff;padding:5px 9px;font-size:11px;font-weight:700;letter-spacing:.08em;line-height:1;align-self:center}
+  .hero-gift{display:flex;align-items:center;gap:12px;padding:10px 12px;background:#fff;border:1px dashed var(--accent);margin-bottom:28px;width:100%}
+  .hero-gift img{width:40px;height:40px;object-fit:cover;flex:none;background:var(--bg)}
+  .hero-gift span{font-size:12px;color:var(--soft);line-height:1.4}
+  .hero-gift b{color:var(--ink);font-weight:600}
+  .hero-cta .btn{flex:1;justify-content:center;min-width:220px}
+  @media(max-width:900px){
+    .hero-stage{aspect-ratio:1/1}
+    .hero-copy{padding:30px 20px 40px}
+    .hero-pill{margin-bottom:20px}
+    h1.h1{font-size:clamp(40px,11vw,60px)}
+    .hero-sub{font-size:15px;margin-bottom:24px}
+    .hero-cta{width:100%;gap:16px}
+    .hero-cta .btn{width:100%;padding:18px 20px;font-size:12px}
+    .hero-cta .link-u{margin:0 auto}
+  }
+
+  /* ---------- proof strip ---------- */
+  .proof-in .n sup{color:var(--accent)}
+
+  /* ---------- why ---------- */
+  .why-cell .ico2{width:52px;height:52px;display:flex;align-items:center;justify-content:center;color:var(--accent)}
+  @media(max-width:560px){
+    .why-grid{grid-template-columns:1fr 1fr}
+    .why-cell{padding:26px 16px;gap:12px;border-right:1px solid var(--line)}
+    .why-cell:nth-child(2n){border-right:none}
+    .why-cell .ico2{width:32px;height:32px}
+    .why-cell .ico2 svg{width:26px;height:26px}
+    .why-cell .big{font-size:34px}
+    .why-cell .stat-lbl{font-size:9px;letter-spacing:.16em;margin-top:8px}
+    .why-cell h4{font-size:14px;margin-top:4px;line-height:1.3}
+    .why-cell p{font-size:12px;line-height:1.55}
+  }
+
+  /* ---------- tech ---------- */
+  .tech-card .img{background:#fff}
+  .tech-card .img img{object-fit:contain;padding:18px}
+  .tech-card .idx,.att-cell .idx{font-family:inherit;font-style:normal;font-weight:600;font-size:13px;letter-spacing:.14em;color:var(--accent-2)}
+  .att-cell .idx{color:var(--accent)}
+  .tech-card .spec .v{font-family:inherit;font-style:normal;font-weight:500;font-size:16px}
+
+  /* ---------- transform ---------- */
+  .transform-card .mark{font-family:inherit;font-style:normal;font-weight:700;font-size:72px;letter-spacing:-.04em}
+  .transform-card h4{font-family:inherit;font-style:normal;font-weight:600;font-size:30px;letter-spacing:-.025em}
+  @media(max-width:820px){.transform-card{min-height:300px}.transform-card h4{font-size:26px}.transform-card .mark{font-size:60px}}
+
+  /* ---------- in the box ---------- */
+  .att-illu svg{width:72px;height:72px;color:var(--ink)}
+  .att-cell.gift{background:#fff7f4}
+  .att-cell .free{display:inline-block;margin-left:6px;background:var(--accent);color:#fff;font-size:10px;font-weight:700;letter-spacing:.12em;padding:3px 7px;vertical-align:middle}
+  @media(max-width:520px){
+    .att-grid{grid-template-columns:1fr 1fr}
+    .att-cell{padding:22px 14px 20px}
+    .att-illu{height:110px;margin:12px 0}
+    .att-illu svg{width:52px;height:52px}
+    .att-cell h4{font-size:14px;line-height:1.3}
+    .att-cell p{font-size:12px;line-height:1.5}
+  }
+
+  /* ---------- specs ---------- */
+  .specs{background:var(--white);border-top:1px solid var(--line)}
+  .specs .meta{display:flex;justify-content:center;gap:8px;font-size:12px;color:var(--muted);letter-spacing:.06em;margin-top:18px}
+  .specs .meta b{color:var(--ink);font-weight:500}
+  .specs dl{display:grid;grid-template-columns:42% 1fr;gap:0;padding:0 0 22px;font-size:14px}
+  .specs dt,.specs dd{padding:11px 0;border-top:1px solid var(--line-2)}
+  .specs dt{color:var(--muted);font-weight:400;padding-right:14px}
+  .specs dd{color:var(--ink);font-weight:400}
+  @media(max-width:520px){.specs dl{font-size:13px;grid-template-columns:44% 1fr}}
+
+  /* ---------- editorial ---------- */
+  .editorial-in blockquote{font-family:inherit;font-style:normal;font-weight:300;letter-spacing:-.02em}
+  .editorial .stars{color:var(--star);letter-spacing:3px;font-size:16px;margin-bottom:18px}
+
+  /* ---------- shop / offer ---------- */
+  .promo-ribbon{background:linear-gradient(135deg,#ff4d1a 0%,#d42a00 100%)}
+  .offer-img{flex-direction:column;gap:16px;padding:28px}
+  .offer-img .main{width:100%;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
+  .offer-img .main img{width:100%;max-width:400px;height:100%;object-fit:contain}
+  .offer-thumbs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+  .offer-thumbs button{width:54px;height:54px;border:1px solid var(--line);background:#fff;padding:3px;transition:border-color .2s}
+  .offer-thumbs button.on{border-color:var(--ink)}
+  .offer-thumbs img{width:100%;height:100%;object-fit:contain}
+  .swatches{display:flex;align-items:center;gap:10px}
+  .swatches .lbl{font-size:12px;color:var(--soft);margin-right:4px}
+  .swatches .lbl b{color:var(--ink);font-weight:500}
+  .swatches .sw{width:44px;height:44px;border:1px solid var(--line);background:#fff center/cover no-repeat;position:relative;cursor:pointer}
+  .swatches .sw.on{border:2px solid var(--ink)}
+  .swatches .sw.soldout{opacity:.45;cursor:not-allowed}
+  .swatches .sw.soldout::after{content:"";position:absolute;left:-2px;right:-2px;top:50%;height:1.5px;background:#555;transform:rotate(-45deg)}
+  .offer-hero-price .was{color:#555;text-decoration-thickness:1.5px}
+  .offer-hero-price .rrp{font-size:12px;color:var(--muted);letter-spacing:.04em;align-self:center}
+  .offer-u .gift-mini{display:flex;align-items:center;gap:8px;text-align:left}
+  .offer-u .gift-mini img{width:34px;height:34px;object-fit:cover;background:var(--bg)}
+  .offer-u .gift-mini span{font-size:12px;line-height:1.25;color:var(--ink);font-weight:500}
+  .offer-u .gift-mini em{display:block;font-style:normal;color:var(--promo);font-weight:600;font-size:11px}
+  .clock-box{min-width:34px}
+  .offer .paylogos{justify-content:center;margin-top:-6px}
+  @media(max-width:520px){
+    .offer-img{padding:18px 18px 22px}
+    .offer-img .main img{max-width:300px}
+    .offer-thumbs button{width:48px;height:48px}
+    .offer-urgency-strip{grid-template-columns:1.25fr 1px 1fr}
+    .clock-boxes{gap:3px}
+    .clock-box{min-width:28px;padding:5px 4px;font-size:14px}
+    .clock-dot{margin:0}
+    .offer-u{padding:0 8px}
+  }
+
+  /* ---------- reviews ---------- */
+  .rv-card .stars{color:var(--star)}
+  .rv-score .stars{color:var(--star)}
+  .rv-bars .bar .fill{background:var(--ink)}
+  .rv-card .avatar{background:linear-gradient(135deg,#ff7a52,#d42a00)}
+  .rv-card .body.clamp{display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden}
+  .rv-card .readmore{align-self:flex-start;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:1px;margin-top:-6px}
+  .rv-more{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .rv-more button{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border:1px solid var(--ink);color:var(--ink);font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;transition:all .3s}
+  .rv-more button:hover{background:var(--ink);color:#fff}
+  .rv-more button.solid{background:var(--ink);color:#fff}
+
+  /* ---------- footer ---------- */
+  footer .f-grid{border-top:none}
+  .f-col a{cursor:pointer}
+
+  /* ---------- sticky bar ---------- */
+  .sb-price .now sup{color:var(--accent)}
+  .sb-price .was{color:#555}
+  .sb{padding-bottom:calc(10px + env(safe-area-inset-bottom))}
+
+  /* ---------- lightbox sizing ---------- */
+  .lb-img{max-height:80vh}
+  .searchbar{top:55px;z-index:59}
+  /* mobile hero: full-bleed photo, tighter copy */
+  @media(max-width:900px){
+    .hero{padding:0 !important;gap:0 !important}
+    .hero-stage{aspect-ratio:5/4}
+    .hero-copy{padding:26px 20px 36px}
+  }
+  h2 .ital{color:var(--accent)}
+  .tech h2 .ital,.editorial h2 .ital{color:var(--accent-2)}
+  .tech-card .spec .v{text-transform:none;letter-spacing:0}
+  .transform-card img.bg.pos-low{object-position:50% 82%}
+  .transform-card img.bg.pos-mid{object-position:50% 62%}
+  .offer-banner{justify-content:flex-end}
+  .offer-banner .right{color:#ffb199}
+  @media(max-width:900px){.rv-tags{flex-direction:row;flex-wrap:wrap}.rv-tags .tag-label{width:100%;margin-bottom:0}.rv-tags .tag{padding:6px 10px}.rv-summary{gap:22px}}
+  @media(max-width:520px){footer .f-grid{grid-template-columns:1fr 1fr;gap:28px 16px}footer .f-col:last-child{grid-column:1/-1}footer .f-col a{font-size:13px}}
+  @media(min-width:821px){.att-grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:520px){
+    .att-cell.gift{grid-column:1/-1;display:grid;grid-template-columns:110px 1fr;column-gap:16px;align-items:center}
+    .att-cell.gift .idx{grid-column:1/-1}
+    .att-cell.gift .att-illu{grid-row:2/4;height:110px;margin:8px 0 0}
+    .att-cell.gift h4{align-self:end;margin-top:8px}
+    .att-cell.gift p{align-self:start}
+  }
+  .editorial{background:radial-gradient(ellipse at 85% 0%,rgba(255,51,0,.35),transparent 55%),var(--ink)}
+  .editorial::before{display:none}
+  @media(max-width:820px){.editorial-in{aspect-ratio:auto;padding:70px 24px;align-items:center}}
+  @media(max-width:820px){.promo-bar{flex-wrap:nowrap;white-space:nowrap;gap:8px;padding:9px 12px}}
+  .menu{box-shadow:none}
+  .menu.open{box-shadow:20px 0 60px -30px rgba(0,0,0,.4)}
+
 </style>
 </head>
 <body>
-<div class="announce">Free UK delivery &nbsp;·&nbsp; 30-day returns &nbsp;·&nbsp; 1-year warranty</div>
 
-<header>
-  <div class="side">
-    <button class="icobtn" id="menuBtn" type="button" aria-label="Open menu" aria-controls="menu" aria-expanded="false"><svg class="ico" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
-    <button class="icobtn" id="searchBtn" type="button" aria-label="Search" aria-expanded="false"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+<div class="promo-bar">
+  <span class="dot"></span>
+  <strong>69% off</strong>
+  <span>£139 + free JBL headphones</span>
+</div>
+
+<nav class="top">
+  <div class="wrap nav-in">
+    <div class="left">
+      <button class="icobtn" id="menuBtn" type="button" aria-label="Open menu" aria-controls="menu" aria-expanded="false"><svg class="ico" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <button class="icobtn" id="searchBtn" type="button" aria-label="Search" aria-expanded="false"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+      <div class="nav-links">
+        <a href="#why">Why Boombox 4</a>
+        <a href="#tech">Technology</a>
+        <a href="#specs">Specs</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+    </div>
+    <a href="#" class="brand" aria-label="JBL home"><img src="images/logo1.svg" alt="JBL"></a>
+    <div class="nav-right">
+      <button class="icobtn bagbtn" id="bagBtn" type="button" aria-label="Open bag"><svg class="ico" viewBox="0 0 24 24"><path d="M5 7h14l-1 13H6L5 7z"/><path d="M9 7a3 3 0 016 0"/></svg><span class="bagcount" id="bagCount">1</span></button>
+    </div>
   </div>
-  <a href="#" class="logo" aria-label="JBL home"><img src="images/logo1.svg" alt="JBL"></a>
-  <div class="side r">
-    <button class="icobtn bagbtn" id="bagBtn" type="button" aria-label="Open bag"><svg class="ico" viewBox="0 0 24 24"><path d="M5 7h14l-1 13H6L5 7z"/><path d="M9 7a3 3 0 016 0"/></svg><span class="bagcount" id="bagCount">1</span></button>
-  </div>
-</header>
+</nav>
 <form class="searchbar" id="searchBar" role="search" autocomplete="off">
   <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
   <input type="search" id="searchInput" placeholder="Search speakers, headphones…" aria-label="Search">
   <button type="submit">Search</button>
 </form>
 
-<main class="wrap">
-  <div class="pinfo px">
-    <a class="back" href="#">&lt; Back to Bluetooth Speakers</a>
-    <div class="trow">
-      <h1 class="ptitle">JBL Boombox 4</h1>
-      <div class="rating"><span class="stars">★★★★★</span> 4.8 (169)</div>
-    </div>
-  </div>
-
-  <div class="gallery">
-    <div class="main-wrap">
-      <button class="nav prev" type="button" aria-label="Previous image">&#8249;</button>
-      <div class="ph main" id="mainImg"><span>a1</span></div>
-      <button class="nav next" type="button" aria-label="Next image">&#8250;</button>
-      <div class="ribbon"><span>Limited offer</span></div>
-      <div class="live">
-        <div class="timer"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg>Deal ends <b id="offLeft">Sunday</b></div>
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-copy">
+    <div class="hero-copy-inner">
+      <div class="hero-pill"><span class="dot"></span><strong>Limited offer</strong><span>· 69% off</span></div>
+      <h1 class="h1">
+        Big sound.
+        <span class="ital">Anywhere.</span>
+      </h1>
+      <p class="hero-sub">JBL's most powerful portable waterproof speaker. Deep, punchy bass, up to 34 hours of playtime and a rugged IP68 body built for every party.</p>
+      <div class="hero-price">
+        <span class="now"><sup>£</sup>139</span>
+        <span class="was">RRP <s>£449.99</s></span>
+        <span class="badge">−69%</span>
+      </div>
+      <div class="hero-gift">
+        <img src="images/gift.webp" alt="JBL Tune 520BT">
+        <span><b>FREE JBL Tune 520BT headphones</b><br>Included with your order · worth £49.99</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#" class="btn js-add">
+          <span>Add to basket · £139</span>
+          <svg width="16" height="10" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 5h14M11 1l4 4-4 4"/></svg>
+        </a>
+        <a href="#why" class="link-u">Why it's different</a>
+      </div>
+      <div class="hero-rating">
+        <span class="st">★★★★★</span>
+        <span class="sc">4.8</span>
+        <span class="sep"></span>
+        <span class="txt">169 verified reviews</span>
       </div>
     </div>
-    <div class="thumbs">
-      <div class="ph on" data-src="images/a1.webp"><span>1</span></div>
-      <div class="ph" data-src="images/a2.webp"><span>2</span></div>
-      <div class="ph" data-src="images/a3.webp"><span>3</span></div>
-      <div class="ph" data-src="images/a4.webp"><span>4</span></div>
-      <div class="ph" data-src="images/a5.webp"><span>5</span></div>
-    </div>
   </div>
-
-  <div class="pinfo px">
-    <div class="label">Color: <b id="colorName">Black</b></div>
-    <div class="swatches">
-      <div class="sw on" data-n="Black" data-img="images/p1.webp"></div>
-      <div class="sw soldout" data-n="Squad" data-img="images/p2.webp" title="Sold out" aria-disabled="true"></div>
-    </div>
-
-    <div class="price">
-      <span class="now"><sup>£</sup>139</span>
-      <span class="was">RRP <s>£449.99</s></span>
-      <i class="brk"></i>
-      <span class="save">Save £310.99 · 69% off</span>
-    </div>
-
-    <div class="giftcall">
-      <img src="images/gift.webp" alt="JBL Tune 520BT">
-      <div><b>+ FREE JBL Tune 520BT headphones</b><span>Included with this order · worth £49.99</span></div>
-      <em>FREE</em>
-    </div>
-
-    <h2 class="dtitle">Most powerful JBL portable waterproof speaker</h2>
-    <p class="desc">Massive sound with deep, punchy bass and up to 34 hours of playtime. Rugged, waterproof and dustproof design built to go anywhere — plus a built-in power bank to keep your devices charged.</p>
-
-    <div class="buy" id="buyRow">
-      <button class="btn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18l-1.5 11a2 2 0 01-2 1.7H6.5a2 2 0 01-2-1.7z"/><path d="M8 6a4 4 0 018 0"/></svg><span>Add to basket</span></button>
-    </div>
-    <ul class="assure">
-      <li><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg>Dispatched within 24h · delivered in 2–4 working days</li>
-      <li><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Secure checkout · 30-day returns · 1-year warranty</li>
-    </ul>
-    <div class="paylogos" aria-label="Accepted payment methods">
-      <span class="pl visa">VISA</span>
-      <span class="pl mc"><i></i><i></i></span>
-      <span class="pl amex">AMEX</span>
-      <span class="pl apple">&#63743; Pay</span>
-      <span class="pl gpay"><b>G</b> Pay</span>
-      <span class="pl paypal">Pay<em>Pal</em></span>
-    </div>
+  <div class="hero-stage">
+    <img class="photo" src="images/feature1.webp" alt="JBL Boombox 4 on the beach at sunset" loading="eager" decoding="async">
+    <span class="off">−69%</span>
+    <span class="ends"><span class="dot"></span>Offer ends <b class="js-left">Sunday</b></span>
   </div>
+</header>
 
-  <div class="why">
-    <h4>Why buy from JBL?</h4>
-    <ul><li>Free UK delivery · 2–4 working days</li><li>Free 30-day returns</li><li>Official 1-year warranty</li></ul>
-  </div>
-
-  <nav class="tabs"><a href="#features" class="on">Features</a><a href="#specs">Specs</a><a href="#reviews">Reviews</a></nav>
-
-  <section id="features" class="feature px">
-    <h2 class="h2">Features</h2>
-    <div class="ph dark auto" data-src="images/feature1.webp"><span>feature1.webp</span></div>
-    <div class="fgrid">
-      <div class="fcard"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="18" height="10" rx="2"/><path d="M22 10v4M6 10v4M10 10v4"/></svg><h3>Up to 34h playtime</h3><p>All-day, all-night battery. Charge once and play through the weekend.</p></div>
-      <div class="fcard"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 01-12 0c0-4.5 6-11 6-11z"/></svg><h3>IP67 waterproof &amp; dustproof</h3><p>Pool, beach, rain or mud. Rinse it off and keep the party going.</p></div>
-      <div class="fcard"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg><h3>Built-in power bank</h3><p>USB-C out charges your phone while the music plays.</p></div>
-      <div class="fcard"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-15.5 6.3M3 12a9 9 0 0115.5-6.3"/><path d="M3 4v5h5M21 20v-5h-5"/></svg><h3>Replaceable battery</h3><p>Swap the battery at home in minutes. Built to last for years.</p></div>
-    </div>
-  </section>
-
-  <section id="specs" class="specs px">
-    <h2 class="h2 left">Specs &amp; Downloads</h2>
-    <div class="meta">
-      <div><span>Item#:</span><b>JBLBOOMBOX4BLKUK</b></div>
-    </div>
-    <details class="top">
-      <summary><h2 class="h2">Description</h2></summary>
-      <div class="body">
-        <p>The JBL Boombox 4 is built for the moments that need big sound. Dual woofers and tweeters deliver deep, punchy bass and crisp highs that fill any room, backyard or beach without distortion, even at full volume.</p>
-        <p>With up to 34 hours of playtime and a built-in power bank, you stay in the mix all day and keep your phone charged. The rugged IP67 design shrugs off water, sand and dust, and the sturdy handle makes it easy to carry the energy everywhere you go.</p>
-        <p>Pair two speakers for stereo sound, or connect more with the JBL app and turn any gathering into a party.</p>
-      </div>
-    </details>
-
-    <details class="top">
-      <summary><h2 class="h2">Specs</h2></summary>
-      <div class="body">
-        <div class="acc">
-          <details><summary>General Specifications</summary>
-            <dl>
-              <dt>Output power (W)</dt><dd>(AC mode) 2 × 65W RMS Woofer, 2 × 40W RMS Tweeter<br>(Battery mode) 2 × 60W RMS Woofer, 2 × 40W RMS Tweeter</dd>
-              <dt>Power Input</dt><dd>100 – 240 Vac; 50/60 Hz</dd>
-              <dt>Signal-to-Noise Ratio</dt><dd>&gt; 80 dB</dd>
-            </dl>
-          </details>
-          <details><summary>Audio Specifications</summary>
-            <dl>
-              <dt>Frequency Response</dt><dd>37 Hz – 20 kHz</dd>
-              <dt>Transducer</dt><dd>2 × 5 inch / 2 × 123 mm woofer, 2 × 0.75 inch / 2 × 20 mm tweeter, 2 pcs circle + 1 pc racetrack passive radiator</dd>
-            </dl>
-          </details>
-          <details><summary>Dimensions</summary>
-            <dl>
-              <dt>Dimensions (W × H × D) (cm)</dt><dd>51 × 26 × 21</dd>
-              <dt>Dimensions (W × H × D) (in)</dt><dd>20 × 10 × 8</dd>
-              <dt>Net Weight (kg)</dt><dd>5.89</dd>
-              <dt>Net Weight (lbs)</dt><dd>13</dd>
-            </dl>
-          </details>
-          <details><summary>Control &amp; Connection</summary>
-            <dl>
-              <dt>Connection Ports</dt><dd>AC-in, USB-C</dd>
-              <dt>Connection</dt><dd>AC-in, USB-C</dd>
-              <dt>Bluetooth profiles</dt><dd>A2DP 1.4, AVRCP 1.6</dd>
-              <dt>Bluetooth frequency</dt><dd>2.4 GHz – 2.4835 GHz</dd>
-              <dt>Bluetooth transmitted modulation</dt><dd>GFSK, π/4 DQPSK, 8DPSK</dd>
-            </dl>
-          </details>
-        </div>
-      </div>
-    </details>
-
-    <details class="top">
-      <summary><h2 class="h2">What's in the box?</h2></summary>
-      <div class="body">
-        <ul><li>1 × JBL Boombox 4</li><li>1 × Power adapter</li><li>1 × Quick start guide</li><li>1 × Warranty card</li></ul>
-      </div>
-    </details>
-
-    <details class="top">
-      <summary><h2 class="h2">Documents &amp; downloads</h2></summary>
-      <div class="body">
-        <ul><li><a href="#">User manual (PDF)</a></li><li><a href="#">Spec sheet (PDF)</a></li><li><a href="#">Safety sheet (PDF)</a></li></ul>
-      </div>
-    </details>
-  </section>
-
-  <section id="reviews" class="reviews px">
-    <h2 class="h2">Reviews</h2>
-    <details class="top" id="revToggle" open>
-    <summary><h2 class="h2">Customer Reviews</h2></summary>
-    <div class="body">
-    <div class="sum">
-      <div><div class="big">4.8</div><div class="stars">★★★★★</div><small style="color:var(--muted);font-size:11px">169 reviews</small></div>
-      <button class="btn outline" type="button" style="flex:none;padding:0 16px;height:40px;font-size:12px" onclick="openFooterModal('write-review')">Write a review</button>
-    </div>
-    <div class="bars">
-      <div class="bar"><span>5★</span><div><i style="width:86%"></i></div><span>145</span></div>
-      <div class="bar"><span>4★</span><div><i style="width:8%"></i></div><span>14</span></div>
-      <div class="bar"><span>3★</span><div><i style="width:4%"></i></div><span>6</span></div>
-      <div class="bar"><span>2★</span><div><i style="width:1%"></i></div><span>2</span></div>
-      <div class="bar"><span>1★</span><div><i style="width:1%"></i></div><span>2</span></div>
-    </div>
-    <div class="rev" id="r1"><div class="stars">★★★★★</div><h5>Great Speaker</h5><p>Loving the speaker and everything about it the base how loud it is the functionality is easy connect to Bluetooth it’s so loud. I want to bring it over with me. It’s a bit heavy but because it’s heavy duty a great speaker so happy with my purchase.</p><div class="rphotos"><img src="images/r1.webp" alt="Customer photo" loading="lazy"></div><small>Tiya123 · 14 June 2026</small><span class="verified"><svg viewBox="0 0 11 11"><circle cx="5.5" cy="5.5" r="5.5"/><path d="M3 5.5l1.8 1.8 3.2-3.2"/></svg>Verified purchase</span></div>
-    <div class="rev" id="r2"><div class="stars">★★★★★</div><h5>Great for family gatherings</h5><p>I recently purchased the JBL Boombox 4. I used the JBL Boombox 4 during a backyard BBQ and the sound quality was impressive. The bass was strong even outdoors, and the speaker got very loud without distortion. The Bluetooth connection was quick and the battery lasted for hours. I also liked that it is waterproof, which makes it great for outdoor use. My family and I really enjoyed using it and I would definitely recommend it.</p><div class="rphotos"><img src="images/r2-1.webp" alt="Customer photo" loading="lazy"><img src="images/r2-2.webp" alt="Customer photo" loading="lazy"></div><small>Husna · 9 June 2026</small><span class="verified"><svg viewBox="0 0 11 11"><circle cx="5.5" cy="5.5" r="5.5"/><path d="M3 5.5l1.8 1.8 3.2-3.2"/></svg>Verified purchase</span></div>
-    <div class="rev" id="r3"><div class="stars">★★★★★</div><h5>Just a great music player</h5><p>So i needed something to play music in the garden that actually sounded good. This is larger than alot of portable speakers but my god is it worth it, sound and bass are superb. Ive charged it once and it has lasted ages so far! I fully reccomend it to anyone who wants great music.</p><div class="rphotos"><img src="images/r3.webp" alt="Customer photo" loading="lazy"></div><small>BottlePete · 2 June 2026</small><span class="verified"><svg viewBox="0 0 11 11"><circle cx="5.5" cy="5.5" r="5.5"/><path d="M3 5.5l1.8 1.8 3.2-3.2"/></svg>Verified purchase</span></div>
-    <div class="rev" id="r4"><div class="stars">★★★★★</div><h5>Amazing sound!</h5><p>Yet again another JBL product landed on my door step in the most robust packaging. JBL really know how to ensure their products reach you in the best condition. I have to tell you something from the off, I have been an avid Bose addict for many a year but was tempted away from them when I heard their soundbar with sub, wow what great sound that is so I have high hopes for this Boombbox 4. I have started building my outside kitchen ready for the summer and this puppy being waterproof and robust is going to be the perfect addition. Impressed that it was almost fully charged right out of the box, pairing it via BT was as simple as putting one foot in front of the other. The sound from this is amazing and when you push the bass enhancer button OMG even at low volume it certainly gives an amazing rich full sound that is perfect for the garden party! The battery goes on for ever, the louder and bassier it is the quicker the battery will drain but saying that I have yet to recharge it since I got it. This does not have any sound enhancement ability so you would have to rely on your broadcasting device to do that however I have yet felt the need to enhance any aspect of the sound I push out to it as it all sounds amazing. The last get together I had went down really well with this JBL supplying the entertainment, I set up an old iPad for people to add tunes to the playlist, I was able to get the BB4 to power the iPad from its built in USBC plug located at the rear, it's own built in powerpack is a great bonus. Lastly the battery, its replaceable!!! So should the battery life ever drop then an affordable battery replacement is available, no need to send away it's a home DIY replacement procedure.</p><div class="rphotos"><img src="images/r4.webp" alt="Customer photo" loading="lazy"></div><small>Anonymous · 21 May 2026</small><span class="verified"><svg viewBox="0 0 11 11"><circle cx="5.5" cy="5.5" r="5.5"/><path d="M3 5.5l1.8 1.8 3.2-3.2"/></svg>Verified purchase</span></div>
-    <button class="btn outline loadmore" id="loadMore" type="button">Load more</button>
-    </div>
-    </details>
-  </section>
-</main>
-
-<section id="faq" class="faq px wrap">
-  <h2 class="h2">FAQ</h2>
-  <div class="faqlist">
-    <details><summary>Is this a genuine JBL Boombox 4?</summary><p>Yes. Every unit is a brand-new, factory-sealed JBL Boombox 4 with the full 1-year warranty and all original accessories in the box.</p></details>
-    <details><summary>How long does delivery take?</summary><p>Free UK delivery. Orders are dispatched within 24 hours and arrive in 2–4 working days with a tracking link by email.</p></details>
-    <details><summary>What if I change my mind?</summary><p>You have 30 days from delivery to return it for a full refund. Keep the original packaging and reply to your order email to start a return.</p></details>
-    <details><summary>How does the free gift work?</summary><p>The JBL Tune 520BT headphones are added to your order automatically at £0 and ship together with the speaker.</p></details>
-    <details><summary>Is there a warranty?</summary><p>Yes, 12 months against manufacturing defects. Contact us with your order number and we repair, replace or refund.</p></details>
-  </div>
-</section>
-
-<div class="news">
-  <div class="wrap">
-    <h3>Sign up for the latest news &amp; offers</h3>
-    <form onsubmit="return false"><input type="email" placeholder="Email address"><button>Sign up</button></form>
-    <small>By signing up you agree to receive marketing emails. Unsubscribe anytime.</small>
+<!-- SOCIAL PROOF -->
+<div class="proof">
+  <div class="wrap proof-in">
+    <div><div class="n">34<sup>h</sup></div><div class="l">Playtime</div></div>
+    <div><div class="n">IP68</div><div class="l">Waterproof</div></div>
+    <div><div class="n">210<sup>W</sup></div><div class="l">RMS output</div></div>
+    <div><div class="n">4.8<sup>★</sup></div><div class="l">169 reviews</div></div>
   </div>
 </div>
 
+<!-- WHY IT'S DIFFERENT -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="why-head">
+      <div class="eyebrow">Why it's different</div>
+      <h2>The speaker everyone <span class="ital">gathers around.</span></h2>
+      <p class="sub" style="margin:24px auto 0">Four reasons the Boombox 4 turns any place into the party.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-cell">
+        <div class="ico2"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="7" width="18" height="10" rx="2"/><path d="M22 11v2M6 10v4M10 10v4M14 10v4"/></svg></div>
+        <div><div class="big">34<sup>h</sup></div><div class="stat-lbl">Playtime</div></div>
+        <h4>Party all weekend.</h4>
+        <p>Up to 28 hours on one charge, plus up to 6 more with Playtime Boost. Charge on Friday, play until Sunday.</p>
+      </div>
+      <div class="why-cell">
+        <div class="ico2"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2.5S5 10 5 15a7 7 0 0014 0c0-5-7-12.5-7-12.5z"/></svg></div>
+        <div><div class="big">IP68</div><div class="stat-lbl">Water &amp; dustproof</div></div>
+        <h4>Pool, beach, rain.</h4>
+        <p>Fully waterproof and dustproof. Splash it, cover it in sand, rinse it off and keep the music going.</p>
+      </div>
+      <div class="why-cell">
+        <div class="ico2"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 12h2M6 8v8M10 5v14M14 8v8M18 10v4M22 12h0"/></svg></div>
+        <div><div class="big">AI</div><div class="stat-lbl">Sound Boost</div></div>
+        <h4>Deep bass, no distortion.</h4>
+        <p>AI Sound Boost reads your music in real time to push more bass and volume while keeping it clean.</p>
+      </div>
+      <div class="why-cell">
+        <div class="ico2"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M12 7l-2 4h4l-2 4"/></svg></div>
+        <div><div class="big">USB-C</div><div class="stat-lbl">Built-in power bank</div></div>
+        <h4>Keeps your phone alive.</h4>
+        <p>Charge your phone from the speaker while it plays. The battery is replaceable, so it lasts for years.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section class="tech" id="tech">
+  <div class="wrap">
+    <div class="tech-head">
+      <div class="eyebrow">The engineering inside</div>
+      <h2>Sound you can <span class="ital">feel.</span></h2>
+      <p class="sub">Two woofers, two tweeters and three passive radiators, tuned by JBL Pro Sound to fill a garden, a beach or a packed room.</p>
+      <div class="tech-stats">
+        <div><div class="n">210<sup>W</sup></div><div class="l">RMS output</div></div>
+        <div><div class="n">37<sup>Hz</sup></div><div class="l">Deep bass</div></div>
+        <div><div class="n">5.4</div><div class="l">Bluetooth</div></div>
+      </div>
+    </div>
+
+    <div class="tech-cards">
+      <div class="tech-card">
+        <div class="img"><img src="images/a4.webp" alt="JBL Boombox 4 passive radiator" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <div class="idx">01</div>
+          <h4>JBL Pro Sound</h4>
+          <p>Dual 5-inch woofers and dual 20 mm tweeters, backed by three passive radiators, deliver deep, punchy bass and crisp highs even at full volume.</p>
+          <div class="spec"><span>Frequency response</span><span class="v">37Hz – 20kHz</span></div>
+        </div>
+      </div>
+      <div class="tech-card">
+        <div class="img"><img src="images/a5.webp" alt="JBL Boombox 4 top controls" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <div class="idx">02</div>
+          <h4>Auracast multi-speaker</h4>
+          <p>Link the Boombox 4 with other Auracast JBL speakers at the press of a button, or pair two for true stereo. Control it all from the JBL Portable app.</p>
+          <div class="spec"><span>Bluetooth</span><span class="v">5.4 · Auracast</span></div>
+        </div>
+      </div>
+      <div class="tech-card">
+        <div class="img"><img src="images/a3.webp" alt="JBL Boombox 4 rear with USB-C port" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <div class="idx">03</div>
+          <h4>Power bank &amp; replaceable battery</h4>
+          <p>The USB-C port on the back charges your phone. When the battery eventually wears, you can swap it at home in minutes.</p>
+          <div class="spec"><span>Playtime</span><span class="v">up to 34h</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="tech-dots" id="techDots"><span class="active"></span><span></span><span></span></div>
+  </div>
+</section>
+
+<!-- IN THE BOX -->
+<section class="att" id="box">
+  <div class="wrap">
+    <div class="att-head">
+      <div class="eyebrow">What's in the box</div>
+      <h2>Everything you need. <span class="ital">Plus a gift.</span></h2>
+    </div>
+    <div class="att-grid">
+      <div class="att-cell">
+        <div class="idx">01</div>
+        <div class="att-illu"><img src="images/a1.webp" alt="JBL Boombox 4" loading="lazy" decoding="async"></div>
+        <h4>JBL Boombox 4</h4>
+        <p>Brand new and factory sealed, with the full 1-year warranty.</p>
+      </div>
+      <div class="att-cell">
+        <div class="idx">02</div>
+        <div class="att-illu"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="22" y="6" width="20" height="16" rx="3"/><path d="M28 6V2M36 6V2M32 22v10c0 8-14 6-14 16s10 12 18 10"/></svg></div>
+        <h4>Power cable &amp; quick start guide</h4>
+        <p>AC power for the full 210W output, plus a guide to pair in seconds and register your warranty.</p>
+      </div>
+      <div class="att-cell gift">
+        <div class="idx">03</div>
+        <div class="att-illu"><img src="images/gift.webp" alt="JBL Tune 520BT headphones" loading="lazy" decoding="async"></div>
+        <h4>JBL Tune 520BT <span class="free">FREE</span></h4>
+        <p>Wireless headphones worth £49.99, added to your order at no cost.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDITORIAL QUOTE -->
+<section class="editorial">
+  <div class="wrap editorial-in">
+    <div class="c">
+      <div class="eyebrow">From our customers</div>
+      <div class="stars">★★★★★</div>
+      <blockquote>The bass was strong even outdoors, and the speaker got very loud without distortion.</blockquote>
+      <cite>Husna · Verified purchase</cite>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section class="shop" id="shop">
+  <div class="wrap">
+    <div class="offer">
+      <div class="promo-ribbon-wrap"><div class="promo-ribbon">Limited Time Offer</div></div>
+      <div class="offer-banner">
+        <span class="left"><span class="dot"></span>Limited offer</span>
+        <span class="right">Ends <span class="js-left">Sunday</span></span>
+      </div>
+
+      <div class="offer-split">
+        <div class="offer-img">
+          <div class="main"><img id="offerMain" src="images/a1.webp" alt="JBL Boombox 4" loading="lazy" decoding="async"></div>
+          <div class="offer-thumbs" id="offerThumbs">
+            <button type="button" class="on" data-src="images/a1.webp"><img src="images/a1.webp" alt="Front angle"></button>
+            <button type="button" data-src="images/a2.webp"><img src="images/a2.webp" alt="Front"></button>
+            <button type="button" data-src="images/a3.webp"><img src="images/a3.webp" alt="Back"></button>
+            <button type="button" data-src="images/a4.webp"><img src="images/a4.webp" alt="Side"></button>
+            <button type="button" data-src="images/a5.webp"><img src="images/a5.webp" alt="Top"></button>
+          </div>
+        </div>
+
+        <div class="offer-body">
+          <div class="offer-head">
+            <div class="offer-title">JBL Boombox 4</div>
+            <div class="offer-sub">Portable waterproof speaker</div>
+          </div>
+
+          <div class="swatches">
+            <span class="lbl">Colour: <b id="colorName">Black</b></span>
+            <span class="sw on" data-n="Black" style="background-image:url(images/p1.webp)" title="Black"></span>
+            <span class="sw soldout" data-n="Squad" style="background-image:url(images/p2.webp)" title="Squad · sold out" aria-disabled="true"></span>
+          </div>
+
+          <div class="offer-hero-price">
+            <div class="row">
+              <span class="now"><sup>£</sup>139</span>
+              <span class="was">£449.99</span>
+              <span class="badge">−69%</span>
+            </div>
+            <div class="save">You save £310.99 on the RRP</div>
+          </div>
+
+          <div class="offer-urgency-strip">
+            <div class="offer-u">
+              <span class="lbl">Offer ends in</span>
+              <div class="clock-boxes">
+                <div class="clock-unit"><div class="clock-box" id="cdD">02</div><div class="clock-u">Days</div></div>
+                <span class="clock-dot">:</span>
+                <div class="clock-unit"><div class="clock-box" id="cdH">05</div><div class="clock-u">Hrs</div></div>
+                <span class="clock-dot">:</span>
+                <div class="clock-unit"><div class="clock-box" id="cdM">42</div><div class="clock-u">Min</div></div>
+                <span class="clock-dot">:</span>
+                <div class="clock-unit"><div class="clock-box" id="cdS">18</div><div class="clock-u">Sec</div></div>
+              </div>
+            </div>
+            <span class="divider"></span>
+            <div class="offer-u">
+              <span class="lbl">Free gift</span>
+              <div class="gift-mini"><img src="images/gift.webp" alt=""><span>Tune 520BT<em>£0 · worth £49.99</em></span></div>
+            </div>
+          </div>
+
+          <ul class="offer-incl">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> JBL Boombox 4 with power cable</li>
+            <li class="gift"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> FREE JBL Tune 520BT headphones · worth £49.99</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Free UK delivery · dispatched within 24h</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 30-day returns · 1-year warranty</li>
+          </ul>
+
+          <a href="#" class="btn js-add">
+            <span>Add to basket · £139</span>
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 5h14M11 1l4 4-4 4"/></svg>
+          </a>
+
+          <div class="paylogos" aria-label="Accepted payment methods">
+            <span class="pl visa">VISA</span>
+            <span class="pl mc"><i></i><i></i></span>
+            <span class="pl amex">AMEX</span>
+            <span class="pl apple">&#63743; Pay</span>
+            <span class="pl gpay"><b>G</b> Pay</span>
+            <span class="pl paypal">Pay<em>Pal</em></span>
+          </div>
+
+          <div class="offer-foot">
+            <span>Secure checkout</span>
+            <span>30-day returns</span>
+            <span>1-year warranty</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="rv-head">
+      <div class="eyebrow">Verified reviews</div>
+      <h2>Trusted by <span class="ital">music lovers.</span></h2>
+      <p class="sub">Rated 4.8 out of 5 by 169 verified customers.</p>
+    </div>
+
+    <div class="rv-summary">
+      <div class="rv-score">
+        <div class="big">4.8</div>
+        <div class="stars">★★★★★</div>
+        <div class="meta">169 reviews</div>
+      </div>
+      <div class="rv-bars">
+        <div class="bar"><span class="l">5★</span><div class="track"><div class="fill" style="width:86%"></div></div><span class="p">145</span></div>
+        <div class="bar"><span class="l">4★</span><div class="track"><div class="fill" style="width:8%"></div></div><span class="p">14</span></div>
+        <div class="bar"><span class="l">3★</span><div class="track"><div class="fill" style="width:4%"></div></div><span class="p">6</span></div>
+        <div class="bar"><span class="l">2★</span><div class="track"><div class="fill" style="width:1%"></div></div><span class="p">2</span></div>
+        <div class="bar"><span class="l">1★</span><div class="track"><div class="fill" style="width:1%"></div></div><span class="p">2</span></div>
+      </div>
+      <div class="rv-tags">
+        <div class="tag-label">Most mentioned</div>
+        <div class="tag">Powerful bass</div>
+        <div class="tag">Long battery life</div>
+        <div class="tag">Waterproof</div>
+        <div class="tag">Easy to pair</div>
+      </div>
+    </div>
+
+    <div class="rv-grid">
+      <div class="rv-card">
+        <div class="top"><div class="stars">★★★★★</div><div class="verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Verified purchase</div></div>
+        <div class="title">"Great for family gatherings"</div>
+        <div class="body">I recently purchased the JBL Boombox 4. I used the JBL Boombox 4 during a backyard BBQ and the sound quality was impressive. The bass was strong even outdoors, and the speaker got very loud without distortion. The Bluetooth connection was quick and the battery lasted for hours. I also liked that it is waterproof, which makes it great for outdoor use. My family and I really enjoyed using it and I would definitely recommend it.</div>
+        <div class="photos"><img src="images/r2-1.webp" alt="Husna's Boombox 4" loading="lazy" decoding="async"><img src="images/r2-2.webp" alt="Husna's Boombox 4" loading="lazy" decoding="async"></div>
+        <div class="meta"><div class="who"><div class="avatar">H</div><div><div class="name">Husna</div><div class="place">9 June 2026</div></div></div></div>
+      </div>
+
+      <div class="rv-card">
+        <div class="top"><div class="stars">★★★★★</div><div class="verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Verified purchase</div></div>
+        <div class="title">"Great Speaker"</div>
+        <div class="body">Loving the speaker and everything about it the base how loud it is the functionality is easy connect to Bluetooth it’s so loud. I want to bring it over with me. It’s a bit heavy but because it’s heavy duty a great speaker so happy with my purchase.</div>
+        <div class="photos"><img src="images/r1.webp" alt="Tiya's Boombox 4" loading="lazy" decoding="async"></div>
+        <div class="meta"><div class="who"><div class="avatar">T</div><div><div class="name">Tiya123</div><div class="place">14 June 2026</div></div></div></div>
+      </div>
+
+      <div class="rv-card">
+        <div class="top"><div class="stars">★★★★★</div><div class="verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Verified purchase</div></div>
+        <div class="title">"Just a great music player"</div>
+        <div class="body">So i needed something to play music in the garden that actually sounded good. This is larger than alot of portable speakers but my god is it worth it, sound and bass are superb. Ive charged it once and it has lasted ages so far! I fully reccomend it to anyone who wants great music.</div>
+        <div class="photos"><img src="images/r3.webp" alt="BottlePete's Boombox 4" loading="lazy" decoding="async"></div>
+        <div class="meta"><div class="who"><div class="avatar">BP</div><div><div class="name">BottlePete</div><div class="place">2 June 2026</div></div></div></div>
+      </div>
+
+      <div class="rv-card">
+        <div class="top"><div class="stars">★★★★★</div><div class="verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Verified purchase</div></div>
+        <div class="title">"Amazing sound!"</div>
+        <div class="body clamp">Yet again another JBL product landed on my door step in the most robust packaging. JBL really know how to ensure their products reach you in the best condition. I have to tell you something from the off, I have been an avid Bose addict for many a year but was tempted away from them when I heard their soundbar with sub, wow what great sound that is so I have high hopes for this Boombbox 4. I have started building my outside kitchen ready for the summer and this puppy being waterproof and robust is going to be the perfect addition. Impressed that it was almost fully charged right out of the box, pairing it via BT was as simple as putting one foot in front of the other. The sound from this is amazing and when you push the bass enhancer button OMG even at low volume it certainly gives an amazing rich full sound that is perfect for the garden party! The battery goes on for ever, the louder and bassier it is the quicker the battery will drain but saying that I have yet to recharge it since I got it. This does not have any sound enhancement ability so you would have to rely on your broadcasting device to do that however I have yet felt the need to enhance any aspect of the sound I push out to it as it all sounds amazing. The last get together I had went down really well with this JBL supplying the entertainment, I set up an old iPad for people to add tunes to the playlist, I was able to get the BB4 to power the iPad from its built in USBC plug located at the rear, it's own built in powerpack is a great bonus. Lastly the battery, its replaceable!!! So should the battery life ever drop then an affordable battery replacement is available, no need to send away it's a home DIY replacement procedure.</div>
+        <button class="readmore" type="button">Read more</button>
+        <div class="photos"><img src="images/r4.webp" alt="Outdoor kitchen with Boombox 4" loading="lazy" decoding="async"></div>
+        <div class="meta"><div class="who"><div class="avatar">A</div><div><div class="name">Anonymous</div><div class="place">21 May 2026</div></div></div></div>
+      </div>
+    </div>
+
+    <div class="rv-more">
+      <button type="button" class="solid js-add">Add to basket · £139</button>
+      <button type="button" onclick="openFooterModal('write-review')">Write a review</button>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section class="specs faq" id="specs">
+  <div class="wrap faq-in">
+    <div class="faq-head">
+      <div class="eyebrow">Tech specs</div>
+      <h2>The <span class="ital">details.</span></h2>
+      <div class="meta"><span>Item#:</span><b>JBLBOOMBOX4BLKUK</b></div>
+    </div>
+    <div class="faq-list">
+      <details class="q">
+        <summary>General <span class="plus"></span></summary>
+        <dl>
+          <dt>Output power (AC mode)</dt><dd>2 × 65W RMS woofer, 2 × 40W RMS tweeter</dd>
+          <dt>Output power (battery)</dt><dd>2 × 60W RMS woofer, 2 × 40W RMS tweeter</dd>
+          <dt>Power input</dt><dd>100 – 240 Vac, 50/60 Hz</dd>
+          <dt>Signal-to-noise ratio</dt><dd>&gt; 80 dB</dd>
+          <dt>Playtime</dt><dd>Up to 28h + 6h with Playtime Boost</dd>
+          <dt>Waterproof</dt><dd>IP68</dd>
+        </dl>
+      </details>
+      <details class="q">
+        <summary>Audio <span class="plus"></span></summary>
+        <dl>
+          <dt>Frequency response</dt><dd>37 Hz – 20 kHz</dd>
+          <dt>Transducers</dt><dd>2 × 123 mm woofer, 2 × 20 mm tweeter, 3 passive radiators</dd>
+        </dl>
+      </details>
+      <details class="q">
+        <summary>Dimensions &amp; weight <span class="plus"></span></summary>
+        <dl>
+          <dt>W × H × D</dt><dd>51 × 26 × 21 cm</dd>
+          <dt>Net weight</dt><dd>5.89 kg</dd>
+        </dl>
+      </details>
+      <details class="q">
+        <summary>Control &amp; connection <span class="plus"></span></summary>
+        <dl>
+          <dt>Ports</dt><dd>AC-in, USB-C</dd>
+          <dt>Bluetooth profiles</dt><dd>A2DP 1.4, AVRCP 1.6</dd>
+          <dt>Bluetooth frequency</dt><dd>2.4 GHz – 2.4835 GHz</dd>
+          <dt>Modulation</dt><dd>GFSK, π/4 DQPSK, 8DPSK</dd>
+        </dl>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap faq-in">
+    <div class="faq-head">
+      <div class="eyebrow">Frequently asked</div>
+      <h2>Questions, <span class="ital">answered.</span></h2>
+    </div>
+    <div class="faq-list">
+      <details class="q">
+        <summary>Is this a genuine JBL Boombox 4? <span class="plus"></span></summary>
+        <div class="ans">Yes. Every unit is a brand-new, factory-sealed JBL Boombox 4 with the full 1-year warranty and all original accessories in the box.</div>
+      </details>
+      <details class="q">
+        <summary>How long does delivery take? <span class="plus"></span></summary>
+        <div class="ans">Free UK delivery. Orders are dispatched within 24 hours and arrive in 2–4 working days, with a tracking link by email.</div>
+      </details>
+      <details class="q">
+        <summary>How does the free gift work? <span class="plus"></span></summary>
+        <div class="ans">The JBL Tune 520BT headphones are added to your order automatically at £0 and ship together with the speaker.</div>
+      </details>
+      <details class="q">
+        <summary>What if I change my mind? <span class="plus"></span></summary>
+        <div class="ans">You have 30 days from delivery to return it for a full refund. Keep the original packaging and reply to your order email to start a return.</div>
+      </details>
+      <details class="q">
+        <summary>Is there a warranty? <span class="plus"></span></summary>
+        <div class="ans">Yes, 12 months against manufacturing defects. Contact us with your order number and we repair, replace or refund.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer>
   <div class="wrap">
-    <div class="fcols">
-      <div><h5>Shop</h5><a href="#">Headphones</a><a href="#">Speakers</a><a href="#">Party Boxes</a><a href="#">Accessories</a><a href="#">Deals</a></div>
-      <div><h5>Support</h5><a href="#" onclick="openFooterModal('contact');return false">Contact Us</a><a href="#" onclick="openFooterModal('contact');return false">Order Status</a><a href="#" onclick="openFooterModal('returns');return false">Returns &amp; Refunds</a><a href="#" onclick="openFooterModal('delivery');return false">Delivery</a><a href="#" onclick="openFooterModal('warranty');return false">Warranty</a></div>
-      <div><h5>Company</h5><a href="#">About</a><a href="#">Careers</a><a href="#">Press</a><a href="#">Affiliates</a></div>
-      <div><h5>Legal</h5><a href="#" onclick="openFooterModal('privacy');return false">Privacy Policy</a><a href="#" onclick="openFooterModal('terms');return false">Terms &amp; Conditions</a><a href="#" onclick="openFooterModal('nav-terms');return false">Navigation Terms</a><a href="#" onclick="openFooterModal('cookie-settings');return false">Cookie Settings</a><a href="#" onclick="openFooterModal('personal-data');return false">Personal Data Requests</a></div>
+    <div class="f-grid">
+      <div class="f-col">
+        <h5>Shop</h5>
+        <a href="./" class="js-reload">Speakers</a>
+        <a href="./" class="js-reload">Headphones</a>
+        <a href="./" class="js-reload">Party Boxes</a>
+        <a href="./" class="js-reload">Deals</a>
+      </div>
+      <div class="f-col">
+        <h5>Help</h5>
+        <a onclick="openFooterModal('delivery')">Delivery</a>
+        <a onclick="openFooterModal('returns')">Returns &amp; Refunds</a>
+        <a onclick="openFooterModal('warranty')">Warranty</a>
+        <a onclick="openFooterModal('contact')">Contact Us</a>
+      </div>
+      <div class="f-col">
+        <h5>Legal</h5>
+        <a onclick="openFooterModal('privacy')">Privacy Policy</a>
+        <a onclick="openFooterModal('terms')">Terms &amp; Conditions</a>
+        <a onclick="openFooterModal('nav-terms')">Navigation Terms</a>
+        <a onclick="openFooterModal('cookie-settings')">Cookie Settings</a>
+        <a onclick="openFooterModal('personal-data')">Personal Data Requests</a>
+      </div>
+      <div class="f-col">
+        <h5>Newsletter</h5>
+        <p class="news">Offers and new arrivals, straight to your inbox.</p>
+        <form class="f-news-form" onsubmit="event.preventDefault();this.querySelector('input').value='';this.querySelector('button').textContent='✓';">
+          <input type="email" placeholder="Email address" required />
+          <button type="submit">Join</button>
+        </form>
+      </div>
     </div>
-    <p class="legal">© 2026 JBL. All rights reserved. Prices and availability subject to change. Questions? <a href="#" onclick="openFooterModal('contact');return false" style="color:#fff;display:inline;font-size:10px;margin:0">Contact us</a>.</p>
+
+    <div class="f-pay">
+      <span class="f-pay-label">Secure checkout · 256-bit SSL</span>
+      <div class="f-pay-marks">
+        <span class="f-pay-mark">Visa</span>
+        <span class="f-pay-mark">Mastercard</span>
+        <span class="f-pay-mark">Amex</span>
+        <span class="f-pay-mark">PayPal</span>
+        <span class="f-pay-mark">Apple Pay</span>
+      </div>
+    </div>
+
+    <div class="f-bot">
+      <div>© 2026 JBL. All rights reserved. Prices and availability subject to change.</div>
+      <div class="legal"><a onclick="openFooterModal('privacy')">Privacy</a><a onclick="openFooterModal('terms')">Terms</a><a onclick="openFooterModal('cookie-settings')">Cookies</a></div>
+    </div>
   </div>
 </footer>
-<div class="bottom">Privacy · Terms · Sitemap</div>
 
 <!-- Mobile menu drawer -->
 <div class="menu-back" id="menuBack"></div>
 <aside class="menu" id="menu" aria-hidden="true">
   <div class="menu-head">
     <img src="images/logo1.svg" alt="JBL">
-    <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+    <button class="menu-close" id="menuClose" type="button" aria-label="Close menu"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
   </div>
-  <nav class="menu-links">
+  <div class="menu-links">
     <a href="./">Speakers</a>
     <a href="./">Headphones</a>
     <a href="./">Party Boxes</a>
     <a href="./">Soundbars</a>
     <a href="./">Accessories</a>
     <a href="./" class="hot">Deals</a>
-  </nav>
+  </div>
   <div class="menu-util">
     <a href="./">Support</a>
     <a href="./">Track Order</a>
-    <a href="./">Account</a>
   </div>
   <div class="menu-foot">Free UK delivery · 30-day returns · 1-year warranty</div>
 </aside>
+
+<!-- Image lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Review image">
+  <span class="lb-counter" id="lbCount"></span>
+  <button class="lb-close" id="lbClose" aria-label="Close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+  <button class="lb-nav prev" id="lbPrev" aria-label="Previous image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 18l-6-6 6-6"/></svg></button>
+  <img class="lb-img" id="lbImg" src="" alt="">
+  <button class="lb-nav next" id="lbNext" aria-label="Next image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
 
 <!-- Cart modal -->
 <div class="cart-back" id="cartBack"></div>
 <aside class="cart" id="cart" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
   <div class="cart-head">
     <div class="t" id="cartTitle">Your Bag <span class="count" id="cartCount">1</span></div>
-    <button class="cart-close" id="cartClose" aria-label="Close cart">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 6L6 18M6 6l12 12"/></svg>
-    </button>
+    <button class="cart-close" id="cartClose" aria-label="Close cart"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
   </div>
 
   <div class="cart-urgency">
@@ -768,7 +1941,7 @@
   </div>
 
   <div class="cart-item">
-    <div class="thumb ph auto" data-src="images/a1.webp"><span>a1</span></div>
+    <div class="thumb"><img src="images/a1.webp" alt="JBL Boombox 4"></div>
     <div class="info">
       <div class="nm">JBL Boombox 4</div>
       <div class="sub" id="cartColor">Black</div>
@@ -781,14 +1954,14 @@
   </div>
 
   <div class="cart-gift">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 12v10H4V12M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
     <span><strong>Official 1-year warranty</strong> included — free 30-day returns</span>
   </div>
 
   <label class="cart-pick" for="giftPick">
     <input type="checkbox" id="giftPick" checked>
-    <span class="box" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
-    <span class="thumb ph auto" data-src="images/gift.webp"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 14v-3a8 8 0 0116 0v3"/><rect x="3" y="13" width="4" height="7" rx="1.5"/><rect x="17" y="13" width="4" height="7" rx="1.5"/></svg></span>
+    <span class="box" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+    <span class="thumb"><img src="images/gift.webp" alt="JBL Tune 520BT"></span>
     <span class="info">
       <span class="tag">Free gift · selected</span>
       <span class="nm">JBL Tune 520BT Wireless Headphones</span>
@@ -830,7 +2003,7 @@
   </div>
 </aside>
 
-<!-- Footer modal (ported from ADDS/footer.js) -->
+<!-- Footer modal -->
 <div class="fp-overlay" id="fp-overlay" onclick="if(event.target===this)closeFooterModal()">
   <div class="fp-modal" id="fp-modal" role="dialog" aria-modal="true" aria-labelledby="fp-modal-title">
     <div class="fp-modal-header">
@@ -841,91 +2014,150 @@
   </div>
 </div>
 
-<div class="lb" id="lb"><button class="x" id="lbX" aria-label="Close">×</button><img id="lbImg" alt=""></div>
-
-<div class="sticky-cta" id="stickyCta">
-  <div class="sp"><b><sup>£</sup>139</b><s>£449.99</s></div>
-  <button class="btn" type="button" id="stickyBuy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18l-1.5 11a2 2 0 01-2 1.7H6.5a2 2 0 01-2-1.7z"/><path d="M8 6a4 4 0 018 0"/></svg><span>Add to cart</span></button>
-  <button class="totop" type="button" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 14l6-6 6 6M6 20l6-6 6 6"/></svg></button>
+<!-- Sticky bar -->
+<div class="sb" id="sb">
+  <div class="sb-in">
+    <div class="sb-left">
+      <div class="sb-tag"><span class="dot"></span>Offer ends&nbsp;<span class="js-left">Sunday</span></div>
+      <div class="sb-price">
+        <span class="now"><sup>£</sup>139</span>
+        <span class="was">£449.99</span>
+        <span class="badge">−69%</span>
+      </div>
+    </div>
+    <a href="#" class="sb-cta js-add">
+      <span>Add to basket</span>
+      <svg width="14" height="10" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 5h14M11 1l4 4-4 4"/></svg>
+    </a>
+  </div>
 </div>
 
 <script>
-  // Color swatches: show images/pN.png if present, else stay a placeholder
-  document.querySelectorAll('.sw').forEach((s, i) => {
-    s.classList.add('ph');
-    s.innerHTML = '<span>p' + (i + 1) + '</span>';
-    const img = new Image();
-    img.onload = () => { s.innerHTML = ''; s.classList.add('has-img'); s.style.backgroundImage = 'url(' + s.dataset.img + ')'; };
-    img.src = s.dataset.img;
-  });
-  document.querySelectorAll('.sw:not(.soldout)').forEach(s => s.onclick = () => {
-    document.querySelectorAll('.sw').forEach(x => x.classList.remove('on'));
-    s.classList.add('on');
-    document.getElementById('colorName').textContent = s.dataset.n;
-  });
-  // Gallery: each slot shows images/product-N.png if present, else stays a placeholder
-  const thumbs = [...document.querySelectorAll('.thumbs .ph')];
-  const main = document.getElementById('mainImg');
-  const fill = (el, src, label) => {
-    const img = new Image();
-    img.onload = () => { el.innerHTML = ''; el.style.background = '#fff'; el.classList.add('has-img'); img.style.cssText = 'width:100%;height:100%;object-fit:contain;position:relative'; el.appendChild(img); };
-    img.onerror = () => { el.innerHTML = '<span>' + label + '</span>'; el.style.background = ''; el.classList.remove('has-img'); };
-    img.src = src;
+  const pad = n => String(n).padStart(2, '0');
+  const setText = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+
+  // ---------- Countdown: ends next Sunday 23:59:59 (Europe/London) ----------
+  const londonNow = () => new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/London' }));
+  const dealEnd = (() => {
+    const n = londonNow(); const d = new Date(n);
+    const daysToSunday = (7 - n.getDay()) % 7 || 7;
+    d.setDate(n.getDate() + daysToSunday); d.setHours(23, 59, 59, 0);
+    return d.getTime() - n.getTime() + Date.now();
+  })();
+  const leftEls = document.querySelectorAll('.js-left');
+  const tick = () => {
+    let d = Math.max(0, dealEnd - Date.now());
+    const days = Math.floor(d / 86400000); d -= days * 86400000;
+    const hrs = Math.floor(d / 3600000); d -= hrs * 3600000;
+    const min = Math.floor(d / 60000); d -= min * 60000;
+    const sec = Math.floor(d / 1000);
+    const clock = pad(hrs) + ':' + pad(min) + ':' + pad(sec);
+    setText('cdD', pad(days)); setText('cdH', pad(hrs)); setText('cdM', pad(min)); setText('cdS', pad(sec));
+    setText('cartLeft', (days ? days + 'd ' : '') + clock);
+    const short = days > 1 ? 'in ' + days + ' days' : days === 1 ? 'tomorrow' : 'in ' + clock;
+    leftEls.forEach(el => el.textContent = short);
   };
-  const show = i => {
-    thumbs.forEach((x, j) => x.classList.toggle('on', j === i));
-    fill(main, thumbs[i].dataset.src, thumbs[i].dataset.src.split('/').pop());
+  tick(); setInterval(tick, 1000);
+
+  // ---------- Cart ----------
+  const cart = document.getElementById('cart'), cartBack = document.getElementById('cartBack');
+  const unitPrice = 139, unitRetail = 449.99;
+  const money = n => (Math.round(n * 100) / 100).toFixed(2).replace(/\.00$/, '');
+  // CHECKOUT: swap this one line to switch store.
+  //   Almond : https://almondstore.store/cart/40995785015425:
+  //   Lumo   : https://thestorelumo.com/cart/45158589792307:
+  const checkoutBase = 'https://thestorelumo.com/cart/45158589792307:';
+  const checkoutBtn = document.getElementById('checkoutBtn');
+  const cartQty = 1;
+  const updateCart = () => {
+    const now = unitPrice * cartQty, was = unitRetail * cartQty;
+    checkoutBtn.href = checkoutBase + cartQty + window.location.search;
+    setText('cartCount', cartQty);
+    setText('itemPrice', money(now)); setText('itemWas', money(was));
+    setText('sumSub', money(now)); setText('sumDisc', money(was - now)); setText('sumTotal', money(now));
+    setText('cartColor', document.getElementById('colorName').textContent);
   };
-  thumbs.forEach((t, i) => { fill(t, t.dataset.src, i + 1); t.onclick = () => show(i); });
-  let cur = 0;
-  const go = d => { cur = (cur + d + thumbs.length) % thumbs.length; show(cur); };
-  thumbs.forEach((t, i) => t.addEventListener('click', () => { cur = i; }));
-  document.querySelector('.nav.prev').onclick = () => go(-1);
-  document.querySelector('.nav.next').onclick = () => go(1);
-  // Generic placeholders (e.g. feature1): load images/NAME.png, fall back to .jpg, else keep label
-  document.querySelectorAll('.ph.auto').forEach(el => {
-    const png = el.dataset.src, jpg = png.replace(/\.png$/, '.jpg');
-    const img = new Image();
-    img.onload = () => { el.innerHTML = ''; el.classList.add('has-img'); img.style.cssText = 'width:100%;height:100%;object-fit:cover;position:relative'; el.appendChild(img); };
-    img.onerror = () => {};
-    img.src = png;
-  });
-  show(0);
-  // Sticky CTA appears once the main buy button scrolls out of view
-  const buyRow = document.getElementById('buyRow'), sticky = document.getElementById('stickyCta');
-  document.getElementById('stickyBuy').onclick = () => {
-    const top = document.querySelector('.pinfo + .gallery + .pinfo').getBoundingClientRect().top + scrollY - 60;
-    window.scrollTo({ top, behavior: 'smooth' });
-    buyRow.classList.remove('flash'); void buyRow.offsetWidth; buyRow.classList.add('flash');
+  const showCart = () => {
+    updateCart();
+    cart.classList.add('open'); cartBack.classList.add('open'); document.body.classList.add('cart-open');
   };
-  // Sticky bar: visible whenever the main buy button is off screen (including right on load)
-  const syncSticky = () => { const r = buyRow.getBoundingClientRect(); sticky.classList.toggle('show', r.bottom < 0 || r.top > window.innerHeight); };
+  const openCart = e => {
+    if (e) e.preventDefault();
+    if (window.ttq) ttq.track('AddToCart', { content_id: 'jbl-boombox-4', content_type: 'product', content_name: 'JBL Boombox 4', value: unitPrice, currency: 'GBP', quantity: 1 });
+    showCart();
+  };
+  const closeCart = () => { cart.classList.remove('open'); cartBack.classList.remove('open'); document.body.classList.remove('cart-open'); };
+  document.querySelectorAll('.js-add').forEach(b => b.addEventListener('click', openCart));
+  document.getElementById('bagBtn').addEventListener('click', showCart);
+  cartBack.addEventListener('click', closeCart);
+  document.getElementById('cartClose').addEventListener('click', closeCart);
+  document.getElementById('cartCont').addEventListener('click', closeCart);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCart(); });
+  const giftPick = document.getElementById('giftPick'), giftRow = document.getElementById('sumGiftRow'), giftLabel = giftPick.closest('.cart-pick');
+  const syncGift = () => { giftLabel.classList.toggle('on', giftPick.checked); giftRow.classList.toggle('hidden', !giftPick.checked); giftLabel.querySelector('.tag').textContent = giftPick.checked ? 'Free gift · selected' : 'Free gift'; };
+  giftPick.addEventListener('change', syncGift); syncGift();
+  checkoutBtn.addEventListener('click', () => { if (window.ttq) ttq.track('InitiateCheckout', { content_id: 'jbl-boombox-4', content_type: 'product', content_name: 'JBL Boombox 4', value: unitPrice, currency: 'GBP', quantity: 1 }); });
+
+  // ---------- Sticky bar: shown whenever no "Add to basket" button is on screen ----------
+  const sb = document.getElementById('sb');
+  const anchors = [document.querySelector('.hero-cta .btn'), document.querySelector('.offer .btn')];
+  const syncSticky = () => {
+    const vh = window.innerHeight;
+    const anyVisible = anchors.some(a => { const r = a.getBoundingClientRect(); return r.bottom > 0 && r.top < vh; });
+    sb.classList.toggle('show', !anyVisible);
+  };
   syncSticky();
   window.addEventListener('scroll', syncSticky, { passive: true });
   window.addEventListener('resize', syncSticky);
   window.addEventListener('load', syncSticky);
-  // Reviews: show 2, then one more per "Load more" click
-  const revs = [...document.querySelectorAll('.reviews .rev')], loadMore = document.getElementById('loadMore');
-  let shown = 2;
-  const renderRevs = () => {
-    revs.forEach((r, i) => r.classList.toggle('hidden', i >= shown));
-    loadMore.classList.toggle('hidden', shown >= revs.length);
-  };
-  loadMore.onclick = () => { shown += 1; renderRevs(); };
-  renderRevs();
 
-  // ---------- Mobile menu drawer ----------
+  // ---------- Offer gallery + colour ----------
+  const offerMain = document.getElementById('offerMain');
+  document.querySelectorAll('#offerThumbs button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('#offerThumbs button').forEach(x => x.classList.toggle('on', x === b));
+    offerMain.src = b.dataset.src;
+  }));
+
+  // ---------- Reviews: read more ----------
+  document.querySelectorAll('.rv-card .readmore').forEach(btn => btn.addEventListener('click', () => {
+    const body = btn.previousElementSibling; const open = body.classList.toggle('clamp');
+    btn.textContent = open ? 'Read more' : 'Show less';
+  }));
+
+  // ---------- Accordions: one open at a time per list ----------
+  document.querySelectorAll('details.q').forEach(d => d.addEventListener('toggle', () => {
+    if (!d.open) return;
+    d.parentElement.querySelectorAll(':scope > details.q').forEach(o => { if (o !== d && o.open) o.open = false; });
+  }));
+
+  // ---------- Review image lightbox ----------
+  const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbCount = document.getElementById('lbCount');
+  const reviewImgs = Array.from(document.querySelectorAll('.rv-photostrip img, .rv-card .photos img'));
+  const pool = []; const seen = new Set();
+  reviewImgs.forEach(i => { if (!seen.has(i.src)) { seen.add(i.src); pool.push(i.src); } });
+  let lbIdx = 0;
+  const renderLb = () => { lbImg.src = pool[lbIdx]; lbCount.textContent = pad(lbIdx + 1) + ' / ' + pad(pool.length); };
+  const openLb = src => { const i = pool.indexOf(src); lbIdx = i >= 0 ? i : 0; renderLb(); lb.classList.add('open'); document.body.classList.add('cart-open'); };
+  const closeLb = () => { lb.classList.remove('open'); document.body.classList.remove('cart-open'); };
+  reviewImgs.forEach(img => img.addEventListener('click', () => openLb(img.src)));
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  document.getElementById('lbNext').addEventListener('click', () => { lbIdx = (lbIdx + 1) % pool.length; renderLb(); });
+  document.getElementById('lbPrev').addEventListener('click', () => { lbIdx = (lbIdx - 1 + pool.length) % pool.length; renderLb(); });
+  lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', e => { if (lb.classList.contains('open') && e.key === 'Escape') closeLb(); });
+
+  // ---------- Menu drawer: options bring the visitor back to this page ----------
   const menu = document.getElementById('menu'), menuBack = document.getElementById('menuBack'), menuBtn = document.getElementById('menuBtn');
   const openMenu = () => { menu.classList.add('open'); menuBack.classList.add('open'); document.body.classList.add('menu-open'); menu.setAttribute('aria-hidden', 'false'); menuBtn.setAttribute('aria-expanded', 'true'); };
   const closeMenu = () => { menu.classList.remove('open'); menuBack.classList.remove('open'); document.body.classList.remove('menu-open'); menu.setAttribute('aria-hidden', 'true'); menuBtn.setAttribute('aria-expanded', 'false'); };
+  const reload = e => { e.preventDefault(); closeMenu(); window.location.href = window.location.pathname + window.location.search; };
   menuBtn.addEventListener('click', openMenu);
   menuBack.addEventListener('click', closeMenu);
   document.getElementById('menuClose').addEventListener('click', closeMenu);
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
-  // every menu option just brings the visitor back to this page
-  document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', e => { e.preventDefault(); closeMenu(); window.location.href = window.location.pathname + window.location.search; }));
+  document.querySelectorAll('#menu a, a.js-reload').forEach(a => a.addEventListener('click', reload));
 
-  // ---------- Search: opens a bar; submitting brings the visitor back to this page ----------
+  // ---------- Search ----------
   const searchBar = document.getElementById('searchBar'), searchBtn = document.getElementById('searchBtn'), searchInput = document.getElementById('searchInput');
   searchBtn.addEventListener('click', () => {
     const open = !searchBar.classList.contains('open');
@@ -934,7 +2166,23 @@
   });
   searchBar.addEventListener('submit', e => { e.preventDefault(); window.location.href = window.location.pathname + window.location.search; });
 
-  // ---------- Footer modals (ported from ADDS/footer.js) ----------
+  // ---------- Tech cards drag-to-scroll + dots ----------
+  const techCards = document.querySelector('.tech-cards'), techDots = document.querySelectorAll('#techDots span');
+  if (techCards) {
+    let isDown = false, startX = 0, scrollL = 0;
+    techCards.addEventListener('mousedown', e => { isDown = true; techCards.classList.add('dragging'); startX = e.pageX - techCards.offsetLeft; scrollL = techCards.scrollLeft; });
+    const endDrag = () => { isDown = false; techCards.classList.remove('dragging'); };
+    techCards.addEventListener('mouseleave', endDrag); techCards.addEventListener('mouseup', endDrag);
+    techCards.addEventListener('mousemove', e => { if (!isDown) return; e.preventDefault(); techCards.scrollLeft = scrollL - (e.pageX - techCards.offsetLeft - startX); });
+    techCards.addEventListener('scroll', () => {
+      const cards = techCards.querySelectorAll('.tech-card'); const center = techCards.scrollLeft + techCards.clientWidth / 2;
+      let idx = 0, best = Infinity;
+      cards.forEach((c, i) => { const dd = Math.abs(c.offsetLeft + c.clientWidth / 2 - center); if (dd < best) { best = dd; idx = i; } });
+      techDots.forEach((dot, i) => dot.classList.toggle('active', i === idx));
+    }, { passive: true });
+  }
+
+  // ---------- Footer modals ----------
   const modals = {
     'cookie-settings': { title: 'Cookie Settings', body: `
         <p style="font-size:13px;color:#444;line-height:1.6;margin-bottom:20px;">Manage your cookie preferences. Essential cookies are always active as they are required for the site to function properly.</p>
@@ -1038,91 +2286,6 @@
     return false;
   };
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeFooterModal(); });
-  // Accordions: opening one closes the others in the same group
-  const topGroup = [...document.querySelectorAll('details.top')];
-  document.querySelectorAll('details').forEach(d => d.addEventListener('toggle', () => {
-    if (!d.open) return;
-    const group = d.classList.contains('top') ? topGroup : [...d.parentElement.querySelectorAll(':scope > details')];
-    group.forEach(o => { if (o !== d && o.open) o.open = false; });
-  }));
-  // Review photo lightbox
-  const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg');
-  document.querySelectorAll('.rphotos img').forEach(im => im.onclick = () => { lbImg.src = im.src; lb.classList.add('open'); });
-  const closeLb = () => lb.classList.remove('open');
-  lb.onclick = closeLb; document.getElementById('lbX').onclick = closeLb;
-  document.querySelectorAll('.tabs a').forEach(a => a.onclick = () => {
-    document.querySelectorAll('.tabs a').forEach(x => x.classList.remove('on'));
-    a.classList.add('on');
-  });
-
-  // ---------- Cart modal ----------
-  // Offer deadline: ends next Sunday 23:59:59 (Europe/London). Deterministic, never resets.
-  const pad = n => String(n).padStart(2, '0');
-  const setText = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
-  const londonNow = () => new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/London' }));
-  const dealEnd = (() => {
-    const n = londonNow(); const d = new Date(n);
-    const daysToSunday = (7 - n.getDay()) % 7 || 7; // today Sunday -> next Sunday
-    d.setDate(n.getDate() + daysToSunday); d.setHours(23, 59, 59, 0);
-    return d.getTime() - n.getTime() + Date.now(); // convert to real clock
-  })();
-  const tick = () => {
-    let d = Math.max(0, dealEnd - Date.now());
-    const days = Math.floor(d / 86400000); d -= days * 86400000;
-    const hrs = Math.floor(d / 3600000); d -= hrs * 3600000;
-    const min = Math.floor(d / 60000); d -= min * 60000;
-    const sec = Math.floor(d / 1000);
-    const clock = pad(hrs) + ':' + pad(min) + ':' + pad(sec);
-    setText('cartLeft', (days ? days + 'd ' : '') + clock);
-    setText('offLeft', days > 1 ? 'in ' + days + ' days' : days === 1 ? 'tomorrow' : 'in ' + clock);
-  };
-  tick(); setInterval(tick, 1000);
-
-  const cart = document.getElementById('cart');
-  const cartBack = document.getElementById('cartBack');
-  const unitPrice = 139, unitRetail = 449.99;
-  const money = n => (Math.round(n * 100) / 100).toFixed(2).replace(/\.00$/, '');
-  // CHECKOUT: swap this one line to switch store.
-  //   Almond : https://almondstore.store/cart/40995785015425:
-  //   Lumo   : https://thestorelumo.com/cart/45158589792307:
-  const checkoutBase = 'https://thestorelumo.com/cart/45158589792307:';
-  const checkoutBtn = document.getElementById('checkoutBtn');
-  const cartQty = 1; // quantity is always 1
-  const updateCart = () => {
-    const now = unitPrice * cartQty, was = unitRetail * cartQty;
-    checkoutBtn.href = checkoutBase + cartQty + window.location.search;
-    setText('cartCount', cartQty);
-    setText('itemPrice', money(now)); setText('itemWas', money(was));
-    setText('sumSub', money(now)); setText('sumDisc', money(was - now)); setText('sumTotal', money(now));
-    setText('cartColor', document.getElementById('colorName').textContent);
-  };
-  const showCart = () => {
-    updateCart();
-    cart.classList.add('open');
-    cartBack.classList.add('open');
-    document.body.classList.add('cart-open');
-  };
-  const openCart = e => {
-    if (e) e.preventDefault();
-    if (window.ttq) ttq.track('AddToCart', { content_id: 'jbl-boombox-4', content_type: 'product', content_name: 'JBL Boombox 4', value: unitPrice, currency: 'GBP', quantity: 1 });
-    showCart();
-  };
-  document.getElementById('bagBtn').addEventListener('click', showCart);
-  const closeCart = () => {
-    cart.classList.remove('open');
-    cartBack.classList.remove('open');
-    document.body.classList.remove('cart-open');
-  };
-  document.querySelector('#buyRow .btn').addEventListener('click', openCart);
-  cartBack.addEventListener('click', closeCart);
-  document.getElementById('cartClose').addEventListener('click', closeCart);
-  document.getElementById('cartCont').addEventListener('click', closeCart);
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCart(); });
-  // Free gift picker (pre-selected)
-  const giftPick = document.getElementById('giftPick'), giftRow = document.getElementById('sumGiftRow'), giftLabel = giftPick.closest('.cart-pick');
-  const syncGift = () => { giftLabel.classList.toggle('on', giftPick.checked); giftRow.classList.toggle('hidden', !giftPick.checked); giftLabel.querySelector('.tag').textContent = giftPick.checked ? 'Free gift · selected' : 'Free gift'; };
-  giftPick.addEventListener('change', syncGift); syncGift();
-  checkoutBtn.addEventListener('click', () => { if (window.ttq) ttq.track('InitiateCheckout', { content_id: 'jbl-boombox-4', content_type: 'product', content_name: 'JBL Boombox 4', value: unitPrice, currency: 'GBP', quantity: 1 }); });
 </script>
 </body>
 </html>
