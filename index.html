@@ -1373,6 +1373,23 @@
   @media(max-width:520px){footer .f-grid{grid-template-columns:1fr 1fr;gap:28px 16px}footer .f-col:last-child{grid-column:1/-1}footer .f-col a{font-size:13px}}
   @media(min-width:821px){.att-grid{grid-template-columns:repeat(2,1fr)}}
   .offer-urgency-strip{grid-template-columns:1fr !important}
+  /* quick reviews strip under hero */
+  .qrv{background:var(--white);border-top:1px solid var(--line);padding:34px 0 30px;overflow:hidden}
+  .qrv-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:16px}
+  .qrv-head .eyebrow{margin:0}
+  .qrv-head a{font-size:12px;font-weight:500;color:var(--ink);text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+  .qrv-row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,1fr);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .qrv-row::-webkit-scrollbar{display:none}
+  .qrv-c{scroll-snap-align:start;border:1px solid var(--line);background:var(--bg);padding:16px 16px 14px;display:flex;flex-direction:column;gap:10px}
+  .qrv-c .st{color:var(--star);font-size:13px;letter-spacing:2px}
+  .qrv-c q{font-size:14px;line-height:1.5;color:var(--ink);quotes:"\201C" "\201D"}
+  .qrv-c .who{display:flex;align-items:center;gap:8px;margin-top:auto;font-size:12px;color:var(--soft)}
+  .qrv-c .who b{color:var(--ink);font-weight:600}
+  .qrv-c .who .vf{color:var(--accent);font-weight:500}
+  @media(max-width:640px){
+    .qrv{padding:26px 0 24px}
+    .qrv-row{grid-auto-columns:80%;margin:0 -18px;padding:0 18px;scroll-padding:0 18px}
+  }
   @media(max-width:520px){
     .att-cell.gift{grid-column:1/-1;display:grid;grid-template-columns:110px 1fr;column-gap:16px;align-items:center}
     .att-cell.gift .idx{grid-column:1/-1}
@@ -1457,6 +1474,22 @@
     <span class="ends"><span class="dot"></span>Offer ends <b class="js-left">Sunday</b></span>
   </div>
 </header>
+
+<!-- QUICK REVIEWS -->
+<section class="qrv" aria-label="Customer reviews">
+  <div class="wrap">
+    <div class="qrv-head">
+      <div class="eyebrow">What buyers say</div>
+      <a href="#reviews">See all 169 reviews</a>
+    </div>
+    <div class="qrv-row">
+      <div class="qrv-c"><div class="st">★★★★★</div><q>Sound and bass are superb. I've charged it once and it has lasted ages so far!</q><div class="who"><b>BottlePete</b><span class="vf">✓ Verified purchase</span></div></div>
+      <div class="qrv-c"><div class="st">★★★★★</div><q>Loving the speaker and everything about it. Easy to connect to Bluetooth and it's so loud.</q><div class="who"><b>Tiya123</b><span class="vf">✓ Verified purchase</span></div></div>
+      <div class="qrv-c"><div class="st">★★★★★</div><q>Push the bass enhancer button and even at low volume it gives an amazing rich, full sound.</q><div class="who"><b>Anonymous</b><span class="vf">✓ Verified purchase</span></div></div>
+      <div class="qrv-c"><div class="st">★★★★★</div><q>The Bluetooth connection was quick and the battery lasted for hours.</q><div class="who"><b>Husna</b><span class="vf">✓ Verified purchase</span></div></div>
+    </div>
+  </div>
+</section>
 
 <!-- SOCIAL PROOF -->
 <div class="proof">
@@ -1965,7 +1998,7 @@
   </div>
 
   <div class="cart-foot">
-    <a href="https://almondstore.store/cart/40995785015425:1" class="cbtn" id="checkoutBtn" target="_blank" rel="noopener noreferrer">
+    <a href="https://almondstore.store/cart/40995785015425:1" class="cbtn" id="checkoutBtn" rel="noreferrer">
       <span>Secure Checkout</span>
       <svg width="16" height="10" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 5h14M11 1l4 4-4 4"/></svg>
     </a>
@@ -2080,7 +2113,13 @@
   const giftPick = document.getElementById('giftPick'), giftRow = document.getElementById('sumGiftRow'), giftLabel = giftPick.closest('.cart-pick');
   const syncGift = () => { giftLabel.classList.toggle('on', giftPick.checked); giftRow.classList.toggle('hidden', !giftPick.checked); giftLabel.querySelector('.tag').textContent = giftPick.checked ? 'Free gift · selected' : 'Free gift'; };
   giftPick.addEventListener('change', syncGift); syncGift();
-  checkoutBtn.addEventListener('click', () => { if (window.ttq) ttq.track('InitiateCheckout', { content_id: 'jbl-boombox-4', content_type: 'product', content_name: 'JBL Boombox 4', value: unitPrice, currency: 'GBP', quantity: 1 }); });
+  checkoutBtn.addEventListener('click', (e) => {
+    if (window.ttq) ttq.track('InitiateCheckout', { content_id: 'jbl-boombox-4', content_type: 'product', content_name: 'JBL Boombox 4', value: unitPrice, currency: 'GBP', quantity: 1 });
+    // same-tab checkout: give the pixels a moment to send before leaving the page
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+    e.preventDefault();
+    setTimeout(() => { window.location.href = checkoutBtn.href; }, 350);
+  });
 
   // ---------- Sticky bar: shown whenever no "Add to basket" button is on screen ----------
   const sb = document.getElementById('sb');
