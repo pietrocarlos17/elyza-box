@@ -1404,6 +1404,21 @@
   .menu{box-shadow:none}
   .menu.open{box-shadow:20px 0 60px -30px rgba(0,0,0,.4)}
 
+  /* compact first screen on phones: price + CTA visible inside in-app browsers */
+  @media(max-width:520px){
+    .hero-stage{aspect-ratio:16/10}
+    .hero-copy{padding:20px 20px 30px}
+    .hero-pill{display:none}
+    h1.h1{font-size:40px;margin-bottom:10px}
+    .hero-copy-inner .hero-rating{order:-1;margin:0 0 10px;padding:0;border:0;font-size:11px}
+    .hero-copy-inner .h1{order:-2}
+    .hero-sub{font-size:15px;line-height:1.45;margin-bottom:16px}
+    .hero-price{margin:0 0 14px}
+    .hero-price .now{font-size:40px}
+    .hero-cta{gap:12px}
+    .hero-cta .btn{width:100%;justify-content:center}
+    .hero-cta .link-u{display:none}
+  }
 </style>
 </head>
 <body>
@@ -1447,7 +1462,7 @@
         Big sound.
         <span class="ital">Anywhere.</span>
       </h1>
-      <p class="hero-sub">JBL's most powerful portable waterproof speaker. Deep, punchy bass, up to 34 hours of playtime and a rugged IP68 body built for every party.</p>
+      <p class="hero-sub">JBL's most powerful portable speaker. Deep bass, 34h playtime and a rugged IP68 body.</p>
       <div class="hero-price">
         <span class="now"><sup>£</sup>139</span>
         <span class="was">RRP <s>£449.99</s></span>
