@@ -1068,6 +1068,12 @@
   .cbtn > *{position:relative;z-index:1}
   .cbtn svg{transition:transform .45s}
   .cbtn:hover svg{transform:translateX(6px)}
+  .cbtn .spin{display:none;width:16px;height:16px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:cbspin .7s linear infinite}
+  .cbtn.loading{pointer-events:none}
+  .cbtn.loading::after{transform:translateY(0)}
+  .cbtn.loading svg{display:none}
+  .cbtn.loading .spin{display:block}
+  @keyframes cbspin{to{transform:rotate(360deg)}}
   .cart-foot .trust{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500}
   .cart-foot .trust span + span::before{content:"·";margin-right:16px;color:var(--line)}
   .cart-cont{text-align:center;font-size:12px;letter-spacing:.02em;color:var(--soft);padding-bottom:4px;cursor:pointer;transition:color .2s}
@@ -2013,8 +2019,9 @@
 
   <div class="cart-foot">
     <a href="https://almondstore.store/cart/40995785015425:1" class="cbtn" id="checkoutBtn" rel="noreferrer">
-      <span>Secure Checkout</span>
+      <span class="cbtn-label">Secure Checkout</span>
       <svg width="16" height="10" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 5h14M11 1l4 4-4 4"/></svg>
+      <span class="spin" aria-hidden="true"></span>
     </a>
     <p class="cart-note">You'll be taken to our secure checkout to complete payment. Your order is protected by SSL encryption.</p>
     <div class="paylogos small" aria-label="Accepted payment methods">
@@ -2135,13 +2142,22 @@
   const giftPick = document.getElementById('giftPick'), giftRow = document.getElementById('sumGiftRow'), giftLabel = giftPick.closest('.cart-pick');
   const syncGift = () => { giftLabel.classList.toggle('on', giftPick.checked); giftRow.classList.toggle('hidden', !giftPick.checked); giftLabel.querySelector('.tag').textContent = giftPick.checked ? 'Free gift · selected' : 'Free gift'; };
   giftPick.addEventListener('change', syncGift); syncGift();
+  const checkoutLabel = checkoutBtn.querySelector('.cbtn-label');
+  const resetCheckoutBtn = () => { checkoutBtn.classList.remove('loading'); checkoutBtn.removeAttribute('aria-busy'); checkoutLabel.textContent = 'Secure Checkout'; };
   checkoutBtn.addEventListener('click', (e) => {
+    if (checkoutBtn.classList.contains('loading')) { e.preventDefault(); return; }
     if (window.ttq) ttq.track('InitiateCheckout', { content_id: 'jbl-boombox-4', content_type: 'product', content_name: 'JBL Boombox 4', value: unitPrice, currency: 'GBP', quantity: 1 });
     // same-tab checkout: give the pixels a moment to send before leaving the page
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
     e.preventDefault();
+    // the store takes a few seconds to answer (two redirects): show it's working so nobody thinks it froze
+    checkoutBtn.classList.add('loading');
+    checkoutBtn.setAttribute('aria-busy', 'true');
+    checkoutLabel.textContent = 'Opening secure checkout…';
     setTimeout(() => { window.location.href = checkoutBtn.href; }, 350);
   });
+  // coming back with the browser's back button restores the page from cache: put the button back to normal
+  window.addEventListener('pageshow', e => { if (e.persisted) resetCheckoutBtn(); });
 
   // ---------- Sticky bar: shown whenever no "Add to basket" button is on screen ----------
   const sb = document.getElementById('sb');
