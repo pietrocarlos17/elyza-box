@@ -1681,21 +1681,6 @@
             <div class="save">You save £310.99 on the RRP</div>
           </div>
 
-          <div class="offer-urgency-strip">
-            <div class="offer-u">
-              <span class="lbl">Offer ends in</span>
-              <div class="clock-boxes">
-                <div class="clock-unit"><div class="clock-box" id="cdD">02</div><div class="clock-u">Days</div></div>
-                <span class="clock-dot">:</span>
-                <div class="clock-unit"><div class="clock-box" id="cdH">05</div><div class="clock-u">Hrs</div></div>
-                <span class="clock-dot">:</span>
-                <div class="clock-unit"><div class="clock-box" id="cdM">42</div><div class="clock-u">Min</div></div>
-                <span class="clock-dot">:</span>
-                <div class="clock-unit"><div class="clock-box" id="cdS">18</div><div class="clock-u">Sec</div></div>
-              </div>
-            </div>
-          </div>
-
           <ul class="offer-incl">
             <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> JBL Boombox 4 with power cable</li>
             <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Free UK delivery · dispatched within 24h</li>
@@ -2121,7 +2106,15 @@
     showCart();
   };
   const closeCart = () => { cart.classList.remove('open'); cartBack.classList.remove('open'); document.body.classList.remove('cart-open'); };
-  document.querySelectorAll('.js-add').forEach(b => b.addEventListener('click', openCart));
+  // only the offer card's button opens the cart; every other "Add to basket" takes the visitor to the card
+  const offerCard = document.querySelector('.offer');
+  const goToOffer = e => {
+    e.preventDefault();
+    const nav = document.querySelector('nav.top');
+    const navH = nav && getComputedStyle(nav).position !== 'static' ? nav.offsetHeight : 0;
+    window.scrollTo({ top: offerCard.getBoundingClientRect().top + window.scrollY - navH - 12, behavior: 'smooth' });
+  };
+  document.querySelectorAll('.js-add').forEach(b => b.addEventListener('click', offerCard.contains(b) ? openCart : goToOffer));
   document.getElementById('bagBtn').addEventListener('click', showCart);
   cartBack.addEventListener('click', closeCart);
   document.getElementById('cartClose').addEventListener('click', closeCart);
@@ -2140,7 +2133,8 @@
 
   // ---------- Sticky bar: shown whenever no "Add to basket" button is on screen ----------
   const sb = document.getElementById('sb');
-  const anchors = [document.querySelector('.hero-cta .btn'), document.querySelector('.offer .btn')];
+  // hide the sticky bar while the hero button or the offer card itself is on screen
+  const anchors = [document.querySelector('.hero-cta .btn'), document.querySelector('.offer')];
   const syncSticky = () => {
     const vh = window.innerHeight;
     const anyVisible = anchors.some(a => { const r = a.getBoundingClientRect(); return r.bottom > 0 && r.top < vh; });
