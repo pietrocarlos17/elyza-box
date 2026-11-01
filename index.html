@@ -1404,6 +1404,11 @@
   .menu{box-shadow:none}
   .menu.open{box-shadow:20px 0 60px -30px rgba(0,0,0,.4)}
 
+  /* offer card description */
+  .offer-desc ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+  .offer-desc li{display:flex;gap:9px;align-items:center;font-size:13.5px;line-height:1.35;color:var(--soft)}
+  .offer-desc li svg{flex:none;color:var(--accent)}
+  .offer-desc li b{color:var(--ink);font-weight:600}
   /* hero photo is absolutely positioned: give the stage a real height where aspect-ratio is unsupported (iOS < 15, old WebViews) */
   @supports not (aspect-ratio:1/1){@media(max-width:900px){.hero-stage{height:80vw;max-height:720px}}}
   /* compact first screen on phones: price + CTA visible inside in-app browsers */
@@ -1664,6 +1669,15 @@
           <div class="offer-head">
             <div class="offer-title">JBL Boombox 4</div>
             <div class="offer-sub">Portable waterproof speaker</div>
+          </div>
+
+          <div class="offer-desc">
+            <ul>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg><span><b>210W</b> of room-shaking JBL sound</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg><span><b>34h</b> battery, plays all weekend</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg><span><b>IP68</b> waterproof: pool, beach, rain</span></li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg><span><b>Charges your phone</b> on the go</span></li>
+            </ul>
           </div>
 
           <div class="swatches">
