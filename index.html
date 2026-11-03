@@ -1686,8 +1686,8 @@
 
           <div class="swatches">
             <span class="lbl">Colour: <b id="colorName">Black</b></span>
-            <span class="sw on" data-n="Black" style="background-image:url(images/p1.webp)" title="Black"></span>
-            <span class="sw soldout" data-n="Squad" style="background-image:url(images/p2.webp)" title="Squad · sold out" aria-disabled="true"></span>
+            <span class="sw on" data-n="Black" data-v="41037691715713" data-set="a" role="button" style="background-image:url(images/p1.webp)" title="Black"></span>
+            <span class="sw" data-n="Camouflage" data-v="41037675266177" data-set="sq" role="button" style="background-image:url(images/p2.webp)" title="Camouflage"></span>
           </div>
 
           <div class="offer-hero-price">
@@ -1978,7 +1978,7 @@
   </div>
 
   <div class="cart-item">
-    <div class="thumb"><img src="images/a1.webp" alt="JBL Boombox 4" loading="lazy" decoding="async"></div>
+    <div class="thumb"><img id="cartThumb" src="images/a1.webp" alt="JBL Boombox 4" loading="lazy" decoding="async"></div>
     <div class="info">
       <div class="nm">JBL Boombox 4</div>
       <div class="sub" id="cartColor">Black</div>
@@ -2101,15 +2101,16 @@
   const cart = document.getElementById('cart'), cartBack = document.getElementById('cartBack');
   const unitPrice = 139, unitRetail = 449.99;
   const money = n => (Math.round(n * 100) / 100).toFixed(2).replace(/\.00$/, '');
-  // CHECKOUT: swap this one line to switch store.
-  //   Almond : https://almondstore.store/cart/41037691715713:
-  //   Lumo   : https://thestorelumo.com/cart/45158589792307:
-  const checkoutBase = 'https://almondstore.store/cart/41037691715713:';
+  // CHECKOUT: Almond store; the variant follows the colour swatch (data-v on .sw)
+  //   Almond : Black 41037691715713 · Camouflage 41037675266177
+  //   Lumo   : https://thestorelumo.com/cart/ (Black 45158589792307 only)
+  const checkoutStore = 'https://almondstore.store/cart/';
+  let variantId = '41037691715713';
   const checkoutBtn = document.getElementById('checkoutBtn');
   const cartQty = 1;
   const updateCart = () => {
     const now = unitPrice * cartQty, was = unitRetail * cartQty;
-    checkoutBtn.href = checkoutBase + cartQty + window.location.search;
+    checkoutBtn.href = checkoutStore + variantId + ':' + cartQty + window.location.search;
     setText('cartCount', cartQty);
     setText('itemPrice', money(now)); setText('itemWas', money(was));
     setText('sumSub', money(now)); setText('sumDisc', money(was - now)); setText('sumTotal', money(now));
@@ -2178,6 +2179,20 @@
   document.querySelectorAll('#offerThumbs button').forEach(b => b.addEventListener('click', () => {
     document.querySelectorAll('#offerThumbs button').forEach(x => x.classList.toggle('on', x === b));
     offerMain.src = b.dataset.src;
+  }));
+  // each colour swaps the gallery to its own photos (a1-a5 / sq1-sq5) and its checkout variant
+  const imgDir = offerMain.getAttribute('src').replace(/[^/]*$/, '');
+  document.querySelectorAll('.swatches .sw').forEach(sw => sw.addEventListener('click', () => {
+    document.querySelectorAll('.swatches .sw').forEach(x => x.classList.toggle('on', x === sw));
+    setText('colorName', sw.dataset.n);
+    variantId = sw.dataset.v;
+    document.querySelectorAll('#offerThumbs button').forEach((b, i) => {
+      b.dataset.src = imgDir + sw.dataset.set + (i + 1) + '.webp';
+      b.querySelector('img').src = b.dataset.src;
+      b.classList.toggle('on', i === 0);
+    });
+    offerMain.src = imgDir + sw.dataset.set + '1.webp';
+    document.getElementById('cartThumb').src = offerMain.src;
   }));
 
   // ---------- Reviews: read more ----------
