@@ -2025,7 +2025,7 @@
   </div>
 
   <div class="cart-foot">
-    <a href="https://almondstore.store/cart/41037691715713:1" class="cbtn" id="checkoutBtn" rel="noreferrer">
+    <a href="https://almondstore.store/cart/41037691715713:1?locale=de" class="cbtn" id="checkoutBtn" rel="noreferrer">
       <span class="cbtn-label">Sicher zur Kasse</span>
       <svg width="16" height="10" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 5h14M11 1l4 4-4 4"/></svg>
       <span class="spin" aria-hidden="true"></span>
@@ -2117,7 +2117,9 @@
   const cartQty = 1;
   const updateCart = () => {
     const now = unitPrice * cartQty, was = unitRetail * cartQty;
-    checkoutBtn.href = checkoutStore + variantId + ':' + cartQty + window.location.search;
+    // locale=de opens the Shopify checkout in German (the cart link on the main domain defaults to English)
+    const qs = new URLSearchParams(window.location.search); qs.set('locale', 'de');
+    checkoutBtn.href = checkoutStore + variantId + ':' + cartQty + '?' + qs.toString();
     setText('cartCount', cartQty);
     setText('itemPrice', money(now)); setText('itemWas', money(was));
     setText('sumSub', money(now)); setText('sumDisc', money(was - now)); setText('sumTotal', money(now));
