@@ -1693,8 +1693,8 @@
 
           <div class="swatches">
             <span class="lbl">カラー：<b id="colorName">ブラック</b></span>
-            <span class="sw on" data-n="ブラック" data-v="41037691715713" data-set="a" role="button" style="background-image:url(../images/p1.webp)" title="ブラック"></span>
-            <span class="sw" data-n="カモフラージュ" data-v="41037675266177" data-set="sq" role="button" style="background-image:url(../images/p2.webp)" title="カモフラージュ"></span>
+            <span class="sw on" data-n="ブラック" data-v="45290824728627" data-set="a" role="button" style="background-image:url(../images/p1.webp)" title="ブラック"></span>
+            <span class="sw" data-n="カモフラージュ" data-v="45290824761395" data-set="sq" role="button" style="background-image:url(../images/p2.webp)" title="カモフラージュ"></span>
           </div>
 
           <div class="offer-hero-price">
@@ -2028,7 +2028,7 @@
   </div>
 
   <div class="cart-foot">
-    <a href="https://almondstore.store/cart/41037691715713:1?locale=ja" class="cbtn" id="checkoutBtn" rel="noreferrer">
+    <a href="https://thestorelumo.com/cart/45290824728627:1?locale=ja" class="cbtn" id="checkoutBtn" rel="noreferrer">
       <span class="cbtn-label">ご購入手続きへ</span>
       <svg width="16" height="10" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 5h14M11 1l4 4-4 4"/></svg>
       <span class="spin" aria-hidden="true"></span>
@@ -2111,11 +2111,11 @@
   const cart = document.getElementById('cart'), cartBack = document.getElementById('cartBack');
   const unitPrice = 24800, unitRetail = 87890;
   const money = n => Math.round(n).toLocaleString('ja-JP');
-  // CHECKOUT: Almond store; the variant follows the colour swatch (data-v on .sw)
-  //   Almond : Black 41037691715713 · Camouflage 41037675266177
-  //   Lumo   : https://thestorelumo.com/cart/ (Black 45158589792307 only)
-  const checkoutStore = 'https://almondstore.store/cart/';
-  let variantId = '41037691715713';
+  // CHECKOUT: Lumo store; the variant follows the colour swatch (data-v on .sw)
+  //   Lumo   : Black 45290824728627 · Camouflage 45290824761395
+  //   Almond : https://almondstore.store/cart/ (Black 41037691715713 · Camouflage 41037675266177)
+  const checkoutStore = 'https://thestorelumo.com/cart/';
+  let variantId = '45290824728627';
   const checkoutBtn = document.getElementById('checkoutBtn');
   const cartQty = 1;
   const updateCart = () => {
