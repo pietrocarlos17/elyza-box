@@ -1686,8 +1686,8 @@
 
           <div class="swatches">
             <span class="lbl">Colour: <b id="colorName">Black</b></span>
-            <span class="sw on" data-n="Black" data-v="45290824728627" data-set="a" role="button" style="background-image:url(images/p1.webp)" title="Black"></span>
-            <span class="sw" data-n="Camouflage" data-v="45290824761395" data-set="sq" role="button" style="background-image:url(images/p2.webp)" title="Camouflage"></span>
+            <span class="sw on" data-n="Black" data-v="68380105507066" data-set="a" role="button" style="background-image:url(images/p1.webp)" title="Black"></span>
+            <span class="sw" data-n="Camouflage" data-v="68380105539834" data-set="sq" role="button" style="background-image:url(images/p2.webp)" title="Camouflage"></span>
           </div>
 
           <div class="offer-hero-price">
@@ -2018,7 +2018,7 @@
   </div>
 
   <div class="cart-foot">
-    <a href="https://thestorelumo.com/cart/45290824728627:1" class="cbtn" id="checkoutBtn" rel="noreferrer">
+    <a href="https://themonna.shop/cart/68380105507066:1" class="cbtn" id="checkoutBtn" rel="noreferrer">
       <span class="cbtn-label">Secure Checkout</span>
       <svg width="16" height="10" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 5h14M11 1l4 4-4 4"/></svg>
       <span class="spin" aria-hidden="true"></span>
@@ -2101,12 +2101,13 @@
   const cart = document.getElementById('cart'), cartBack = document.getElementById('cartBack');
   const unitPrice = 119, unitRetail = 449.99;
   const money = n => (Math.round(n * 100) / 100).toFixed(2).replace(/\.00$/, '');
-  // CHECKOUT: Lumo store; the variant follows the colour swatch (data-v on .sw)
-  //   Lumo   : Black 45290824728627 · Camouflage 45290824761395 (GB market £119)
+  // CHECKOUT: Monna store; the variant follows the colour swatch (data-v on .sw)
+  //   Monna  : Black 68380105507066 · Camouflage 68380105539834 (GB market £119)
+  //   Lumo   : https://thestorelumo.com/cart/ (Black 45290824728627 · Camouflage 45290824761395)
   //   Athkos : https://athkosstore.shop/cart/ (Black 68022014640205 · Camouflage 68022014672973)
   //   Almond : https://almondstore.store/cart/ (Black 41037691715713 · Camouflage 41037675266177)
-  const checkoutStore = 'https://thestorelumo.com/cart/';
-  let variantId = '45290824728627';
+  const checkoutStore = 'https://themonna.shop/cart/';
+  let variantId = '68380105507066';
   const checkoutBtn = document.getElementById('checkoutBtn');
   const cartQty = 1;
   const updateCart = () => {
