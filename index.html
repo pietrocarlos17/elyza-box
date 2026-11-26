@@ -2102,18 +2102,28 @@
   const cart = document.getElementById('cart'), cartBack = document.getElementById('cartBack');
   const unitPrice = 119, unitRetail = 449.99;
   const money = n => (Math.round(n * 100) / 100).toFixed(2).replace(/\.00$/, '');
-  // CHECKOUT: Monna store; the variant follows the colour swatch (data-v on .sw)
-  //   Monna  : Black 68380105507066 · Camouflage 68380105539834 (GB market £119)
-  //   Lumo   : https://thestorelumo.com/cart/ (Black 45290824728627 · Camouflage 45290824761395)
-  //   Athkos : https://athkosstore.shop/cart/ (Black 68022014640205 · Camouflage 68022014672973)
-  //   Almond : https://almondstore.store/cart/ (Black 41037691715713 · Camouflage 41037675266177)
-  const checkoutStore = 'https://themonna.shop/cart/';
-  let variantId = '68380105507066';
+  // CHECKOUT ROTATION: the store alternates automatically every 2 hours (UTC clock, both GB markets £119).
+  //   Slots start at even UTC hours: 00-02 Monna, 02-04 Lumo, 04-06 Monna ... 22-24 Lumo.
+  //   The variant follows the colour swatch name (data-n on .sw); the store is picked again on every checkout click.
+  //   Inactive stores: Athkos https://athkosstore.shop/cart/ (Black 68022014640205 · Camouflage 68022014672973)
+  //                    Almond https://almondstore.store/cart/ (Black 41037691715713 · Camouflage 41037675266177)
+  const CHECKOUT_STORES = {
+    monna: { cart: 'https://themonna.shop/cart/',     Black: '68380105507066', Camouflage: '68380105539834' },
+    lumo:  { cart: 'https://thestorelumo.com/cart/',  Black: '45290824728627', Camouflage: '45290824761395' }
+  };
+  const ROTATION = ['monna', 'lumo'], SLOT_MS = 2 * 60 * 60 * 1000;
+  const storeAt = t => ROTATION[Math.floor(t / SLOT_MS) % ROTATION.length];
+  let colour = 'Black';
   const checkoutBtn = document.getElementById('checkoutBtn');
   const cartQty = 1;
+  const checkoutHref = () => {
+    const s = CHECKOUT_STORES[storeAt(Date.now())];
+    return s.cart + (s[colour] || s.Black) + ':' + cartQty + window.location.search;
+  };
+  checkoutBtn.addEventListener('click', () => { checkoutBtn.href = checkoutHref(); });
   const updateCart = () => {
     const now = unitPrice * cartQty, was = unitRetail * cartQty;
-    checkoutBtn.href = checkoutStore + variantId + ':' + cartQty + window.location.search;
+    checkoutBtn.href = checkoutHref();
     setText('cartCount', cartQty);
     setText('itemPrice', money(now)); setText('itemWas', money(was));
     setText('sumSub', money(now)); setText('sumDisc', money(was - now)); setText('sumTotal', money(now));
@@ -2188,7 +2198,7 @@
   document.querySelectorAll('.swatches .sw').forEach(sw => sw.addEventListener('click', () => {
     document.querySelectorAll('.swatches .sw').forEach(x => x.classList.toggle('on', x === sw));
     setText('colorName', sw.dataset.n);
-    variantId = sw.dataset.v;
+    colour = sw.dataset.n;
     document.querySelectorAll('#offerThumbs button').forEach((b, i) => {
       b.dataset.src = imgDir + sw.dataset.set + (i + 1) + '.webp';
       b.querySelector('img').src = b.dataset.src;
